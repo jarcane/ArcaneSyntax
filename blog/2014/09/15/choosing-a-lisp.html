@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Choosing a Lisp</title>
+    <meta name="description" content="I began my adventure back into the world of programming with Python. My last book had started to peter out in sales, and I began seriously re-evaluating my career potential, and it was at this point that a friend introduced me to Codecademy. I was immedia...">
+    <meta name="author"      content="The Unknown Blogger">
+    <meta name="keywords"    content="Lisp, Racket">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="http://jarcane.github.com/blog\2014\09\15\choosing-a-lisp.html">
+    <link rel="next" href="/blog\2014\09\15\christening-the-grimoire.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link ref="alternate" type="application/atom+xml"
+          href="/feeds/all.atom.xml" title="Atom Feed">
+    <link ref="alternate" type="application/rss+xml"
+          href="/feeds/all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-xxxxx']);
+      _gaq.push(['_setDomainName', 'example.com']);
+      _gaq.push(['_trackPageview']);
+      setTimeout(function(){_gaq.push(['_trackEvent', '30_seconds', 'read'])}, 30000); // http://drawingablank.me/blog/fix-your-bounce-rate.html
+      (function() {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <header class="navbar navbar-default navbar-inverse"
+            role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target=".our-nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/index.html" class="navbar-brand">Choosing a Lisp</a>
+        </div>
+        <div class="collapse navbar-collapse our-nav-collapse"
+             role="navigation">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Tags <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/index.html">All Posts</a></li>
+
+<li><a href="/tags/announcements.html">announcements</a></li>
+
+<li><a href="/tags/Lisp.html">Lisp</a></li>
+
+<li><a href="/tags/Racket.html">Racket</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/About.html">About</a>
+            </li> 
+            <li><a href="/feeds/all.atom.xml">Atom</a></li>
+            <li><a href="/feeds/all.rss.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+
+
+
+
+          <article>
+  <header>
+    <h1>Choosing a Lisp</h1>
+    <p class='date-and-tags'>
+<time datetime="2014-09-15" pubdate="true">2014-09-15</time> :: <span class="tags"><a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Racket.html">Racket</a></span></p>
+  </header>
+
+<p>I began my adventure back into the world of programming with Python. My last book had started to peter out in sales, and I began seriously re-evaluating my career potential, and it was at this point that a friend introduced me to <a href="http://codecademy.com">Codecademy</a>. I was immediately taken with the interactive approach to programming instruction, and in particular gravitated to Python, because it was a language I&rsquo;d tinkered with before and whose power, especially in strings and lists, I&rsquo;d always been impressed with.</p>
+
+<p>I devoured the Python course greedily and soon moved on to my first &ldquo;big&rdquo; project, <a href="https://github.com/jarcane/handhRL">handhRL</a> a roguelike based on one of my tabletop rulesets. However, as I grappled with the tedium of building random object generators with massive elseif-based constructor patterns, and the poor performance and gaming potential, I also was acutely aware I&rsquo;d need to branch out into other languages.</p>
+
+<p>And then another friend recommended I try Lisp. I consider it a fateful day. I&rsquo;m not honestly certain whether to curse him for it or thank him. I tried a number of entryways into the world, and indeed, choosing which Lisp to focus on has consumed much of the last two months of my time. I fall more in love with Lisp the more I learn of it, but choosing a flavor of it has tormented me more than perhaps it should.</p>
+
+<p>Here&rsquo;s what I have learned.</p>
+<!-- more-->
+
+<p>There are a dizzying array of Lisps out there, but by and large the main options boil down to the following:</p>
+
+<ul>
+ <li>Common Lisp</li>
+ <li>Scheme</li>
+ <li>Clojure</li>
+ <li>Racket</li></ul>
+
+<p>There&rsquo;s more of course, Paul Graham has Arc which powers Hacker News, there&rsquo;s the venerable Emacs Lisp that powers the very editor I write these posts on, but those four are probably the most prominent and feasible for at least some practical amount of actual work.</p>
+
+<p>I started with Common Lisp. Or at least, attempting it. I suspect many people do, those that don&rsquo;t instead get exposed to Scheme in college. I suspect now I understand why so many come away with a bad impression. Common Lisp is far easier to learn now than it was 10 years ago, but it&rsquo;s still a dialect built on compromises and mired in ancient and cthonian syntax. I found myself stymied by having to learn 12 different ways of doing any given thing, and by chapter-long exercises done entirely in a REPL that then crashed or fell victim to an error somewhere back on page 2.</p>
+
+<p>So, from there I cast around and found Racket. And lo, the heavens did open, and mine eyes did see the light. While I did catch glimpses of the power of Lisp with my initial toolings, it was in the purity and clarity of Racket, in its wonderful documentation, in the easy power of the Lisp&ndash;1, that I found the full breadth of what I&rsquo;d seen as I stumbled through the CL wilderness. I played and tinkered and hacked. I wrote an <a href="https://github.com/jarcane/MicroMini">8-bit VM</a> in just 206 lines of code. 206!</p>
+
+<p>But I stumbled as well. I ran into problems implementing terminal i/o with my virtual machine, so it would only run in Linux. I found myself frustrated by the lack of mature development for pretty common &ldquo;getting work done&rdquo; tasks, at least for the kind of work I wanted to do. As well, I found myself stymied by the books and documentation; put off by the beginner material, but utterly baffled by the advanced features.</p>
+
+<p>I made another run at Common Lisp, getting pretty far in Peter Seibel&rsquo;s excellent <a href="http://www.gigamonkeys.com/book/">Practical Common Lisp</a>. Ultimately though, more exposure to the many-splendored weirdness of CL ultimately lead me to think perhaps it just wasn&rsquo;t the flavor for me.</p>
+
+<p>Another friend had mentioned Clojure. I was put off by Clojure up until now, because it reeked of startup culture and I frankly have a long-standing grudge against Java. But Java is practically the reigning Lord and Master of the mobile-heavy Finnish scene, and it seemed to be driving a lot of new adoption locally and even a few actual jobs.</p>
+
+<p>So, I discussed it with my wife and we mutually agreed I should give it a shot. I meditated upon the <a href="http://clojurescriptkoans.com/">ClojureScript Koans</a>, and was initially quite intrigued by its #() and its funcional purity, if a bit baffled by the sheer number of different data types, and put off by the ugly syntax. I code-golfed a FizzBuzz in a tweet done in CS. I then thought I should meditate upon the full <a href="https://github.com/functional-koans/clojure-koans">Clojure Koans</a> in order to learn those things which CS had by necessity neglected.</p>
+
+<p>By the end, the only &ldquo;enlightenment&rdquo; I found there was the cold burning focus of pure fury. I hated its clunky implementation, it&rsquo;s utter violation of the purity I so loved in a Lisp. I hated how utterly inconsistent everything was. I hated how any error could spell utter doom to your entire system, as typo&rsquo;d recursions led to full CPUs and runaway threads. I hate hate hated the threading macro with the fire of a thousand incandescent supernovas.</p>
+
+<p>However, it also gave me a sense of perspective, and so I meditated on the <a href="https://github.com/google/lisp-koans">Common Lisp Koans</a>. There I faced a an anticlimax. The final meditation was on SBCL threads, and SBCL threads were like grasping a stream of water. I had recieved all the enlightenment that Common Lisp seemed ready to offer.</p>
+
+<p>And in the end, all I wanted was my Racket back. The prodigal son wanted to come home.</p>
+
+<p>I am sure that in the cold light of reason I could find work in Clojure or Common Lisp. I do indeed envy their library support, and have come to respect a number of those features that they offer, and may even seek to reimplement some of them in my own Racket set up.</p>
+
+<p>It is true as well that Racket is not well represented in the world of working programmers. But it is well represented in the world of computer science, a world I increasingly suspect I might like to enter if I should prove worthy. While there is something of a gap between the &ldquo;beginner&rdquo; and &ldquo;advanced&rdquo; levels of the Racket world, the flipside to this is that it is stuffed with incredibly brilliant people who are almost to a one the most polite and helpful people I&rsquo;ve met since returning to programming.</p>
+
+<p>So, with at least a year of language courses before I can even think about a job or university, why not hang around and contribute and learn in a place where I feel most at home? It was Python being this for me that made me a programmer again, and I think it could be Racket doing so that makes me a <em>good</em> one.</p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://jarcane.github.com/blog\2014\09\15\choosing-a-lisp.html"
+       data-dnt="true">
+      "Tweet"</a>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <g:plusone size="medium" href="http://jarcane.github.com/blog\2014\09\15\choosing-a-lisp.html"></g:plusone>
+    <script type="text/javascript">
+      var disqus_shortname = 'shortname';
+      (function() {
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <div id="disqus_thread"></div>
+    <ul class="pager">
+
+    <li class="next">
+      <a href="/blog\2014\09\15\christening-the-grimoire.html"><em>Christening the Grimoire</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p><a href="https://twitter.com/J_Arcane"
+              class="twitter-follow-button"
+              data-show-count="false"
+              data-lang="en">
+             "Follow J_Arcane"
+           </a>
+           <script type="text/javascript">
+             !function(d,s,id){
+                 var js,fjs=d.getElementsByTagName(s)[0];
+                 if(!d.getElementById(id)){
+                     js=d.createElement(s);
+                     js.id=id;
+                     js.src="//platform.twitter.com/widgets.js";
+                     fjs.parentNode.insertBefore(js,fjs);
+                 }
+             }(document,"script","twitter-wjs");
+           </script></p>
+        <p>Site generated
+        by <a href="https://github.com/greghendershott/frog">Frog</a>,
+        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+        <p><em>All contents Copyright 2014- by John S. Berry III</em>.</p>
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="//code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

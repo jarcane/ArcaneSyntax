@@ -1,2 +1,3 @@
-http://www.example.com/blog\2012\01\01\a-2012-blog-post\
-http://www.example.com/About.html
+http://jarcane.github.com/blog\2014\09\15\christening-the-grimoire.html
+http://jarcane.github.com/blog\2014\09\15\choosing-a-lisp.html
+http://jarcane.github.com/About.html

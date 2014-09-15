@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?> 
-<rss version="2.0">
- <channel>
-  <title>Arcane Syntax: Arcane Syntax</title>
-  <description>Arcane Syntax: Arcane Syntax</description>
-  <link>http://jarcane.github.com/index.html</link>
-  <lastBuildDate>Mon, 15 Sep 2014 23:22:25 FLE Daylight Time</lastBuildDate>
-  <pubDate>Mon, 15 Sep 2014 23:22:25 FLE Daylight Time</pubDate>
-  <ttl>1800</ttl>
-  <item>
-   <title>Choosing a Lisp</title>
-   <link>http://jarcane.github.com/blog\2014\09\15\choosing-a-lisp.html</link>
-   <guid>urn:http-jarcane-github-com:-blog-2014-09-15-choosing-a-lisp-html</guid>
-   <pubDate>Mon, 15 Sep 2014 23:22:25 FLE Daylight Time</pubDate>
-   <description>&lt;html&gt;
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">Arcane Syntax: Posts tagged 'Lisp'</title>
+ <link rel="self" href="http://jarcane.github.com/feeds\Lisp.atom.xml" />
+ <link href="http://jarcane.github.com/tags\Lisp.html" />
+ <id>urn:http-jarcane-github-com:-tags-Lisp-html</id>
+ <updated>2014-09-15T23:22:25Z</updated>
+ <entry>
+  <title type="text">Choosing a Lisp</title>
+  <link rel="alternate" href="http://jarcane.github.com/blog\2014\09\15\choosing-a-lisp.html" />
+  <id>urn:http-jarcane-github-com:-blog-2014-09-15-choosing-a-lisp-html</id>
+  <published>2014-09-15T23:22:25Z</published>
+  <updated>2014-09-15T23:22:25Z</updated>
+  <author>
+   <name>John Berry</name></author>
+  <content type="html">&lt;html&gt;
 &lt;p&gt;I began my adventure back into the world of programming with Python. My last book had started to peter out in sales, and I began seriously re-evaluating my career potential, and it was at this point that a friend introduced me to &lt;a href="http://codecademy.com"&gt;Codecademy&lt;/a&gt;. I was immediately taken with the interactive approach to programming instruction, and in particular gravitated to Python, because it was a language I&amp;rsquo;d tinkered with before and whose power, especially in strings and lists, I&amp;rsquo;d always been impressed with.&lt;/p&gt;
 
 &lt;p&gt;I devoured the Python course greedily and soon moved on to my first &amp;ldquo;big&amp;rdquo; project, &lt;a href="https://github.com/jarcane/handhRL"&gt;handhRL&lt;/a&gt; a roguelike based on one of my tabletop rulesets. However, as I grappled with the tedium of building random object generators with massive elseif-based constructor patterns, and the poor performance and gaming potential, I also was acutely aware I&amp;rsquo;d need to branch out into other languages.&lt;/p&gt;
@@ -54,15 +55,4 @@
 
 &lt;p&gt;It is true as well that Racket is not well represented in the world of working programmers. But it is well represented in the world of computer science, a world I increasingly suspect I might like to enter if I should prove worthy. While there is something of a gap between the &amp;ldquo;beginner&amp;rdquo; and &amp;ldquo;advanced&amp;rdquo; levels of the Racket world, the flipside to this is that it is stuffed with incredibly brilliant people who are almost to a one the most polite and helpful people I&amp;rsquo;ve met since returning to programming.&lt;/p&gt;
 
-&lt;p&gt;So, with at least a year of language courses before I can even think about a job or university, why not hang around and contribute and learn in a place where I feel most at home? It was Python being this for me that made me a programmer again, and I think it could be Racket doing so that makes me a &lt;em&gt;good&lt;/em&gt; one.&lt;/p&gt;&lt;/html&gt;</description></item>
-  <item>
-   <title>Christening the Grimoire</title>
-   <link>http://jarcane.github.com/blog\2014\09\15\christening-the-grimoire.html</link>
-   <guid>urn:http-jarcane-github-com:-blog-2014-09-15-christening-the-grimoire-html</guid>
-   <pubDate>Mon, 15 Sep 2014 23:07:10 FLE Daylight Time</pubDate>
-   <description>&lt;html&gt;
-&lt;p&gt;Welcome to Arcane Syntax, destined to be the new home of all things relating to the arcane art of computer programming and development, as flowing from the mind of myself, an self-trained apprentice programmer, Finnish language student, and former tabletop games writer.&lt;/p&gt;
-
-&lt;p&gt;The chief subject matter of Arcane Syntax is likely at this point to be focusing especially on the Racket programming language, which has ultimately proved my favorite home in the magical land of Lisp dialects, for reasons which I shall expound upon in my next post.&lt;/p&gt;
-
-&lt;p&gt;I have been at this programming thing for but a short time, having previously not touched more than a few simple dice rollers in at least a decade. If something I should happen to post on this blog demonstrate a profound ignorance, it is likely for lack of education, and thus polite instruction is likely to be welcomed eagerly.&lt;/p&gt;&lt;/html&gt;</description></item></channel></rss>
+&lt;p&gt;So, with at least a year of language courses before I can even think about a job or university, why not hang around and contribute and learn in a place where I feel most at home? It was Python being this for me that made me a programmer again, and I think it could be Racket doing so that makes me a &lt;em&gt;good&lt;/em&gt; one.&lt;/p&gt;&lt;/html&gt;</content></entry></feed>
