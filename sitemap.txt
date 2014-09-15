@@ -1,3 +1,4 @@
 http://jarcane.github.com/blog\2014\09\15\christening-the-grimoire.html
 http://jarcane.github.com/blog\2014\09\15\choosing-a-lisp.html
+http://jarcane.github.com/blog\2014\09\16\technical-difficulties.html
 http://jarcane.github.com/About.html
