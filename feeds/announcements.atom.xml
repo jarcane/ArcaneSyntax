@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
  <title type="text">Arcane Syntax: Posts tagged 'announcements'</title>
- <link rel="self" href="http://jarcane.github.com/feeds\announcements.atom.xml" />
- <link href="http://jarcane.github.com/tags\announcements.html" />
+ <link rel="self" href="http://jarcane.github.com/feeds/announcements.atom.xml" />
+ <link href="http://jarcane.github.com/tags/announcements.html" />
  <id>urn:http-jarcane-github-com:-tags-announcements-html</id>
  <updated>2014-09-16T00:44:56Z</updated>
  <entry>
   <title type="text">Technical Difficulties</title>
-  <link rel="alternate" href="http://jarcane.github.com/blog\2014\09\16\technical-difficulties.html" />
+  <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/16/technical-difficulties.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-09-16-technical-difficulties-html</id>
   <published>2014-09-16T00:44:56Z</published>
   <updated>2014-09-16T00:44:56Z</updated>
@@ -17,7 +17,7 @@
 &lt;p&gt;Currently aware of an issue in Frog resulting in malformed page URLs for my posts. Users on browsers other than Chrome will get 404 errors accessing full blog pages. Greg Hendershott is aware of the issue now, and I&amp;rsquo;ll get the site patched as soon as he pushes a fix to Frog.&lt;/p&gt;&lt;/html&gt;</content></entry>
  <entry>
   <title type="text">Christening the Grimoire</title>
-  <link rel="alternate" href="http://jarcane.github.com/blog\2014\09\15\christening-the-grimoire.html" />
+  <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/15/christening-the-grimoire.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-09-15-christening-the-grimoire-html</id>
   <published>2014-09-15T23:07:10Z</published>
   <updated>2014-09-15T23:07:10Z</updated>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
  <title type="text">Arcane Syntax: Arcane Syntax</title>
- <link rel="self" href="http://jarcane.github.com/feeds\all.atom.xml" />
+ <link rel="self" href="http://jarcane.github.com/feeds/all.atom.xml" />
  <link href="http://jarcane.github.com/index.html" />
  <id>urn:http-jarcane-github-com:-index-html</id>
  <updated>2014-09-16T10:15:18Z</updated>
  <entry>
   <title type="text">Disqus comments with Frog</title>
-  <link rel="alternate" href="http://jarcane.github.com/blog\2014\09\16\disqus-comments-with-frog.html" />
+  <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/16/disqus-comments-with-frog.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-09-16-disqus-comments-with-frog-html</id>
   <published>2014-09-16T10:15:18Z</published>
   <updated>2014-09-16T10:15:18Z</updated>
@@ -53,7 +53,7 @@
 &lt;p&gt;And voila, numbered comments links in our Frog posts!&lt;/p&gt;&lt;/html&gt;</content></entry>
  <entry>
   <title type="text">Technical Difficulties</title>
-  <link rel="alternate" href="http://jarcane.github.com/blog\2014\09\16\technical-difficulties.html" />
+  <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/16/technical-difficulties.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-09-16-technical-difficulties-html</id>
   <published>2014-09-16T00:44:56Z</published>
   <updated>2014-09-16T00:44:56Z</updated>
@@ -63,7 +63,7 @@
 &lt;p&gt;Currently aware of an issue in Frog resulting in malformed page URLs for my posts. Users on browsers other than Chrome will get 404 errors accessing full blog pages. Greg Hendershott is aware of the issue now, and I&amp;rsquo;ll get the site patched as soon as he pushes a fix to Frog.&lt;/p&gt;&lt;/html&gt;</content></entry>
  <entry>
   <title type="text">Choosing a Lisp</title>
-  <link rel="alternate" href="http://jarcane.github.com/blog\2014\09\15\choosing-a-lisp.html" />
+  <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/15/choosing-a-lisp.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-09-15-choosing-a-lisp-html</id>
   <published>2014-09-15T23:22:25Z</published>
   <updated>2014-09-15T23:22:25Z</updated>
@@ -114,7 +114,7 @@
 &lt;p&gt;So, with at least a year of language courses before I can even think about a job or university, why not hang around and contribute and learn in a place where I feel most at home? It was Python being this for me that made me a programmer again, and I think it could be Racket doing so that makes me a &lt;em&gt;good&lt;/em&gt; one.&lt;/p&gt;&lt;/html&gt;</content></entry>
  <entry>
   <title type="text">Christening the Grimoire</title>
-  <link rel="alternate" href="http://jarcane.github.com/blog\2014\09\15\christening-the-grimoire.html" />
+  <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/15/christening-the-grimoire.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-09-15-christening-the-grimoire-html</id>
   <published>2014-09-15T23:07:10Z</published>
   <updated>2014-09-15T23:07:10Z</updated>

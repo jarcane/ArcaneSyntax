@@ -3,13 +3,13 @@
  <channel>
   <title>Arcane Syntax: Posts tagged 'Racket'</title>
   <description>Arcane Syntax: Posts tagged 'Racket'</description>
-  <link>http://jarcane.github.com/tags\Racket.html</link>
+  <link>http://jarcane.github.com/tags/Racket.html</link>
   <lastBuildDate>Tue, 16 Sep 2014 10:15:18 FLE Daylight Time</lastBuildDate>
   <pubDate>Tue, 16 Sep 2014 10:15:18 FLE Daylight Time</pubDate>
   <ttl>1800</ttl>
   <item>
    <title>Disqus comments with Frog</title>
-   <link>http://jarcane.github.com/blog\2014\09\16\disqus-comments-with-frog.html</link>
+   <link>http://jarcane.github.com/blog/2014/09/16/disqus-comments-with-frog.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-16-disqus-comments-with-frog-html</guid>
    <pubDate>Tue, 16 Sep 2014 10:15:18 FLE Daylight Time</pubDate>
    <description>&lt;html&gt;
@@ -52,7 +52,7 @@
 &lt;p&gt;And voila, numbered comments links in our Frog posts!&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>Choosing a Lisp</title>
-   <link>http://jarcane.github.com/blog\2014\09\15\choosing-a-lisp.html</link>
+   <link>http://jarcane.github.com/blog/2014/09/15/choosing-a-lisp.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-15-choosing-a-lisp-html</guid>
    <pubDate>Mon, 15 Sep 2014 23:22:25 FLE Daylight Time</pubDate>
    <description>&lt;html&gt;

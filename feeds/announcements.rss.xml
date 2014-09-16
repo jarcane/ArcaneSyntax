@@ -3,20 +3,20 @@
  <channel>
   <title>Arcane Syntax: Posts tagged 'announcements'</title>
   <description>Arcane Syntax: Posts tagged 'announcements'</description>
-  <link>http://jarcane.github.com/tags\announcements.html</link>
+  <link>http://jarcane.github.com/tags/announcements.html</link>
   <lastBuildDate>Tue, 16 Sep 2014 00:44:56 FLE Daylight Time</lastBuildDate>
   <pubDate>Tue, 16 Sep 2014 00:44:56 FLE Daylight Time</pubDate>
   <ttl>1800</ttl>
   <item>
    <title>Technical Difficulties</title>
-   <link>http://jarcane.github.com/blog\2014\09\16\technical-difficulties.html</link>
+   <link>http://jarcane.github.com/blog/2014/09/16/technical-difficulties.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-16-technical-difficulties-html</guid>
    <pubDate>Tue, 16 Sep 2014 00:44:56 FLE Daylight Time</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;Currently aware of an issue in Frog resulting in malformed page URLs for my posts. Users on browsers other than Chrome will get 404 errors accessing full blog pages. Greg Hendershott is aware of the issue now, and I&amp;rsquo;ll get the site patched as soon as he pushes a fix to Frog.&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>Christening the Grimoire</title>
-   <link>http://jarcane.github.com/blog\2014\09\15\christening-the-grimoire.html</link>
+   <link>http://jarcane.github.com/blog/2014/09/15/christening-the-grimoire.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-15-christening-the-grimoire-html</guid>
    <pubDate>Mon, 15 Sep 2014 23:07:10 FLE Daylight Time</pubDate>
    <description>&lt;html&gt;

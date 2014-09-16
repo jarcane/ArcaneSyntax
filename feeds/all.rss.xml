@@ -9,7 +9,7 @@
   <ttl>1800</ttl>
   <item>
    <title>Disqus comments with Frog</title>
-   <link>http://jarcane.github.com/blog\2014\09\16\disqus-comments-with-frog.html</link>
+   <link>http://jarcane.github.com/blog/2014/09/16/disqus-comments-with-frog.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-16-disqus-comments-with-frog-html</guid>
    <pubDate>Tue, 16 Sep 2014 10:15:18 FLE Daylight Time</pubDate>
    <description>&lt;html&gt;
@@ -52,14 +52,14 @@
 &lt;p&gt;And voila, numbered comments links in our Frog posts!&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>Technical Difficulties</title>
-   <link>http://jarcane.github.com/blog\2014\09\16\technical-difficulties.html</link>
+   <link>http://jarcane.github.com/blog/2014/09/16/technical-difficulties.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-16-technical-difficulties-html</guid>
    <pubDate>Tue, 16 Sep 2014 00:44:56 FLE Daylight Time</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;Currently aware of an issue in Frog resulting in malformed page URLs for my posts. Users on browsers other than Chrome will get 404 errors accessing full blog pages. Greg Hendershott is aware of the issue now, and I&amp;rsquo;ll get the site patched as soon as he pushes a fix to Frog.&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>Choosing a Lisp</title>
-   <link>http://jarcane.github.com/blog\2014\09\15\choosing-a-lisp.html</link>
+   <link>http://jarcane.github.com/blog/2014/09/15/choosing-a-lisp.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-15-choosing-a-lisp-html</guid>
    <pubDate>Mon, 15 Sep 2014 23:22:25 FLE Daylight Time</pubDate>
    <description>&lt;html&gt;
@@ -107,7 +107,7 @@
 &lt;p&gt;So, with at least a year of language courses before I can even think about a job or university, why not hang around and contribute and learn in a place where I feel most at home? It was Python being this for me that made me a programmer again, and I think it could be Racket doing so that makes me a &lt;em&gt;good&lt;/em&gt; one.&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>Christening the Grimoire</title>
-   <link>http://jarcane.github.com/blog\2014\09\15\christening-the-grimoire.html</link>
+   <link>http://jarcane.github.com/blog/2014/09/15/christening-the-grimoire.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-15-christening-the-grimoire-html</guid>
    <pubDate>Mon, 15 Sep 2014 23:07:10 FLE Daylight Time</pubDate>
    <description>&lt;html&gt;

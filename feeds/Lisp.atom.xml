@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
  <title type="text">Arcane Syntax: Posts tagged 'Lisp'</title>
- <link rel="self" href="http://jarcane.github.com/feeds\Lisp.atom.xml" />
- <link href="http://jarcane.github.com/tags\Lisp.html" />
+ <link rel="self" href="http://jarcane.github.com/feeds/Lisp.atom.xml" />
+ <link href="http://jarcane.github.com/tags/Lisp.html" />
  <id>urn:http-jarcane-github-com:-tags-Lisp-html</id>
  <updated>2014-09-15T23:22:25Z</updated>
  <entry>
   <title type="text">Choosing a Lisp</title>
-  <link rel="alternate" href="http://jarcane.github.com/blog\2014\09\15\choosing-a-lisp.html" />
+  <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/15/choosing-a-lisp.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-09-15-choosing-a-lisp-html</id>
   <published>2014-09-15T23:22:25Z</published>
   <updated>2014-09-15T23:22:25Z</updated>
