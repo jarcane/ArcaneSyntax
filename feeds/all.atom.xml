@@ -4,7 +4,17 @@
  <link rel="self" href="http://jarcane.github.com/feeds/all.atom.xml" />
  <link href="http://jarcane.github.com/index.html" />
  <id>urn:http-jarcane-github-com:-index-html</id>
- <updated>2014-09-16T10:15:18Z</updated>
+ <updated>2014-09-16T22:29:00Z</updated>
+ <entry>
+  <title type="text">URI bug fixed</title>
+  <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/16/uri-bug-fixed.html" />
+  <id>urn:http-jarcane-github-com:-blog-2014-09-16-uri-bug-fixed-html</id>
+  <published>2014-09-16T22:29:00Z</published>
+  <updated>2014-09-16T22:29:00Z</updated>
+  <author>
+   <name>John Berry</name></author>
+  <content type="html">&lt;html&gt;
+&lt;p&gt;Thanks to the quick efforts of Greg Hendershott, we now have a fix for the Windows URI path generation, so links to subpages should all work correctly now. Let me know if there&amp;rsquo;s any further problems.&lt;/p&gt;&lt;/html&gt;</content></entry>
  <entry>
   <title type="text">Disqus comments with Frog</title>
   <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/16/disqus-comments-with-frog.html" />

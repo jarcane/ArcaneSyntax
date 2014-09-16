@@ -4,9 +4,16 @@
   <title>Arcane Syntax: Posts tagged 'announcements'</title>
   <description>Arcane Syntax: Posts tagged 'announcements'</description>
   <link>http://jarcane.github.com/tags/announcements.html</link>
-  <lastBuildDate>Tue, 16 Sep 2014 00:44:56 FLE Daylight Time</lastBuildDate>
-  <pubDate>Tue, 16 Sep 2014 00:44:56 FLE Daylight Time</pubDate>
+  <lastBuildDate>Tue, 16 Sep 2014 22:29:00 FLE Daylight Time</lastBuildDate>
+  <pubDate>Tue, 16 Sep 2014 22:29:00 FLE Daylight Time</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>URI bug fixed</title>
+   <link>http://jarcane.github.com/blog/2014/09/16/uri-bug-fixed.html</link>
+   <guid>urn:http-jarcane-github-com:-blog-2014-09-16-uri-bug-fixed-html</guid>
+   <pubDate>Tue, 16 Sep 2014 22:29:00 FLE Daylight Time</pubDate>
+   <description>&lt;html&gt;
+&lt;p&gt;Thanks to the quick efforts of Greg Hendershott, we now have a fix for the Windows URI path generation, so links to subpages should all work correctly now. Let me know if there&amp;rsquo;s any further problems.&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>Technical Difficulties</title>
    <link>http://jarcane.github.com/blog/2014/09/16/technical-difficulties.html</link>
