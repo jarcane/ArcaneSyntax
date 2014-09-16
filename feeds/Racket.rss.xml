@@ -4,9 +4,52 @@
   <title>Arcane Syntax: Posts tagged 'Racket'</title>
   <description>Arcane Syntax: Posts tagged 'Racket'</description>
   <link>http://jarcane.github.com/tags\Racket.html</link>
-  <lastBuildDate>Mon, 15 Sep 2014 23:22:25 FLE Daylight Time</lastBuildDate>
-  <pubDate>Mon, 15 Sep 2014 23:22:25 FLE Daylight Time</pubDate>
+  <lastBuildDate>Tue, 16 Sep 2014 10:15:18 FLE Daylight Time</lastBuildDate>
+  <pubDate>Tue, 16 Sep 2014 10:15:18 FLE Daylight Time</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>Disqus comments with Frog</title>
+   <link>http://jarcane.github.com/blog\2014\09\16\disqus-comments-with-frog.html</link>
+   <guid>urn:http-jarcane-github-com:-blog-2014-09-16-disqus-comments-with-frog-html</guid>
+   <pubDate>Tue, 16 Sep 2014 10:15:18 FLE Daylight Time</pubDate>
+   <description>&lt;html&gt;
+&lt;p&gt;I had a slightly tricky time setting up a numbered comment link with Disqus, so I thought it might be helpful to write up a quick post on how I did it.&lt;/p&gt;
+
+&lt;p&gt;The standard Frog templates of course include a widget for embedding a Disqus comment thread in a page, which is quite handy, however without configuration Disqus defaults to an obnoxious thing full of Yahoo ads. To fix this, you need to register an account with Disqus, and create a new site with it, which you can do &lt;a href="https://disqus.com/admin/create/"&gt;here&lt;/a&gt;. Give it a name and a unique URL, which will provide the &amp;ldquo;shortname&amp;rdquo; you&amp;rsquo;ll use with the Disqus widget and scripts.&lt;/p&gt;
+
+&lt;p&gt;From here, you&amp;rsquo;ll go to the install page, from which you can select from a number of options from which we want to choose the one called &lt;em&gt;Universal Code&lt;/em&gt;. This page contains instructions for manually embedding the necessary JavaScript files for Disqus to work. Leave this open for now, we actually don&amp;rsquo;t need it for step 1, which has already been helpfully provided via Frog&amp;rsquo;s Disqus widget.&lt;/p&gt;
+
+&lt;p&gt;Instead, we want to open up the &lt;code&gt;post-template.html&lt;/code&gt; in our Frog project&amp;rsquo;s _src directory, and look for the &lt;code&gt;@disqus-comments["shortname"]&lt;/code&gt; line and replace &amp;ldquo;shortname&amp;rdquo; with the shortname you chose for your Disqus account. If you&amp;rsquo;re not sure what that is, look in the template code on the &lt;em&gt;Universal Code&lt;/em&gt; guide for &lt;code&gt;var disqus_shortname =&lt;/code&gt; at the top of the code box in step 1.&lt;/p&gt;
+
+&lt;p&gt;This is enough to get us comments pages that should now be blissfully free of annoying Yahoo Ads, and also gives us moderation tools and other handy settings for configuring how Disqus works, but there&amp;rsquo;s one other useful step you might want (I did), and that&amp;rsquo;s one of those nice little numbered &amp;ldquo;comments&amp;rdquo; links at the bottom of our posts when looking at the main blog page.&lt;/p&gt;
+
+&lt;p&gt;To do that, we need to make some modifications to &lt;code&gt;index-template.html&lt;/code&gt; and create a footer that contains what we want. We want to add a set of  tags after &lt;code&gt;@|content|&lt;/code&gt; to contain a link that the Disqus software will then modify to contain a comments count. This looks like this:&lt;/p&gt;
+
+&lt;div class="brush: html"&gt;
+ &lt;table class="sourcetable"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td class="linenos"&gt;
+     &lt;div class="linenodiv"&gt;
+      &lt;pre&gt;1
+2
+3
+4
+5&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
+    &lt;td class="code"&gt;
+     &lt;div class="source"&gt;
+      &lt;pre&gt;  &lt;span class="nt"&gt;&amp;lt;footer&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;br&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;@|uri-path|#disqus_thread&amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Comments&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    ** Disqus javascript goes here**
+  &lt;span class="nt"&gt;&amp;lt;/footer&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then, after the &lt;code&gt;a href&lt;/code&gt; line we can just paste in the code from the second box in the &lt;em&gt;Universal Code&lt;/em&gt; guide, under &amp;ldquo;How to display comment count.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;And voila, numbered comments links in our Frog posts!&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>Choosing a Lisp</title>
    <link>http://jarcane.github.com/blog\2014\09\15\choosing-a-lisp.html</link>

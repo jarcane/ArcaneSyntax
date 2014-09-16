@@ -3,15 +3,15 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Technical Difficulties</title>
-    <meta name="description" content="Currently aware of an issue in Frog resulting in malformed page URLs for my posts. Users on browsers other than Chrome will get 404 errors accessing full blog pages. Greg Hendershott is aware of the issue now, and I'll get the site patched as soon as he p...">
+    <title>Disqus comments with Frog</title>
+    <meta name="description" content="I had a slightly tricky time setting up a numbered comment link with Disqus, so I thought it might be helpful to write up a quick post on how I did it.  The standard Frog templates of course include a widget for embedding a Disqus comment thread in a page...">
     <meta name="author"      content="The Unknown Blogger">
-    <meta name="keywords"    content="announcements">
+    <meta name="keywords"    content="Racket, Frog">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://jarcane.github.com/blog\2014\09\16\technical-difficulties.html">
-    <link rel="next" href="/blog\2014\09\15\choosing-a-lisp.html">
-    <link rel="prev" href="/blog\2014\09\16\disqus-comments-with-frog.html">
+    <link rel="canonical" href="http://jarcane.github.com/blog\2014\09\16\disqus-comments-with-frog.html">
+    <link rel="next" href="/blog\2014\09\16\technical-difficulties.html">
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -52,7 +52,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="/index.html" class="navbar-brand">Technical Difficulties</a>
+          <a href="/index.html" class="navbar-brand">Disqus comments with Frog</a>
         </div>
         <div class="collapse navbar-collapse our-nav-collapse"
              role="navigation">
@@ -94,12 +94,48 @@
 
           <article>
   <header>
-    <h1>Technical Difficulties</h1>
+    <h1>Disqus comments with Frog</h1>
     <p class='date-and-tags'>
-<time datetime="2014-09-16" pubdate="true">2014-09-16</time> :: <span class="tags"><a href="/tags/announcements.html">announcements</a></span></p>
+<time datetime="2014-09-16" pubdate="true">2014-09-16</time> :: <span class="tags"><a href="/tags/Racket.html">Racket</a>, <a href="/tags/Frog.html">Frog</a></span></p>
   </header>
 
-<p>Currently aware of an issue in Frog resulting in malformed page URLs for my posts. Users on browsers other than Chrome will get 404 errors accessing full blog pages. Greg Hendershott is aware of the issue now, and I&rsquo;ll get the site patched as soon as he pushes a fix to Frog.</p>
+<p>I had a slightly tricky time setting up a numbered comment link with Disqus, so I thought it might be helpful to write up a quick post on how I did it.</p>
+
+<p>The standard Frog templates of course include a widget for embedding a Disqus comment thread in a page, which is quite handy, however without configuration Disqus defaults to an obnoxious thing full of Yahoo ads. To fix this, you need to register an account with Disqus, and create a new site with it, which you can do <a href="https://disqus.com/admin/create/">here</a>. Give it a name and a unique URL, which will provide the &ldquo;shortname&rdquo; you&rsquo;ll use with the Disqus widget and scripts.</p>
+
+<p>From here, you&rsquo;ll go to the install page, from which you can select from a number of options from which we want to choose the one called <em>Universal Code</em>. This page contains instructions for manually embedding the necessary JavaScript files for Disqus to work. Leave this open for now, we actually don&rsquo;t need it for step 1, which has already been helpfully provided via Frog&rsquo;s Disqus widget.</p>
+
+<p>Instead, we want to open up the <code>post-template.html</code> in our Frog project&rsquo;s _src directory, and look for the <code>@disqus-comments["shortname"]</code> line and replace &ldquo;shortname&rdquo; with the shortname you chose for your Disqus account. If you&rsquo;re not sure what that is, look in the template code on the <em>Universal Code</em> guide for <code>var disqus_shortname =</code> at the top of the code box in step 1.</p>
+
+<p>This is enough to get us comments pages that should now be blissfully free of annoying Yahoo Ads, and also gives us moderation tools and other handy settings for configuring how Disqus works, but there&rsquo;s one other useful step you might want (I did), and that&rsquo;s one of those nice little numbered &ldquo;comments&rdquo; links at the bottom of our posts when looking at the main blog page.</p>
+
+<p>To do that, we need to make some modifications to <code>index-template.html</code> and create a footer that contains what we want. We want to add a set of  tags after <code>@|content|</code> to contain a link that the Disqus software will then modify to contain a comments count. This looks like this:</p>
+
+<div class="brush: html">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2
+3
+4
+5</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre>  <span class="nt">&lt;footer&gt;</span>
+    <span class="nt">&lt;br&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&#39;@|uri-path|#disqus_thread&#39;</span><span class="nt">&gt;</span>Comments<span class="nt">&lt;/a&gt;</span>
+    ** Disqus javascript goes here**
+  <span class="nt">&lt;/footer&gt;</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>Then, after the <code>a href</code> line we can just paste in the code from the second box in the <em>Universal Code</em> guide, under &ldquo;How to display comment count.&rdquo;</p>
+
+<p>And voila, numbered comments links in our Frog posts!</p>
   <footer>
     <script type="text/javascript">
       !function(d,s,id){
@@ -114,11 +150,11 @@
     </script>
     <a href="https://twitter.com/share"
        class="twitter-share-button"
-       data-url="http://jarcane.github.com/blog\2014\09\16\technical-difficulties.html"
+       data-url="http://jarcane.github.com/blog\2014\09\16\disqus-comments-with-frog.html"
        data-dnt="true">
       "Tweet"</a>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-    <g:plusone size="medium" href="http://jarcane.github.com/blog\2014\09\16\technical-difficulties.html"></g:plusone>
+    <g:plusone size="medium" href="http://jarcane.github.com/blog\2014\09\16\disqus-comments-with-frog.html"></g:plusone>
     <script type="text/javascript">
       var disqus_shortname = 'jarcane';
       (function() {
@@ -131,11 +167,9 @@
     </script>
     <div id="disqus_thread"></div>
     <ul class="pager">
-    <li class="previous">
-      <a href="/blog\2014\09\16\disqus-comments-with-frog.html">&larr; <em>Disqus comments with Frog</em></a>
-    </li>
+
     <li class="next">
-      <a href="/blog\2014\09\15\choosing-a-lisp.html"><em>Choosing a Lisp</em> &rarr;</a>
+      <a href="/blog\2014\09\16\technical-difficulties.html"><em>Technical Difficulties</em> &rarr;</a>
     </li>
     </ul>
   </footer>
