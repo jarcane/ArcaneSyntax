@@ -4,9 +4,39 @@
   <title>Arcane Syntax: Posts tagged 'Racket'</title>
   <description>Arcane Syntax: Posts tagged 'Racket'</description>
   <link>http://jarcane.github.com/tags/Racket.html</link>
-  <lastBuildDate>Tue, 16 Sep 2014 10:15:18 FLE Daylight Time</lastBuildDate>
-  <pubDate>Tue, 16 Sep 2014 10:15:18 FLE Daylight Time</pubDate>
+  <lastBuildDate>Wed, 17 Sep 2014 10:43:53 FLE Daylight Time</lastBuildDate>
+  <pubDate>Wed, 17 Sep 2014 10:43:53 FLE Daylight Time</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>We need a new filter</title>
+   <link>http://jarcane.github.com/blog/2014/09/17/we-need-a-new-filter.html</link>
+   <guid>urn:http-jarcane-github-com:-blog-2014-09-17-we-need-a-new-filter-html</guid>
+   <pubDate>Wed, 17 Sep 2014 10:43:53 FLE Daylight Time</pubDate>
+   <description>&lt;html&gt;
+&lt;p&gt;In the wake of recent events in the gaming sphere, I&amp;rsquo;ve been thinking a good hard think. Harassment on the internet is becoming a major societal problem. People&amp;rsquo;s lives are being threatened. Women are bombarded with abuse on an unconscionable scale. Something needs to be done: we can talk until we&amp;rsquo;re blue in the face about why sending someone violent threats and harassment is wrong, but the harassers aren&amp;rsquo;t listening.&lt;/p&gt;
+
+&lt;p&gt;What we need, is an abuse filter.&lt;/p&gt;
+&lt;!-- more--&gt;
+
+&lt;p&gt;Since the public birth of the internet, millions, possibly even billions of dollars have been spent in pursuit of building a better spam filter. Countless man-hours have been dedicated to finding new ways of identifying and properly filing away to /dev/null the endless torrent of garbage emails about Viagra and Nigerian princes.&lt;/p&gt;
+
+&lt;p&gt;And yet, where are the millions spent on solutions for internet harassment? The countless man-or-woman-hours poured into making life on the internet less an endless free-fire zone for abusive sociopaths?&lt;/p&gt;
+
+&lt;p&gt;Most existing social media systems rely entirely on user reporting, essentially leaving it to the user to manually report and block each and every abusive message. This is about as ludicrous a task to demand as it would be for spam. Especially for those targeted by concerted campaigns like #gamergate/#quinnspiracy, this is more or less an intractable problem. Props aplenty for the courage of women like Zoe Quinn and Anita Sarkeesian who&amp;rsquo;ve stuck it out and even done that work, but they never should&amp;rsquo;ve had to do it in the first place, and many choose simply to leave rather than deal with it. Some very talented women and men alike have literally quit gaming entirely over this kind of harassment, and similar incidents have occured elsewhere in any number of fields.&lt;/p&gt;
+
+&lt;p&gt;What we need is something that takes the burden of policing one&amp;rsquo;s own timelines and inboxes off of the user, just as spam filters do for advertising and scams.&lt;/p&gt;
+
+&lt;p&gt;But there&amp;rsquo;s an important difference here: ignoring spam has little consequence. Ignoring violent threats can be dangerous, and even ignoring mundane harassment often sends the message that such behavior is itself without consequence.&lt;/p&gt;
+
+&lt;p&gt;Thus unlike a spam filter which simply consigns a useless message to a dustbin, an abuse filter would need to properly file and report abusive and threatening messages, possibly even for reporting to legal authorities. It needs to be smart enough to know not just what an abusive message is, but what to &lt;em&gt;do&lt;/em&gt; about it.&lt;/p&gt;
+
+&lt;p&gt;This also would require some cooperation from service providers, however, not all of which even provide such avenues. A Twitter client, for instance, would need to be able to report a user as abusive, yet the Twitter APIs, that I can see, do not appear to support reporting a user for abuse, only for spam.&lt;/p&gt;
+
+&lt;p&gt;I am just one guy, a relative amateur at that. This is a large problem that will require brilliant minds, lots of man hours, and probably more resources than I have at my disposal. But that doesn&amp;rsquo;t mean I can&amp;rsquo;t get it started. I intend to take a crack at developing a simple filtering engine to file and classify abusive messages given the pair of an identifying username and the text of the message. I&amp;rsquo;ll be doing it in Racket, because I think the tools Racket offers for parsing might offer some clever avenues for solutions to such problems.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s likely to be unimpressive, and it&amp;rsquo;s likely to bring grumbles about the choice of language, the simplicity of the model, and on and on. That&amp;rsquo;s the point. Consider it my challenge. A first effort to get the ball rolling, with the tacit expectation that you indeed can do better: so prove it.&lt;/p&gt;
+
+&lt;p&gt;Work begins soon, announcements and github repo pending. Let&amp;rsquo;s help make the internet a better place to be.&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>Disqus comments with Frog</title>
    <link>http://jarcane.github.com/blog/2014/09/16/disqus-comments-with-frog.html</link>

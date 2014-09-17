@@ -3,15 +3,15 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Disqus comments with Frog</title>
-    <meta name="description" content="I had a slightly tricky time setting up a numbered comment link with Disqus, so I thought it might be helpful to write up a quick post on how I did it.  The standard Frog templates of course include a widget for embedding a Disqus comment thread in a page...">
+    <title>We need a new filter</title>
+    <meta name="description" content="In the wake of recent events in the gaming sphere, I've been thinking a good hard think. Harassment on the internet is becoming a major societal problem. People's lives are being threatened. Women are bombarded with abuse on an unconscionable scale. Somet...">
     <meta name="author"      content="The Unknown Blogger">
-    <meta name="keywords"    content="Racket, Frog">
+    <meta name="keywords"    content="Racket, abuse">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://jarcane.github.com/blog/2014/09/16/disqus-comments-with-frog.html">
-    <link rel="next" href="/blog/2014/09/16/technical-difficulties.html">
-    <link rel="prev" href="/blog/2014/09/16/uri-bug-fixed.html">
+    <link rel="canonical" href="http://jarcane.github.com/blog/2014/09/17/we-need-a-new-filter.html">
+    <link rel="next" href="/blog/2014/09/16/uri-bug-fixed.html">
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -52,7 +52,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="/index.html" class="navbar-brand">Disqus comments with Frog</a>
+          <a href="/index.html" class="navbar-brand">We need a new filter</a>
         </div>
         <div class="collapse navbar-collapse our-nav-collapse"
              role="navigation">
@@ -96,48 +96,35 @@
 
           <article>
   <header>
-    <h1>Disqus comments with Frog</h1>
+    <h1>We need a new filter</h1>
     <p class='date-and-tags'>
-<time datetime="2014-09-16" pubdate="true">2014-09-16</time> :: <span class="tags"><a href="/tags/Racket.html">Racket</a>, <a href="/tags/Frog.html">Frog</a></span></p>
+<time datetime="2014-09-17" pubdate="true">2014-09-17</time> :: <span class="tags"><a href="/tags/Racket.html">Racket</a>, <a href="/tags/abuse.html">abuse</a></span></p>
   </header>
 
-<p>I had a slightly tricky time setting up a numbered comment link with Disqus, so I thought it might be helpful to write up a quick post on how I did it.</p>
+<p>In the wake of recent events in the gaming sphere, I&rsquo;ve been thinking a good hard think. Harassment on the internet is becoming a major societal problem. People&rsquo;s lives are being threatened. Women are bombarded with abuse on an unconscionable scale. Something needs to be done: we can talk until we&rsquo;re blue in the face about why sending someone violent threats and harassment is wrong, but the harassers aren&rsquo;t listening.</p>
 
-<p>The standard Frog templates of course include a widget for embedding a Disqus comment thread in a page, which is quite handy, however without configuration Disqus defaults to an obnoxious thing full of Yahoo ads. To fix this, you need to register an account with Disqus, and create a new site with it, which you can do <a href="https://disqus.com/admin/create/">here</a>. Give it a name and a unique URL, which will provide the &ldquo;shortname&rdquo; you&rsquo;ll use with the Disqus widget and scripts.</p>
+<p>What we need, is an abuse filter.</p>
+<!-- more-->
 
-<p>From here, you&rsquo;ll go to the install page, from which you can select from a number of options from which we want to choose the one called <em>Universal Code</em>. This page contains instructions for manually embedding the necessary JavaScript files for Disqus to work. Leave this open for now, we actually don&rsquo;t need it for step 1, which has already been helpfully provided via Frog&rsquo;s Disqus widget.</p>
+<p>Since the public birth of the internet, millions, possibly even billions of dollars have been spent in pursuit of building a better spam filter. Countless man-hours have been dedicated to finding new ways of identifying and properly filing away to /dev/null the endless torrent of garbage emails about Viagra and Nigerian princes.</p>
 
-<p>Instead, we want to open up the <code>post-template.html</code> in our Frog project&rsquo;s _src directory, and look for the <code>@disqus-comments["shortname"]</code> line and replace &ldquo;shortname&rdquo; with the shortname you chose for your Disqus account. If you&rsquo;re not sure what that is, look in the template code on the <em>Universal Code</em> guide for <code>var disqus_shortname =</code> at the top of the code box in step 1.</p>
+<p>And yet, where are the millions spent on solutions for internet harassment? The countless man-or-woman-hours poured into making life on the internet less an endless free-fire zone for abusive sociopaths?</p>
 
-<p>This is enough to get us comments pages that should now be blissfully free of annoying Yahoo Ads, and also gives us moderation tools and other handy settings for configuring how Disqus works, but there&rsquo;s one other useful step you might want (I did), and that&rsquo;s one of those nice little numbered &ldquo;comments&rdquo; links at the bottom of our posts when looking at the main blog page.</p>
+<p>Most existing social media systems rely entirely on user reporting, essentially leaving it to the user to manually report and block each and every abusive message. This is about as ludicrous a task to demand as it would be for spam. Especially for those targeted by concerted campaigns like #gamergate/#quinnspiracy, this is more or less an intractable problem. Props aplenty for the courage of women like Zoe Quinn and Anita Sarkeesian who&rsquo;ve stuck it out and even done that work, but they never should&rsquo;ve had to do it in the first place, and many choose simply to leave rather than deal with it. Some very talented women and men alike have literally quit gaming entirely over this kind of harassment, and similar incidents have occured elsewhere in any number of fields.</p>
 
-<p>To do that, we need to make some modifications to <code>index-template.html</code> and create a footer that contains what we want. We want to add a set of  tags after <code>@|content|</code> to contain a link that the Disqus software will then modify to contain a comments count. This looks like this:</p>
+<p>What we need is something that takes the burden of policing one&rsquo;s own timelines and inboxes off of the user, just as spam filters do for advertising and scams.</p>
 
-<div class="brush: html">
- <table class="sourcetable">
-  <tbody>
-   <tr>
-    <td class="linenos">
-     <div class="linenodiv">
-      <pre>1
-2
-3
-4
-5</pre></div></td>
-    <td class="code">
-     <div class="source">
-      <pre>  <span class="nt">&lt;footer&gt;</span>
-    <span class="nt">&lt;br&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&#39;@|uri-path|#disqus_thread&#39;</span><span class="nt">&gt;</span>Comments<span class="nt">&lt;/a&gt;</span>
-    ** Disqus javascript goes here**
-  <span class="nt">&lt;/footer&gt;</span>
-</pre></div>
-</td></tr></tbody></table>
-</div>
+<p>But there&rsquo;s an important difference here: ignoring spam has little consequence. Ignoring violent threats can be dangerous, and even ignoring mundane harassment often sends the message that such behavior is itself without consequence.</p>
 
-<p>Then, after the <code>a href</code> line we can just paste in the code from the second box in the <em>Universal Code</em> guide, under &ldquo;How to display comment count.&rdquo;</p>
+<p>Thus unlike a spam filter which simply consigns a useless message to a dustbin, an abuse filter would need to properly file and report abusive and threatening messages, possibly even for reporting to legal authorities. It needs to be smart enough to know not just what an abusive message is, but what to <em>do</em> about it.</p>
 
-<p>And voila, numbered comments links in our Frog posts!</p>
+<p>This also would require some cooperation from service providers, however, not all of which even provide such avenues. A Twitter client, for instance, would need to be able to report a user as abusive, yet the Twitter APIs, that I can see, do not appear to support reporting a user for abuse, only for spam.</p>
+
+<p>I am just one guy, a relative amateur at that. This is a large problem that will require brilliant minds, lots of man hours, and probably more resources than I have at my disposal. But that doesn&rsquo;t mean I can&rsquo;t get it started. I intend to take a crack at developing a simple filtering engine to file and classify abusive messages given the pair of an identifying username and the text of the message. I&rsquo;ll be doing it in Racket, because I think the tools Racket offers for parsing might offer some clever avenues for solutions to such problems.</p>
+
+<p>It&rsquo;s likely to be unimpressive, and it&rsquo;s likely to bring grumbles about the choice of language, the simplicity of the model, and on and on. That&rsquo;s the point. Consider it my challenge. A first effort to get the ball rolling, with the tacit expectation that you indeed can do better: so prove it.</p>
+
+<p>Work begins soon, announcements and github repo pending. Let&rsquo;s help make the internet a better place to be.</p>
   <footer>
     <script type="text/javascript">
       !function(d,s,id){
@@ -152,11 +139,11 @@
     </script>
     <a href="https://twitter.com/share"
        class="twitter-share-button"
-       data-url="http://jarcane.github.com/blog/2014/09/16/disqus-comments-with-frog.html"
+       data-url="http://jarcane.github.com/blog/2014/09/17/we-need-a-new-filter.html"
        data-dnt="true">
       "Tweet"</a>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-    <g:plusone size="medium" href="http://jarcane.github.com/blog/2014/09/16/disqus-comments-with-frog.html"></g:plusone>
+    <g:plusone size="medium" href="http://jarcane.github.com/blog/2014/09/17/we-need-a-new-filter.html"></g:plusone>
     <script type="text/javascript">
       var disqus_shortname = 'jarcane';
       (function() {
@@ -169,11 +156,9 @@
     </script>
     <div id="disqus_thread"></div>
     <ul class="pager">
-    <li class="previous">
-      <a href="/blog/2014/09/16/uri-bug-fixed.html">&larr; <em>URI bug fixed</em></a>
-    </li>
+
     <li class="next">
-      <a href="/blog/2014/09/16/technical-difficulties.html"><em>Technical Difficulties</em> &rarr;</a>
+      <a href="/blog/2014/09/16/uri-bug-fixed.html"><em>URI bug fixed</em> &rarr;</a>
     </li>
     </ul>
   </footer>
