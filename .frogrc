@@ -6,7 +6,7 @@ author = John Berry
 
 # What editor to launch with --edit. $EDITOR means to use $EDITOR from
 # the environment
-editor = c:\emacs-24.4\bin\runemacs.exe
+editor = c:\\emacs-24.4\\bin\\runemacs.exe
 
 # The command to run, in case you need to customize how the editor is
 # called. For example, {editor} {filename} will call:
