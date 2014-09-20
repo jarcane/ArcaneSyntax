@@ -4,7 +4,17 @@
  <link rel="self" href="http://jarcane.github.com/feeds/all.atom.xml" />
  <link href="http://jarcane.github.com/index.html" />
  <id>urn:http-jarcane-github-com:-index-html</id>
- <updated>2014-09-19T10:53:59Z</updated>
+ <updated>2014-09-20T15:43:43Z</updated>
+ <entry>
+  <title type="text">Trying a new theme</title>
+  <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/20/trying-a-new-theme.html" />
+  <id>urn:http-jarcane-github-com:-blog-2014-09-20-trying-a-new-theme-html</id>
+  <published>2014-09-20T15:43:43Z</published>
+  <updated>2014-09-20T15:43:43Z</updated>
+  <author>
+   <name>John Berry</name></author>
+  <content type="html">&lt;html&gt;
+&lt;p&gt;It would appear that Bootswatch has been updated to Boostrap 3, because I was able to install Slate without any apparent issue. Let me know if you notice anything. I&amp;rsquo;m also testing some issues with Frog giving me grief on builds.&lt;/p&gt;&lt;/html&gt;</content></entry>
  <entry>
   <title type="text">Apologizing for exuberance</title>
   <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/19/apologizing-for-exuberance.html" />

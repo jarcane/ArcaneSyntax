@@ -4,9 +4,16 @@
   <title>Arcane Syntax: Posts tagged 'announcements'</title>
   <description>Arcane Syntax: Posts tagged 'announcements'</description>
   <link>http://jarcane.github.com/tags/announcements.html</link>
-  <lastBuildDate>Tue, 16 Sep 2014 22:29:00 FLE Daylight Time</lastBuildDate>
-  <pubDate>Tue, 16 Sep 2014 22:29:00 FLE Daylight Time</pubDate>
+  <lastBuildDate>Sat, 20 Sep 2014 15:43:43 FLE Daylight Time</lastBuildDate>
+  <pubDate>Sat, 20 Sep 2014 15:43:43 FLE Daylight Time</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>Trying a new theme</title>
+   <link>http://jarcane.github.com/blog/2014/09/20/trying-a-new-theme.html</link>
+   <guid>urn:http-jarcane-github-com:-blog-2014-09-20-trying-a-new-theme-html</guid>
+   <pubDate>Sat, 20 Sep 2014 15:43:43 FLE Daylight Time</pubDate>
+   <description>&lt;html&gt;
+&lt;p&gt;It would appear that Bootswatch has been updated to Boostrap 3, because I was able to install Slate without any apparent issue. Let me know if you notice anything. I&amp;rsquo;m also testing some issues with Frog giving me grief on builds.&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>URI bug fixed</title>
    <link>http://jarcane.github.com/blog/2014/09/16/uri-bug-fixed.html</link>
