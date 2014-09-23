@@ -2,6 +2,7 @@ http://jarcane.github.com/blog/2014/09/15/christening-the-grimoire.html
 http://jarcane.github.com/blog/2014/09/15/choosing-a-lisp.html
 http://jarcane.github.com/blog/2014/09/19/apologizing-for-exuberance.html
 http://jarcane.github.com/blog/2014/09/16/disqus-comments-with-frog.html
+http://jarcane.github.com/blog/2014/09/23/announcing-try-racket-org.html
 http://jarcane.github.com/blog/2014/09/17/we-need-a-new-filter.html
 http://jarcane.github.com/blog/2014/09/20/trying-a-new-theme.html
 http://jarcane.github.com/blog/2014/09/16/technical-difficulties.html

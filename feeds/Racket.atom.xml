@@ -4,7 +4,21 @@
  <link rel="self" href="http://jarcane.github.com/feeds/Racket.atom.xml" />
  <link href="http://jarcane.github.com/tags/Racket.html" />
  <id>urn:http-jarcane-github-com:-tags-Racket-html</id>
- <updated>2014-09-17T10:43:53Z</updated>
+ <updated>2014-09-23T20:10:45Z</updated>
+ <entry>
+  <title type="text">Announcing try-racket.org</title>
+  <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/23/announcing-try-racket-org.html" />
+  <id>urn:http-jarcane-github-com:-blog-2014-09-23-announcing-try-racket-org-html</id>
+  <published>2014-09-23T20:10:45Z</published>
+  <updated>2014-09-23T20:10:45Z</updated>
+  <author>
+   <name>John Berry</name></author>
+  <content type="html">&lt;html&gt;
+&lt;p&gt;It is my pleasure to announce that at long last, Racket has an online REPL. I&amp;rsquo;ve taken it upon myself to acquire a domain and a DigitalOcean droplet, and hosted the long-mothballed Try Racket code which you can find at &lt;a href="http://try-racket.org"&gt;http://try-racket.org&lt;/a&gt;. The PLT folks have also kindly offered an alternate URL at &lt;a href="http://try.racket-lang.org"&gt;http://try.racket-lang.org&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve also taken up the responsibility of maintaining the code: I had to fork it by necessity to modify some things necessary to get it to run without X, and as the original maintainer had no interest in pursuing it further than that, he asked me if I&amp;rsquo;d like to take over. You can thus find my fork of it &lt;a href="https://github.com/jarcane/try-racket"&gt;here&lt;/a&gt;, where future issues and development should take place.&lt;/p&gt;
+
+&lt;p&gt;The code&amp;rsquo;s still a bit rough, with a number of issues to be resolved, and I welcome any and all contributions to the code; pull requests will be tested and then accepted so long as they don&amp;rsquo;t appear to be breaking anything. In particular, it seems the memory constraints for the sandbox need revision to prevent a server crash, and there is some amount of demand for proper multi-line entry in the style of the offline Racket REPL. The tutorial is a bit tedious without it at present.&lt;/p&gt;&lt;/html&gt;</content></entry>
  <entry>
   <title type="text">We need a new filter</title>
   <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/17/we-need-a-new-filter.html" />
