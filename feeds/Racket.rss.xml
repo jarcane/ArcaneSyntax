@@ -4,9 +4,20 @@
   <title>Arcane Syntax: Posts tagged 'Racket'</title>
   <description>Arcane Syntax: Posts tagged 'Racket'</description>
   <link>http://jarcane.github.com/tags/Racket.html</link>
-  <lastBuildDate>Tue, 23 Sep 2014 20:10:45 FLE Daylight Time</lastBuildDate>
-  <pubDate>Tue, 23 Sep 2014 20:10:45 FLE Daylight Time</pubDate>
+  <lastBuildDate>Sun, 28 Sep 2014 23:13:13 FLE Daylight Time</lastBuildDate>
+  <pubDate>Sun, 28 Sep 2014 23:13:13 FLE Daylight Time</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>HateStack: The self-deleting rantbin</title>
+   <link>http://jarcane.github.com/blog/2014/09/28/hatestack-the-self-deleting-rantbin.html</link>
+   <guid>urn:http-jarcane-github-com:-blog-2014-09-28-hatestack-the-self-deleting-rantbin-html</guid>
+   <pubDate>Sun, 28 Sep 2014 23:13:13 FLE Daylight Time</pubDate>
+   <description>&lt;html&gt;
+&lt;p&gt;Inspired by a tweet that Zoe Quinn made the other day, I knocked out a little web app over the weekend for a self-deleting public blogthing. The original spec was a social network that worked like a SnapChat for text, in which the user could post an angry rant with the assurance that it would be automatically deleted in 30 minutes&amp;rsquo; time.&lt;/p&gt;
+
+&lt;p&gt;Taking that a step further, in part to limit its utility for nefarious purposes and also in part to keep the project simple, I adapted this to a single-page stack model, with post contents dwelling entirely within memory to ensure maximum privacy. Gone is gone, here, no database remnants or temporary files.&lt;/p&gt;
+
+&lt;p&gt;The result is &lt;a href="https://t.co/bX5kiqZSm7"&gt;HateStack&lt;/a&gt;, a simple Racket web application in a single 172-line file, with layout assistance from Bootstrap (helpfully imported by BootstrapCDN). It&amp;rsquo;s not yet hosted anywhere; to be honest I&amp;rsquo;m not in a great hurry to go wrestling with yet another server when I&amp;rsquo;ve still probably got work to do on &lt;a href="http://try-racket.org"&gt;Try Racket&lt;/a&gt;. But it was an interesting little project that gave me a chance to tinker a bit more with my HTML/CSS skills, and thus be reminded why most of the time I play around with almost anything else besides web applications &amp;hellip;&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>Announcing try-racket.org</title>
    <link>http://jarcane.github.com/blog/2014/09/23/announcing-try-racket-org.html</link>
