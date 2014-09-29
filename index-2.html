@@ -3,13 +3,13 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Posts tagged 'Frog'</title>
-    <meta name="description" content="Posts tagged 'Frog'">
+    <title>Arcane Syntax (page 2)</title>
+    <meta name="description" content="Arcane Syntax (page 2)">
     <meta name="author"      content="John Berry">
-    <meta name="keywords"    content="Frog">
+    <meta name="keywords"    content="Lisp, programming, all, games, Frog, announcements, learning, abuse, Racket">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://jarcane.github.com/tags/Frog.html">
+    <link rel="canonical" href="http://jarcane.github.com/index-2.html">
 
 
     <!-- CSS -->
@@ -19,9 +19,9 @@
     <link rel="stylesheet" type="text/css" href="/css/custom.css">
     <!-- Feeds -->
     <link ref="alternate" type="application/atom+xml"
-          href="/feeds/Frog.atom.xml" title="Atom Feed">
+          href="/feeds/all.atom.xml" title="Atom Feed">
     <link ref="alternate" type="application/rss+xml"
-          href="/feeds/Frog.rss.xml" title="RSS Feed">
+          href="/feeds/all.rss.xml" title="RSS Feed">
     <!-- JS -->
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -52,7 +52,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="/index.html" class="navbar-brand">Posts tagged 'Frog'</a>
+          <a href="/index.html" class="navbar-brand">Arcane Syntax (page 2)</a>
         </div>
         <div class="collapse navbar-collapse our-nav-collapse"
              role="navigation">
@@ -84,8 +84,8 @@
             <li>
               <a href="/About.html">About</a>
             </li> 
-            <li><a href="/feeds/Frog.atom.xml">Atom</a></li>
-            <li><a href="/feeds/Frog.rss.xml">RSS</a></li>
+            <li><a href="/feeds/all.atom.xml">Atom</a></li>
+            <li><a href="/feeds/all.rss.xml">RSS</a></li>
           </ul>
         </div>
       </div>
@@ -98,55 +98,23 @@
 
 
 
-          <h1>Posts tagged <em>Frog</em></h1>
+
 
           <article>
   <header>
-    <h2><a href='/blog/2014/09/16/disqus-comments-with-frog.html'>Disqus comments with Frog</a></h2>
+    <h2><a href='/blog/2014/09/15/christening-the-grimoire.html'>Christening the Grimoire</a></h2>
     <p class='date-and-tags'>
-<time datetime="2014-09-16" pubdate="true">2014-09-16</time> :: <span class="tags"><a href="/tags/Racket.html">Racket</a>, <a href="/tags/Frog.html">Frog</a></span></p>
+<time datetime="2014-09-15" pubdate="true">2014-09-15</time> :: <span class="tags"><a href="/tags/announcements.html">announcements</a></span></p>
   </header>
 
-<p>I had a slightly tricky time setting up a numbered comment link with Disqus, so I thought it might be helpful to write up a quick post on how I did it.</p>
+<p>Welcome to Arcane Syntax, destined to be the new home of all things relating to the arcane art of computer programming and development, as flowing from the mind of myself, an self-trained apprentice programmer, Finnish language student, and former tabletop games writer.</p>
 
-<p>The standard Frog templates of course include a widget for embedding a Disqus comment thread in a page, which is quite handy, however without configuration Disqus defaults to an obnoxious thing full of Yahoo ads. To fix this, you need to register an account with Disqus, and create a new site with it, which you can do <a href="https://disqus.com/admin/create/">here</a>. Give it a name and a unique URL, which will provide the &ldquo;shortname&rdquo; you&rsquo;ll use with the Disqus widget and scripts.</p>
+<p>The chief subject matter of Arcane Syntax is likely at this point to be focusing especially on the Racket programming language, which has ultimately proved my favorite home in the magical land of Lisp dialects, for reasons which I shall expound upon in my next post.</p>
 
-<p>From here, you&rsquo;ll go to the install page, from which you can select from a number of options from which we want to choose the one called <em>Universal Code</em>. This page contains instructions for manually embedding the necessary JavaScript files for Disqus to work. Leave this open for now, we actually don&rsquo;t need it for step 1, which has already been helpfully provided via Frog&rsquo;s Disqus widget.</p>
-
-<p>Instead, we want to open up the <code>post-template.html</code> in our Frog project&rsquo;s _src directory, and look for the <code>@disqus-comments["shortname"]</code> line and replace &ldquo;shortname&rdquo; with the shortname you chose for your Disqus account. If you&rsquo;re not sure what that is, look in the template code on the <em>Universal Code</em> guide for <code>var disqus_shortname =</code> at the top of the code box in step 1.</p>
-
-<p>This is enough to get us comments pages that should now be blissfully free of annoying Yahoo Ads, and also gives us moderation tools and other handy settings for configuring how Disqus works, but there&rsquo;s one other useful step you might want (I did), and that&rsquo;s one of those nice little numbered &ldquo;comments&rdquo; links at the bottom of our posts when looking at the main blog page.</p>
-
-<p>To do that, we need to make some modifications to <code>index-template.html</code> and create a footer that contains what we want. We want to add a set of  tags after <code>@|content|</code> to contain a link that the Disqus software will then modify to contain a comments count. This looks like this:</p>
-
-<div class="brush: html">
- <table class="sourcetable">
-  <tbody>
-   <tr>
-    <td class="linenos">
-     <div class="linenodiv">
-      <pre>1
-2
-3
-4
-5</pre></div></td>
-    <td class="code">
-     <div class="source">
-      <pre>  <span class="nt">&lt;footer&gt;</span>
-    <span class="nt">&lt;br&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&#39;@|uri-path|#disqus_thread&#39;</span><span class="nt">&gt;</span>Comments<span class="nt">&lt;/a&gt;</span>
-    ** Disqus javascript goes here**
-  <span class="nt">&lt;/footer&gt;</span>
-</pre></div>
-</td></tr></tbody></table>
-</div>
-
-<p>Then, after the <code>a href</code> line we can just paste in the code from the second box in the <em>Universal Code</em> guide, under &ldquo;How to display comment count.&rdquo;</p>
-
-<p>And voila, numbered comments links in our Frog posts!</p>
+<p>I have been at this programming thing for but a short time, having previously not touched more than a few simple dice rollers in at least a decade. If something I should happen to post on this blog demonstrate a profound ignorance, it is likely for lack of education, and thus polite instruction is likely to be welcomed eagerly.</p>
   <footer>
     <br>
-    <a href='/blog/2014/09/16/disqus-comments-with-frog.html#disqus_thread'>Comments</a>
+    <a href='/blog/2014/09/15/christening-the-grimoire.html#disqus_thread'>Comments</a>
     <script type="text/javascript">
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'jarcane'; // required: replace example with your forum shortname
@@ -163,9 +131,10 @@
 </article>
 <footer>
  <ul class="pagination">
-  <li class="disabled"><a href="#">
+  <li><a href="/index.html">
     <quote>&larr;</quote></a></li>
-  <li class="active"><a href="/tags/Frog.html">1</a></li>
+  <li><a href="/index.html">1</a></li>
+  <li class="active"><a href="/index-2.html">2</a></li>
   <li class="disabled"><a href="#">
     <quote>&rarr;</quote></a></li></ul></footer>
         </div>

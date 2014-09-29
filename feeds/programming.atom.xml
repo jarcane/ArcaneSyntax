@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">Arcane Syntax: Posts tagged 'programming'</title>
+ <link rel="self" href="http://jarcane.github.com/feeds/programming.atom.xml" />
+ <link href="http://jarcane.github.com/tags/programming.html" />
+ <id>urn:http-jarcane-github-com:-tags-programming-html</id>
+ <updated>2014-09-29T23:08:19Z</updated>
+ <entry>
+  <title type="text">Learning Programming: the Backlog</title>
+  <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/29/learning-programming-the-backlog.html" />
+  <id>urn:http-jarcane-github-com:-blog-2014-09-29-learning-programming-the-backlog-html</id>
+  <published>2014-09-29T23:08:19Z</published>
+  <updated>2014-09-29T23:08:19Z</updated>
+  <author>
+   <name>John Berry</name></author>
+  <content type="html">&lt;html&gt;
+&lt;p&gt;Thus far, I have been back to programming for a vanishingly small amount of time, roughly three months by Github commit reckoning (plus a bit of time spent in Codecademy). In that time it has seemed, to myself and even to others to a lesser extent, rather remarkable the amount of progress I&amp;rsquo;ve made. In just that three months and change I&amp;rsquo;ve written a roguelike game, an old-fashioned line editor, a text graphics wrapper, an esolang, a virtual machine, a basic weblog, and even taken over as chief maintainer of an open source project for the first time.&lt;/p&gt;
+
+&lt;p&gt;Thus by all appearances, it seems like I&amp;rsquo;ve already learned a lot, and in some ways that&amp;rsquo;s true.&lt;/p&gt;
+
+&lt;p&gt;In other ways, it&amp;rsquo;s not.&lt;/p&gt;
+&lt;!-- more--&gt;
+
+&lt;p&gt;What I have learned thus far, more than anything, is that in actuality for someone with a particular frame of mind and some grasp of logical thinking and problem solving, it is relatively easy to make a seemingly large amount of apparenty progress as a programmer in a very short span of time.&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;I&amp;rsquo;ve realized that it is very easy to get fairly far in programming with just a little bit of knowlege and some basic logic skills, but then when you start wanting to push just a bit farther than that, the whole sense of progress collapses like a house of cards &amp;hellip;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;And the thing is, this can be a very dangerous trap, for learning anything. A crucial time, one I&amp;rsquo;m frankly wrestling with. When learning (or re-learning) a new skill, there&amp;rsquo;s a point at which the &amp;ldquo;good start&amp;rdquo; you&amp;rsquo;ve made is actually a hindrance. You &lt;em&gt;can&lt;/em&gt; become a programmer in 28 days.&lt;/p&gt;
+
+&lt;p&gt;You might even be decent at it, given some more practice, if you&amp;rsquo;ve the head for it and all you want to do is be a &lt;a href="http://www.paulgraham.com/avg.html"&gt;&amp;ldquo;Blub&amp;rdquo;&lt;/a&gt; coder for life. In the old days this was how a lot of working programmers got started, and cubicle farms the world over are similarly filled with these. The local Java apprenticeship program I think lasts all of three months. Many so-called &amp;ldquo;hacker schools&amp;rdquo; and &amp;ldquo;bootcamps&amp;rdquo; more or less crash-course young minds through an easy language like Ruby or Python in a matter of weeks and send them off into the world $10,000 poorer and with all the coding knowledge of the average Codecademy user.&lt;/p&gt;
+
+&lt;p&gt;To be a &lt;em&gt;good&lt;/em&gt; one, though, even a &lt;em&gt;great&lt;/em&gt; one, you need to be willing to set aside that &amp;ldquo;good start&amp;rdquo; and keep building back on the fundamentals again and again. And when you already have that start, when you already feel like you &lt;em&gt;are&lt;/em&gt; &amp;ldquo;good enough,&amp;rdquo; it&amp;rsquo;s incredibly hard to force yourself to go back to feeling like you&amp;rsquo;ve no idea what you&amp;rsquo;re doing all over again.&lt;/p&gt;
+
+&lt;p&gt;I programmed when I was younger, quite a lot in fact, and that skill never quite decays, so that plus some great re-introductory material seemed to be catapulting me into the stratosphere at a rate not dissimilar from my foray into book publishing. There was a window when I think I was even getting a bit cocky about it. Racket was good for breaking this. The basics of Racket are as easy to grasp as any other, probably the easiest Lisp to learn, with some pretty good intro books and guides. But those advanced topics, the language tools, the contracts, the dialects, all hang there in the Guide sidebar reminding you of just how much more there is to learn. And hanging out with the PLT crew, and the #esolang hackers, and other similarly smart folk (seriously the smartest people I&amp;rsquo;ve ever met in programming were either esolang nerds or Lispers or one flavor or another), is also hugely eye-opening for a cocky young sprat.&lt;/p&gt;
+
+&lt;p&gt;This is all one reason why I&amp;rsquo;ve picked up quite a bit of backlog of books to study, probably enough to fill a year&amp;rsquo;s university curriculum at a minimum. Now that the rambling phase of the post is over, I thought it might be useful to someone or simply for posterity to catalog my current &amp;ldquo;learn stack&amp;rdquo;. These are the books I want to tackle in the near-ish future, though in what order and which next is still the subject of some debate.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.ccs.neu.edu/home/matthias/HtDP2e/"&gt;How To Design Programs&lt;/a&gt; - I&amp;rsquo;ve started this book twice. Both times I&amp;rsquo;ve got impatient or distracted and gone on to something that seemed to be leading me towards more direct progress; it has a very particular style of design it teaches that I found a bit odd, and the focus on &amp;ldquo;learning languages&amp;rdquo; was a bit frustrating when all I really wanted to do was learn more about Racket proper.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://mitpress.mit.edu/sicp/full-text/book/book-Z-H-1.html"&gt;Structure and Interpretation of Computer Programs&lt;/a&gt; - Anyone who is reading this probably already is at least familiar with this name. It seems to be perhaps one of the most well-regarded books on programming and CS there is; almost no one I&amp;rsquo;ve ever spoken to about it had anything but glowing praise, even the ones who didn&amp;rsquo;t even write Scheme or Lisp anymore. I&amp;rsquo;m definitely curious, especially as it covers a lot of systems programming stuff that seems to be where my mind wants to go as a programmer. (For similar reasons, I&amp;rsquo;m also really interested in &lt;a href="http://cs.brown.edu/courses/cs173/2012/book/"&gt;PLAI&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.buildyourownlisp.com/"&gt;Build Your Own Lisp&lt;/a&gt; - An unusual approach for a new language introduction, this book aims to teach the reader C by walking them through the development of a dialect of Lisp. I&amp;rsquo;m a bit suspicious of some of the design decisions (it controversially avoids dealing with quote and macros by replacing them with something called &amp;ldquo;Q-expressions&amp;rdquo;), but C is a good language to know and this seems like a fun way to learn it. In a similar vein, there is &lt;a href="https://en.wikibooks.org/wiki/Write_Yourself_a_Scheme_in_48_Hours"&gt;Write Yourself A Scheme in 48 Hours&lt;/a&gt;, which aims to give a crash course in Haskell by teaching you how to build a basic Scheme interpreter with it. This leads to my next pick:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://learnyouahaskell.com/"&gt;Learn You a Haskel for Great Good&lt;/a&gt; - I am deeply curious about Haskell, because I am deeply curious about functional programming and also by the unusual arcaneness of it. This book seems to be a fan favorite, as it were, and the tone is certainly inviting. There&amp;rsquo;s also an &lt;a href="http://learnyousomeerlang.com/"&gt;Erlang book&lt;/a&gt; inspired by it, which I&amp;rsquo;m more interested for professional reasons: it was invented next-door, as it were, so there&amp;rsquo;s a fair number of jobs about in Erlang still.&lt;/p&gt;
+
+&lt;p&gt;I think the next book I tackle will be one of these, I just haven&amp;rsquo;t decided which yet. I&amp;rsquo;m very open to advice, so feel free to leave your thoughts in the comments, as opinionated as you like.&lt;/p&gt;&lt;/html&gt;</content></entry></feed>
