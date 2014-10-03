@@ -4,9 +4,123 @@
   <title>Arcane Syntax: Arcane Syntax</title>
   <description>Arcane Syntax: Arcane Syntax</description>
   <link>http://jarcane.github.com/index.html</link>
-  <lastBuildDate>Mon, 29 Sep 2014 23:08:19 FLE Daylight Time</lastBuildDate>
-  <pubDate>Mon, 29 Sep 2014 23:08:19 FLE Daylight Time</pubDate>
+  <lastBuildDate>Fri, 03 Oct 2014 23:25:10 FLE Daylight Time</lastBuildDate>
+  <pubDate>Fri, 03 Oct 2014 23:25:10 FLE Daylight Time</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>Haskell is Cool</title>
+   <link>http://jarcane.github.com/blog/2014/10/03/haskell-is-cool.html</link>
+   <guid>urn:http-jarcane-github-com:-blog-2014-10-03-haskell-is-cool-html</guid>
+   <pubDate>Fri, 03 Oct 2014 23:25:10 FLE Daylight Time</pubDate>
+   <description>&lt;html&gt;
+&lt;p&gt;After my last post and some thinking, I ultimately settled on &lt;em&gt;Learn You a Haskell&lt;/em&gt; as my next book to work through, and after some initial hassles trying to get a decent working environment set up, I must say that I&amp;rsquo;m quite enjoying the language itself. It was running across &lt;a href="http://tryhaskell.org/"&gt;Try Haskell&lt;/a&gt; that actually spurred me to finally take the leap in that direction (seriously, online REPLs are the best language demos period), and I was quickly impressed by the power hiding in that seemingly obtuse syntax.&lt;/p&gt;
+
+&lt;p&gt;And of course, like everyone else ever (so many that &lt;em&gt;Learn You a Haskell&lt;/em&gt; actually makes a bit of a joke out of it), I was impressed as hell with the Haskell quicksort solution.&lt;/p&gt;
+
+&lt;p&gt;But after some tinkering in Racket, not for precisely the same reasons as the book uses it.&lt;/p&gt;
+&lt;!-- more--&gt;
+
+&lt;p&gt;For reference, the Haskell recursive quicksort looks like this:&lt;/p&gt;
+
+&lt;div class="brush: haskell"&gt;
+ &lt;table class="sourcetable"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td class="linenos"&gt;
+     &lt;div class="linenodiv"&gt;
+      &lt;pre&gt;1
+2
+3
+4
+5
+6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
+    &lt;td class="code"&gt;
+     &lt;div class="source"&gt;
+      &lt;pre&gt;&lt;span class="nf"&gt;quicksort&lt;/span&gt; &lt;span class="ow"&gt;::&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;Ord&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="ow"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="nf"&gt;quicksort&lt;/span&gt; &lt;span class="kt"&gt;[]&lt;/span&gt; &lt;span class="ow"&gt;=&lt;/span&gt; &lt;span class="kt"&gt;[]&lt;/span&gt;
+&lt;span class="nf"&gt;quicksort&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="kt"&gt;:&lt;/span&gt;&lt;span class="n"&gt;xs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;=&lt;/span&gt;
+    &lt;span class="kr"&gt;let&lt;/span&gt; &lt;span class="n"&gt;smallerSorted&lt;/span&gt; &lt;span class="ow"&gt;=&lt;/span&gt; &lt;span class="n"&gt;quicksort&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="n"&gt;xs&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;biggerSorted&lt;/span&gt; &lt;span class="ow"&gt;=&lt;/span&gt; &lt;span class="n"&gt;quicksort&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="ow"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="n"&gt;xs&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="kr"&gt;in&lt;/span&gt; &lt;span class="n"&gt;smallerSorted&lt;/span&gt; &lt;span class="o"&gt;++&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;++&lt;/span&gt; &lt;span class="n"&gt;biggerSorted&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I know, right? It&amp;rsquo;s short and sweet, and using multiple recursion and list filtering to solve it takes a hell of a lot of the work out of it. Hell, this is actually the first version of quicksort I&amp;rsquo;ve ever understood; though in my defense the last time I tried to write a quicksort was some 15 years ago as a teenage BASIC hacker (I failed. Repeatedly.)&lt;/p&gt;
+
+&lt;p&gt;The book of course uses it as an example of the power of recursion, and it is indeed a good example of where clever use of that can do a lot in very little space (though personally I think the lazy factorial method is a cooler example), but the thing is that any language that implements good recursion can do the same algorithm and just as fast.&lt;/p&gt;
+
+&lt;p&gt;For instance, Racket can do the exact same algorithm in just a few more lines (most of them in this case for clarity and convenience, semantically it&amp;rsquo;s &lt;em&gt;almost&lt;/em&gt; identical [but not quite, and I&amp;rsquo;ll get to why]).&lt;/p&gt;
+
+&lt;div class="brush: racket"&gt;
+ &lt;table class="sourcetable"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td class="linenos"&gt;
+     &lt;div class="linenodiv"&gt;
+      &lt;pre&gt;1
+2
+3
+4
+5
+6
+7
+8&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
+    &lt;td class="code"&gt;
+     &lt;div class="source"&gt;
+      &lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;&lt;a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit"&gt;define&lt;/a&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;qs&lt;/span&gt; &lt;span class="nv"&gt;lst&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;&lt;a href="http://docs.racket-lang.org/reference/if.html#(form._((quote._~23~25kernel)._if))" style="color: inherit"&gt;if&lt;/a&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/list..rkt)._empty~3f))" style="color: inherit"&gt;empty?&lt;/a&gt;&lt;/span&gt; &lt;span class="nv"&gt;lst&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="nv"&gt;lst&lt;/span&gt;
+      &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;&lt;a href="http://docs.racket-lang.org/reference/let.html#(form._((lib._racket/private/letstx-scheme..rkt)._let*))" style="color: inherit"&gt;let*&lt;/a&gt; &lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nf"&gt;hd&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._car))" style="color: inherit"&gt;car&lt;/a&gt; &lt;/span&gt;&lt;span class="nv"&gt;lst&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;tl&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cdr))" style="color: inherit"&gt;cdr&lt;/a&gt; &lt;/span&gt;&lt;span class="nv"&gt;lst&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;smaller&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;qs&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/for.html#(form._((lib._racket/private/base..rkt)._for/list))" style="color: inherit"&gt;for/list&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nf"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;tl&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kd"&gt;#:when&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3c~3d))" style="color: inherit"&gt;&amp;lt;=&lt;/a&gt; &lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;hd&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;larger&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;qs&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/for.html#(form._((lib._racket/private/base..rkt)._for/list))" style="color: inherit"&gt;for/list&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nf"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;tl&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kd"&gt;#:when&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt; &lt;/span&gt;&lt;span class="nv"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;hd&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="p"&gt;))))&lt;/span&gt;
+		 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/list..rkt)._flatten))" style="color: inherit"&gt;flatten&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cons))" style="color: inherit"&gt;cons&lt;/a&gt; &lt;/span&gt;&lt;span class="nv"&gt;smaller&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cons))" style="color: inherit"&gt;cons&lt;/a&gt; &lt;/span&gt;&lt;span class="nv"&gt;hd&lt;/span&gt; &lt;span class="nv"&gt;larger&lt;/span&gt;&lt;span class="p"&gt;))))))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;So clearly, it&amp;rsquo;s not exactly the &lt;em&gt;recursion&lt;/em&gt; that makes the example so cool. No, what makes the Haskell version cool is when you realize what it can do that our Racket port can&amp;rsquo;t: anything but numbers. The Haskell quicksort can readily handle numbers, strings, or lists of chars, all thanks to the power of this line right here:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;quicksort :: (Ord a) =&amp;gt; [a] -&amp;gt; [a]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Especially&lt;/em&gt; the &lt;code&gt;(Ord a)&lt;/code&gt; bit: that&amp;rsquo;s the Ord typeclass, which imports types that Haskell knows how to put in order, thus allowing a statically typed language to still nonetheless use the same &amp;lt;= operator regardless of what type is actually being fed it (the other part of that feat is the &lt;code&gt;[a]&lt;/code&gt; bit, the generics).&lt;/p&gt;
+
+&lt;p&gt;To be able to get a similarly powerful, if not as convenient function, we have to upgrade our Racket version a bit:&lt;/p&gt;
+
+&lt;div class="brush: racket"&gt;
+ &lt;table class="sourcetable"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td class="linenos"&gt;
+     &lt;div class="linenodiv"&gt;
+      &lt;pre&gt;1
+2
+3
+4
+5
+6
+7
+8&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
+    &lt;td class="code"&gt;
+     &lt;div class="source"&gt;
+      &lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;&lt;a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit"&gt;define&lt;/a&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;qs-2&lt;/span&gt; &lt;span class="nv"&gt;fun&lt;/span&gt; &lt;span class="nv"&gt;lst&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;&lt;a href="http://docs.racket-lang.org/reference/if.html#(form._((quote._~23~25kernel)._if))" style="color: inherit"&gt;if&lt;/a&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/list..rkt)._empty~3f))" style="color: inherit"&gt;empty?&lt;/a&gt;&lt;/span&gt; &lt;span class="nv"&gt;lst&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+      &lt;span class="nv"&gt;lst&lt;/span&gt;
+      &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;&lt;a href="http://docs.racket-lang.org/reference/let.html#(form._((lib._racket/private/letstx-scheme..rkt)._let*))" style="color: inherit"&gt;let*&lt;/a&gt; &lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nf"&gt;hd&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._car))" style="color: inherit"&gt;car&lt;/a&gt; &lt;/span&gt;&lt;span class="nv"&gt;lst&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;tl&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cdr))" style="color: inherit"&gt;cdr&lt;/a&gt; &lt;/span&gt;&lt;span class="nv"&gt;lst&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;smaller&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;qs&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/for.html#(form._((lib._racket/private/base..rkt)._for/list))" style="color: inherit"&gt;for/list&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nf"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;tl&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kd"&gt;#:when&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;fun&lt;/span&gt; &lt;span class="nv"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;hd&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+             &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;larger&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;qs&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/for.html#(form._((lib._racket/private/base..rkt)._for/list))" style="color: inherit"&gt;for/list&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nf"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;tl&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kd"&gt;#:when&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/procedures.html#(def._((lib._racket/function..rkt)._negate))" style="color: inherit"&gt;negate&lt;/a&gt;&lt;/span&gt; &lt;span class="nv"&gt;fun&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="nv"&gt;i&lt;/span&gt; &lt;span class="nv"&gt;hd&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="nv"&gt;i&lt;/span&gt;&lt;span class="p"&gt;))))&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/list..rkt)._flatten))" style="color: inherit"&gt;flatten&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cons))" style="color: inherit"&gt;cons&lt;/a&gt; &lt;/span&gt;&lt;span class="nv"&gt;smaller&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cons))" style="color: inherit"&gt;cons&lt;/a&gt; &lt;/span&gt;&lt;span class="nv"&gt;hd&lt;/span&gt; &lt;span class="nv"&gt;larger&lt;/span&gt;&lt;span class="p"&gt;))))))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now our Racket quicksort has become a higher-order function, and must be passed the less-than function it will use to find &lt;em&gt;smaller&lt;/em&gt; as well as negate to find &lt;em&gt;larger&lt;/em&gt;. But it&amp;rsquo;s still not exactly replicated the feat that Haskell&amp;rsquo;s version would, and doing so directly would mean a whole range of type checks. It is almost certainly possible, but not in so concise a manner.&lt;/p&gt;
+
+&lt;p&gt;And of course, some of this difference comes from Haskell&amp;rsquo;s special little rules, like lists being mono-typed elements (as opposed to Racket&amp;rsquo;s free-wheeling ones); this is more limiting but also means that functions like quicksort can largely be written to assume a list will behave with it. If we pass it a list from elsewhere in our program, it will still work as long as its members are members of Ord.&lt;/p&gt;
+
+&lt;p&gt;The amusing footnote to this is that the easy solution for Racket is to make it a higher-order function (and in fact, this is even what Racket&amp;rsquo;s built-in &lt;a href="http://docs.racket-lang.org/reference/pairs.html#%28def._%28%28lib._racket%2Fprivate%2Flist..rkt%29._sort%29%29"&gt;sort&lt;/a&gt; does), whereas in &lt;em&gt;Learn You a Haskell&lt;/em&gt; the author doesn&amp;rsquo;t even get to higher-order functions until the chapter after the quicksort example.&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>Learning Programming: the Backlog</title>
    <link>http://jarcane.github.com/blog/2014/09/29/learning-programming-the-backlog.html</link>

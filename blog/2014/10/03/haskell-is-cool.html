@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Haskell is Cool</title>
+    <meta name="description" content="After my last post and some thinking, I ultimately settled on _Learn You a Haskell_ as my next book to work through, and after some initial hassles trying to get a decent working environment set up, I must say that I'm quite enjoying the language itself. ...">
+    <meta name="author"      content="John Berry">
+    <meta name="keywords"    content="Haskell, Racket">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="http://jarcane.github.com/blog/2014/10/03/haskell-is-cool.html">
+    <link rel="next" href="/blog/2014/09/29/learning-programming-the-backlog.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link ref="alternate" type="application/atom+xml"
+          href="/feeds/all.atom.xml" title="Atom Feed">
+    <link ref="alternate" type="application/rss+xml"
+          href="/feeds/all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-xxxxx']);
+      _gaq.push(['_setDomainName', 'example.com']);
+      _gaq.push(['_trackPageview']);
+      setTimeout(function(){_gaq.push(['_trackEvent', '30_seconds', 'read'])}, 30000); // http://drawingablank.me/blog/fix-your-bounce-rate.html
+      (function() {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <header class="navbar navbar-default navbar-inverse"
+            role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target=".our-nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/index.html" class="navbar-brand">Haskell is Cool</a>
+        </div>
+        <div class="collapse navbar-collapse our-nav-collapse"
+             role="navigation">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Tags <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/index.html">All Posts</a></li>
+
+<li><a href="/tags/abuse.html">abuse</a></li>
+
+<li><a href="/tags/announcements.html">announcements</a></li>
+
+<li><a href="/tags/Frog.html">Frog</a></li>
+
+<li><a href="/tags/games.html">games</a></li>
+
+<li><a href="/tags/Haskell.html">Haskell</a></li>
+
+<li><a href="/tags/learning.html">learning</a></li>
+
+<li><a href="/tags/Lisp.html">Lisp</a></li>
+
+<li><a href="/tags/programming.html">programming</a></li>
+
+<li><a href="/tags/Racket.html">Racket</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/About.html">About</a>
+            </li> 
+            <li><a href="/feeds/all.atom.xml">Atom</a></li>
+            <li><a href="/feeds/all.rss.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+
+
+
+
+          <article>
+  <header>
+    <h1>Haskell is Cool</h1>
+    <p class='date-and-tags'>
+<time datetime="2014-10-03" pubdate="true">2014-10-03</time> :: <span class="tags"><a href="/tags/Haskell.html">Haskell</a>, <a href="/tags/Racket.html">Racket</a></span></p>
+  </header>
+
+<p>After my last post and some thinking, I ultimately settled on <em>Learn You a Haskell</em> as my next book to work through, and after some initial hassles trying to get a decent working environment set up, I must say that I&rsquo;m quite enjoying the language itself. It was running across <a href="http://tryhaskell.org/">Try Haskell</a> that actually spurred me to finally take the leap in that direction (seriously, online REPLs are the best language demos period), and I was quickly impressed by the power hiding in that seemingly obtuse syntax.</p>
+
+<p>And of course, like everyone else ever (so many that <em>Learn You a Haskell</em> actually makes a bit of a joke out of it), I was impressed as hell with the Haskell quicksort solution.</p>
+
+<p>But after some tinkering in Racket, not for precisely the same reasons as the book uses it.</p>
+<!-- more-->
+
+<p>For reference, the Haskell recursive quicksort looks like this:</p>
+
+<div class="brush: haskell">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2
+3
+4
+5
+6</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span class="nf">quicksort</span> <span class="ow">::</span> <span class="p">(</span><span class="kt">Ord</span> <span class="n">a</span><span class="p">)</span> <span class="ow">=&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="ow">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span>
+<span class="nf">quicksort</span> <span class="kt">[]</span> <span class="ow">=</span> <span class="kt">[]</span>
+<span class="nf">quicksort</span> <span class="p">(</span><span class="n">x</span><span class="kt">:</span><span class="n">xs</span><span class="p">)</span> <span class="ow">=</span>
+    <span class="kr">let</span> <span class="n">smallerSorted</span> <span class="ow">=</span> <span class="n">quicksort</span> <span class="p">[</span><span class="n">a</span> <span class="o">|</span> <span class="n">a</span> <span class="ow">&lt;-</span> <span class="n">xs</span><span class="p">,</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="n">x</span><span class="p">]</span>
+        <span class="n">biggerSorted</span> <span class="ow">=</span> <span class="n">quicksort</span> <span class="p">[</span><span class="n">a</span> <span class="o">|</span> <span class="n">a</span> <span class="ow">&lt;-</span> <span class="n">xs</span><span class="p">,</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">]</span>
+    <span class="kr">in</span> <span class="n">smallerSorted</span> <span class="o">++</span> <span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">++</span> <span class="n">biggerSorted</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>I know, right? It&rsquo;s short and sweet, and using multiple recursion and list filtering to solve it takes a hell of a lot of the work out of it. Hell, this is actually the first version of quicksort I&rsquo;ve ever understood; though in my defense the last time I tried to write a quicksort was some 15 years ago as a teenage BASIC hacker (I failed. Repeatedly.)</p>
+
+<p>The book of course uses it as an example of the power of recursion, and it is indeed a good example of where clever use of that can do a lot in very little space (though personally I think the lazy factorial method is a cooler example), but the thing is that any language that implements good recursion can do the same algorithm and just as fast.</p>
+
+<p>For instance, Racket can do the exact same algorithm in just a few more lines (most of them in this case for clarity and convenience, semantically it&rsquo;s <em>almost</em> identical [but not quite, and I&rsquo;ll get to why]).</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a> </span><span class="p">(</span><span class="nf">qs</span> <span class="nv">lst</span><span class="p">)</span>
+  <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/if.html#(form._((quote._~23~25kernel)._if))" style="color: inherit">if</a> </span><span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/list..rkt)._empty~3f))" style="color: inherit">empty?</a></span> <span class="nv">lst</span><span class="p">)</span>
+      <span class="nv">lst</span>
+      <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/let.html#(form._((lib._racket/private/letstx-scheme..rkt)._let*))" style="color: inherit">let*</a> </span><span class="p">((</span><span class="nf">hd</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._car))" style="color: inherit">car</a> </span><span class="nv">lst</span><span class="p">))</span>
+             <span class="p">(</span><span class="nf">tl</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cdr))" style="color: inherit">cdr</a> </span><span class="nv">lst</span><span class="p">))</span>
+             <span class="p">(</span><span class="nf">smaller</span> <span class="p">(</span><span class="nf">qs</span> <span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/for.html#(form._((lib._racket/private/base..rkt)._for/list))" style="color: inherit">for/list</a></span> <span class="p">((</span><span class="nf">i</span> <span class="nv">tl</span><span class="p">)</span> <span class="kd">#:when</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3c~3d))" style="color: inherit">&lt;=</a> </span><span class="nv">i</span> <span class="nv">hd</span><span class="p">))</span> <span class="nv">i</span><span class="p">)))</span>
+             <span class="p">(</span><span class="nf">larger</span> <span class="p">(</span><span class="nf">qs</span> <span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/for.html#(form._((lib._racket/private/base..rkt)._for/list))" style="color: inherit">for/list</a></span> <span class="p">((</span><span class="nf">i</span> <span class="nv">tl</span><span class="p">)</span> <span class="kd">#:when</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a> </span><span class="nv">i</span> <span class="nv">hd</span><span class="p">))</span> <span class="nv">i</span><span class="p">))))</span>
+		 <span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/list..rkt)._flatten))" style="color: inherit">flatten</a></span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cons))" style="color: inherit">cons</a> </span><span class="nv">smaller</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cons))" style="color: inherit">cons</a> </span><span class="nv">hd</span> <span class="nv">larger</span><span class="p">))))))</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>So clearly, it&rsquo;s not exactly the <em>recursion</em> that makes the example so cool. No, what makes the Haskell version cool is when you realize what it can do that our Racket port can&rsquo;t: anything but numbers. The Haskell quicksort can readily handle numbers, strings, or lists of chars, all thanks to the power of this line right here:</p>
+
+<p><code>quicksort :: (Ord a) =&gt; [a] -&gt; [a]</code></p>
+
+<p><em>Especially</em> the <code>(Ord a)</code> bit: that&rsquo;s the Ord typeclass, which imports types that Haskell knows how to put in order, thus allowing a statically typed language to still nonetheless use the same &lt;= operator regardless of what type is actually being fed it (the other part of that feat is the <code>[a]</code> bit, the generics).</p>
+
+<p>To be able to get a similarly powerful, if not as convenient function, we have to upgrade our Racket version a bit:</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a> </span><span class="p">(</span><span class="nf">qs-2</span> <span class="nv">fun</span> <span class="nv">lst</span><span class="p">)</span>
+  <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/if.html#(form._((quote._~23~25kernel)._if))" style="color: inherit">if</a> </span><span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/list..rkt)._empty~3f))" style="color: inherit">empty?</a></span> <span class="nv">lst</span><span class="p">)</span>
+      <span class="nv">lst</span>
+      <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/let.html#(form._((lib._racket/private/letstx-scheme..rkt)._let*))" style="color: inherit">let*</a> </span><span class="p">((</span><span class="nf">hd</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._car))" style="color: inherit">car</a> </span><span class="nv">lst</span><span class="p">))</span>
+             <span class="p">(</span><span class="nf">tl</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cdr))" style="color: inherit">cdr</a> </span><span class="nv">lst</span><span class="p">))</span>
+             <span class="p">(</span><span class="nf">smaller</span> <span class="p">(</span><span class="nf">qs</span> <span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/for.html#(form._((lib._racket/private/base..rkt)._for/list))" style="color: inherit">for/list</a></span> <span class="p">((</span><span class="nf">i</span> <span class="nv">tl</span><span class="p">)</span> <span class="kd">#:when</span> <span class="p">(</span><span class="nf">fun</span> <span class="nv">i</span> <span class="nv">hd</span><span class="p">))</span> <span class="nv">i</span><span class="p">)))</span>
+             <span class="p">(</span><span class="nf">larger</span> <span class="p">(</span><span class="nf">qs</span> <span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/for.html#(form._((lib._racket/private/base..rkt)._for/list))" style="color: inherit">for/list</a></span> <span class="p">((</span><span class="nf">i</span> <span class="nv">tl</span><span class="p">)</span> <span class="kd">#:when</span> <span class="p">((</span><span class="nf"><a href="http://docs.racket-lang.org/reference/procedures.html#(def._((lib._racket/function..rkt)._negate))" style="color: inherit">negate</a></span> <span class="nv">fun</span><span class="p">)</span> <span class="nv">i</span> <span class="nv">hd</span><span class="p">))</span> <span class="nv">i</span><span class="p">))))</span>
+        <span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/list..rkt)._flatten))" style="color: inherit">flatten</a></span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cons))" style="color: inherit">cons</a> </span><span class="nv">smaller</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cons))" style="color: inherit">cons</a> </span><span class="nv">hd</span> <span class="nv">larger</span><span class="p">))))))</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>Now our Racket quicksort has become a higher-order function, and must be passed the less-than function it will use to find <em>smaller</em> as well as negate to find <em>larger</em>. But it&rsquo;s still not exactly replicated the feat that Haskell&rsquo;s version would, and doing so directly would mean a whole range of type checks. It is almost certainly possible, but not in so concise a manner.</p>
+
+<p>And of course, some of this difference comes from Haskell&rsquo;s special little rules, like lists being mono-typed elements (as opposed to Racket&rsquo;s free-wheeling ones); this is more limiting but also means that functions like quicksort can largely be written to assume a list will behave with it. If we pass it a list from elsewhere in our program, it will still work as long as its members are members of Ord.</p>
+
+<p>The amusing footnote to this is that the easy solution for Racket is to make it a higher-order function (and in fact, this is even what Racket&rsquo;s built-in <a href="http://docs.racket-lang.org/reference/pairs.html#%28def._%28%28lib._racket%2Fprivate%2Flist..rkt%29._sort%29%29">sort</a> does), whereas in <em>Learn You a Haskell</em> the author doesn&rsquo;t even get to higher-order functions until the chapter after the quicksort example.</p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://jarcane.github.com/blog/2014/10/03/haskell-is-cool.html"
+       data-dnt="true">
+      "Tweet"</a>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <g:plusone size="medium" href="http://jarcane.github.com/blog/2014/10/03/haskell-is-cool.html"></g:plusone>
+    <script type="text/javascript">
+      var disqus_shortname = 'jarcane';
+      (function() {
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <div id="disqus_thread"></div>
+    <ul class="pager">
+
+    <li class="next">
+      <a href="/blog/2014/09/29/learning-programming-the-backlog.html"><em>Learning Programming: the Backlog</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p><a href="https://twitter.com/J_Arcane"
+              class="twitter-follow-button"
+              data-show-count="false"
+              data-lang="en">
+             "Follow J_Arcane"
+           </a>
+           <script type="text/javascript">
+             !function(d,s,id){
+                 var js,fjs=d.getElementsByTagName(s)[0];
+                 if(!d.getElementById(id)){
+                     js=d.createElement(s);
+                     js.id=id;
+                     js.src="//platform.twitter.com/widgets.js";
+                     fjs.parentNode.insertBefore(js,fjs);
+                 }
+             }(document,"script","twitter-wjs");
+           </script></p>
+        <p>Site generated
+        by <a href="https://github.com/greghendershott/frog">Frog</a>,
+        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+        <p><em>All contents Copyright 2014- by John S. Berry III</em>.</p>
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="//code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

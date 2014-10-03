@@ -1,3 +1,4 @@
+http://jarcane.github.com/blog/2014/10/03/haskell-is-cool.html
 http://jarcane.github.com/blog/2014/09/28/hatestack-the-self-deleting-rantbin.html
 http://jarcane.github.com/blog/2014/09/15/christening-the-grimoire.html
 http://jarcane.github.com/blog/2014/09/15/choosing-a-lisp.html
