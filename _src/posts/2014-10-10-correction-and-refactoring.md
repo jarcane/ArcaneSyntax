@@ -1,0 +1,33 @@
+    Title: Correction and refactoring
+    Date: 2014-10-10T19:20:23
+    Tags: Racket
+
+I was thinking again this evening about last week's quicksort post (which I've since even been informed isn't technically a quicksort algorithm), and decided to tinker with streamlining my Racket version a bit more to take better advantage of higher-order functions.
+
+To my horror I realized in looking at last week's code I'd actually munged up the qs-2 version, which should look like this:
+
+```racket
+(define (qs-2 fun lst)
+  (if (empty? lst)
+      lst
+      (let* ((hd (car lst))
+             (tl (cdr lst))
+             (smaller (qs-2 fun (for/list ((i tl) #:when (fun i hd)) i)))
+             (larger (qs-2 fun (for/list ((i tl) #:when ((negate fun) i hd)) i))))
+		 (flatten (cons smaller (cons hd larger))))))
+```
+
+
+However, as it turns out, Racket actually has built-ins for function currying, and as well, filter's really a better (and Lispier) function here than a for loop, so we can actually match the Haskell version's line count like so.
+
+```racket
+(define (qs-3 fun lst)
+  (if (empty? lst)
+      lst
+      (let ((smaller (qs-3 fun (filter (curryr fun          (car lst)) (cdr lst))))
+            (larger  (qs-3 fun (filter (curryr (negate fun) (car lst)) (cdr lst)))))
+		(flatten (cons smaller (cons (car lst) larger))))))
+```
+		
+
+Voila. Now we have a version that is both Lispier and makes better use of higher-order functions. Alas, we still can't universalize it in so little space (that I know of anyway). The Ord typeclass is one powerful little bugger.

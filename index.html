@@ -105,6 +105,89 @@
 
           <article>
   <header>
+    <h2><a href='/blog/2014/10/10/correction-and-refactoring.html'>Correction and refactoring</a></h2>
+    <p class='date-and-tags'>
+<time datetime="2014-10-10" pubdate="true">2014-10-10</time> :: <span class="tags"><a href="/tags/Racket.html">Racket</a></span></p>
+  </header>
+
+<p>I was thinking again this evening about last week&rsquo;s quicksort post (which I&rsquo;ve since even been informed isn&rsquo;t technically a quicksort algorithm), and decided to tinker with streamlining my Racket version a bit more to take better advantage of higher-order functions.</p>
+
+<p>To my horror I realized in looking at last week&rsquo;s code I&rsquo;d actually munged up the qs&ndash;2 version, which should look like this:</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a> </span><span class="p">(</span><span class="nf">qs-2</span> <span class="nv">fun</span> <span class="nv">lst</span><span class="p">)</span>
+  <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/if.html#(form._((quote._~23~25kernel)._if))" style="color: inherit">if</a> </span><span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/list..rkt)._empty~3f))" style="color: inherit">empty?</a></span> <span class="nv">lst</span><span class="p">)</span>
+      <span class="nv">lst</span>
+      <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/let.html#(form._((lib._racket/private/letstx-scheme..rkt)._let*))" style="color: inherit">let*</a> </span><span class="p">((</span><span class="nf">hd</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._car))" style="color: inherit">car</a> </span><span class="nv">lst</span><span class="p">))</span>
+             <span class="p">(</span><span class="nf">tl</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cdr))" style="color: inherit">cdr</a> </span><span class="nv">lst</span><span class="p">))</span>
+             <span class="p">(</span><span class="nf">smaller</span> <span class="p">(</span><span class="nf">qs-2</span> <span class="nv">fun</span> <span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/for.html#(form._((lib._racket/private/base..rkt)._for/list))" style="color: inherit">for/list</a></span> <span class="p">((</span><span class="nf">i</span> <span class="nv">tl</span><span class="p">)</span> <span class="kd">#:when</span> <span class="p">(</span><span class="nf">fun</span> <span class="nv">i</span> <span class="nv">hd</span><span class="p">))</span> <span class="nv">i</span><span class="p">)))</span>
+             <span class="p">(</span><span class="nf">larger</span> <span class="p">(</span><span class="nf">qs-2</span> <span class="nv">fun</span> <span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/for.html#(form._((lib._racket/private/base..rkt)._for/list))" style="color: inherit">for/list</a></span> <span class="p">((</span><span class="nf">i</span> <span class="nv">tl</span><span class="p">)</span> <span class="kd">#:when</span> <span class="p">((</span><span class="nf"><a href="http://docs.racket-lang.org/reference/procedures.html#(def._((lib._racket/function..rkt)._negate))" style="color: inherit">negate</a></span> <span class="nv">fun</span><span class="p">)</span> <span class="nv">i</span> <span class="nv">hd</span><span class="p">))</span> <span class="nv">i</span><span class="p">))))</span>
+		 <span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/list..rkt)._flatten))" style="color: inherit">flatten</a></span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cons))" style="color: inherit">cons</a> </span><span class="nv">smaller</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cons))" style="color: inherit">cons</a> </span><span class="nv">hd</span> <span class="nv">larger</span><span class="p">))))))</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>However, as it turns out, Racket actually has built-ins for function currying, and as well, filter&rsquo;s really a better (and Lispier) function here than a for loop, so we can actually match the Haskell version&rsquo;s line count like so.</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2
+3
+4
+5
+6</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a> </span><span class="p">(</span><span class="nf">qs-3</span> <span class="nv">fun</span> <span class="nv">lst</span><span class="p">)</span>
+  <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/if.html#(form._((quote._~23~25kernel)._if))" style="color: inherit">if</a> </span><span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/list..rkt)._empty~3f))" style="color: inherit">empty?</a></span> <span class="nv">lst</span><span class="p">)</span>
+      <span class="nv">lst</span>
+      <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/let.html#(form._((lib._racket/private/letstx-scheme..rkt)._let))" style="color: inherit">let</a> </span><span class="p">((</span><span class="nf">smaller</span> <span class="p">(</span><span class="nf">qs-3</span> <span class="nv">fun</span> <span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/private/list..rkt)._filter))" style="color: inherit">filter</a></span> <span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/procedures.html#(def._((lib._racket/function..rkt)._curryr))" style="color: inherit">curryr</a></span> <span class="nv">fun</span>          <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._car))" style="color: inherit">car</a> </span><span class="nv">lst</span><span class="p">))</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cdr))" style="color: inherit">cdr</a> </span><span class="nv">lst</span><span class="p">))))</span>
+            <span class="p">(</span><span class="nf">larger</span>  <span class="p">(</span><span class="nf">qs-3</span> <span class="nv">fun</span> <span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/private/list..rkt)._filter))" style="color: inherit">filter</a></span> <span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/procedures.html#(def._((lib._racket/function..rkt)._curryr))" style="color: inherit">curryr</a></span> <span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/procedures.html#(def._((lib._racket/function..rkt)._negate))" style="color: inherit">negate</a></span> <span class="nv">fun</span><span class="p">)</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._car))" style="color: inherit">car</a> </span><span class="nv">lst</span><span class="p">))</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cdr))" style="color: inherit">cdr</a> </span><span class="nv">lst</span><span class="p">)))))</span>
+		<span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/list..rkt)._flatten))" style="color: inherit">flatten</a></span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cons))" style="color: inherit">cons</a> </span><span class="nv">smaller</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._cons))" style="color: inherit">cons</a> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._car))" style="color: inherit">car</a> </span><span class="nv">lst</span><span class="p">)</span> <span class="nv">larger</span><span class="p">))))))</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>Voila. Now we have a version that is both Lispier and makes better use of higher-order functions. Alas, we still can&rsquo;t universalize it in so little space (that I know of anyway). The Ord typeclass is one powerful little bugger.</p>
+  <footer>
+    <br>
+    <a href='/blog/2014/10/10/correction-and-refactoring.html#disqus_thread'>Comments</a>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'jarcane'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+      var s = document.createElement('script'); s.async = true;
+      s.type = 'text/javascript';
+      s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
+   </footer>
+</article>
+<article>
+  <header>
     <h2><a href='/blog/2014/10/03/haskell-is-cool.html'>Haskell is Cool</a></h2>
     <p class='date-and-tags'>
 <time datetime="2014-10-03" pubdate="true">2014-10-03</time> :: <span class="tags"><a href="/tags/Haskell.html">Haskell</a>, <a href="/tags/Racket.html">Racket</a></span></p>
@@ -377,31 +460,6 @@
   <footer>
     <br>
     <a href='/blog/2014/09/16/disqus-comments-with-frog.html#disqus_thread'>Comments</a>
-    <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'jarcane'; // required: replace example with your forum shortname
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function () {
-      var s = document.createElement('script'); s.async = true;
-      s.type = 'text/javascript';
-      s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-      }());
-    </script>
-   </footer>
-</article>
-<article>
-  <header>
-    <h2><a href='/blog/2014/09/16/technical-difficulties.html'>Technical Difficulties</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2014-09-16" pubdate="true">2014-09-16</time> :: <span class="tags"><a href="/tags/announcements.html">announcements</a></span></p>
-  </header>
-
-<p>Currently aware of an issue in Frog resulting in malformed page URLs for my posts. Users on browsers other than Chrome will get 404 errors accessing full blog pages. Greg Hendershott is aware of the issue now, and I&rsquo;ll get the site patched as soon as he pushes a fix to Frog.</p>
-  <footer>
-    <br>
-    <a href='/blog/2014/09/16/technical-difficulties.html#disqus_thread'>Comments</a>
     <script type="text/javascript">
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'jarcane'; // required: replace example with your forum shortname
