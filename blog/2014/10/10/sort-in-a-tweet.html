@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Sort in a Tweet</title>
+    <meta name="description" content="Sometimes I just can't leave well enough alone. After my last post I dove into further simplifying my Racket code, and as a fun way of relaunching my Twitter I decided to take the lock back off with a bang by code-golfing the sort algorithm down to fit in...">
+    <meta name="author"      content="John Berry">
+    <meta name="keywords"    content="Racket">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="http://jarcane.github.com/blog/2014/10/10/sort-in-a-tweet.html">
+    <link rel="next" href="/blog/2014/10/10/correction-and-refactoring.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link ref="alternate" type="application/atom+xml"
+          href="/feeds/all.atom.xml" title="Atom Feed">
+    <link ref="alternate" type="application/rss+xml"
+          href="/feeds/all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-xxxxx']);
+      _gaq.push(['_setDomainName', 'example.com']);
+      _gaq.push(['_trackPageview']);
+      setTimeout(function(){_gaq.push(['_trackEvent', '30_seconds', 'read'])}, 30000); // http://drawingablank.me/blog/fix-your-bounce-rate.html
+      (function() {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <header class="navbar navbar-default navbar-inverse"
+            role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target=".our-nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/index.html" class="navbar-brand">Sort in a Tweet</a>
+        </div>
+        <div class="collapse navbar-collapse our-nav-collapse"
+             role="navigation">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Tags <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/index.html">All Posts</a></li>
+
+<li><a href="/tags/abuse.html">abuse</a></li>
+
+<li><a href="/tags/announcements.html">announcements</a></li>
+
+<li><a href="/tags/Frog.html">Frog</a></li>
+
+<li><a href="/tags/games.html">games</a></li>
+
+<li><a href="/tags/Haskell.html">Haskell</a></li>
+
+<li><a href="/tags/learning.html">learning</a></li>
+
+<li><a href="/tags/Lisp.html">Lisp</a></li>
+
+<li><a href="/tags/programming.html">programming</a></li>
+
+<li><a href="/tags/Racket.html">Racket</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/About.html">About</a>
+            </li> 
+            <li><a href="/feeds/all.atom.xml">Atom</a></li>
+            <li><a href="/feeds/all.rss.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+
+
+
+
+          <article>
+  <header>
+    <h1>Sort in a Tweet</h1>
+    <p class='date-and-tags'>
+<time datetime="2014-10-10" pubdate="true">2014-10-10</time> :: <span class="tags"><a href="/tags/Racket.html">Racket</a></span></p>
+  </header>
+
+<p>Sometimes I just can&rsquo;t leave well enough alone. After my last post I dove into further simplifying my Racket code, and as a fun way of <a href="https://twitter.com/J_Arcane">relaunching my Twitter</a> I decided to take the lock back off with a bang by code-golfing the sort algorithm down to fit in a tweet.</p>
+
+<p>With some extra pointers from Rosetta Code and Jens Axel Soegaard in the #racket channel, I boiled it down to <a href="https://twitter.com/J_Arcane/status/520664571858911232">this tweet</a>.</p>
+<!-- more-->
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span class="kn">#lang racket</span> <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a> </span><span class="p">(</span><span class="nf">s</span> <span class="nv">f</span> <span class="nv">l</span><span class="p">)(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/match.html#(form._((lib._racket/match..rkt)._match))" style="color: inherit">match</a></span> <span class="nv">l</span><span class="p">[</span><span class="o">'</span><span class="p">()</span> <span class="o">'</span><span class="p">()][</span><span class="o">`</span><span class="p">(</span><span class="o">,</span><span class="nv">h</span> <span class="o">.,</span><span class="nv">t</span><span class="p">)</span><span class="o">`</span><span class="p">(</span><span class="o">,@</span><span class="p">(</span><span class="nf">s</span> <span class="nv">f</span><span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/private/list..rkt)._filter))" style="color: inherit">filter</a></span><span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/procedures.html#(def._((lib._racket/function..rkt)._curry))" style="color: inherit">curry</a></span><span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/procedures.html#(def._((lib._racket/function..rkt)._negate))" style="color: inherit">negate</a></span> <span class="nv">f</span><span class="p">)</span><span class="nv">h</span><span class="p">)</span><span class="nv">t</span><span class="p">))</span><span class="o">,</span><span class="nv">h,@</span><span class="p">(</span><span class="nf">s</span> <span class="nv">f</span><span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/private/list..rkt)._filter))" style="color: inherit">filter</a></span><span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/procedures.html#(def._((lib._racket/function..rkt)._curry))" style="color: inherit">curry</a></span> <span class="nv">f</span> <span class="nv">h</span><span class="p">)</span><span class="nv">t</span><span class="p">)))]))</span><span class="c1">;(sort fun list)</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>I also debuted a new personal logo, developed entirely in Racket using the Racket image libraries. I was inspired by the shape of the <a href="http://en.wikipedia.org/wiki/Lambda_phage">lambda phage</a> and the Plague Inc. computer game to create a new lambda logo:</p>
+
+<div class="figure"><img src="http://i.imgur.com/xHfZ0a2.png" alt="The Lambdemic Logo" />
+ <p class="caption">The Lambdemic Logo</p></div>
+
+<p>This can be helpfully generated with the following piece of Racket code:</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span class="kn">#lang racket</span>
+
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/require.html#(form._((lib._racket/private/base..rkt)._require))" style="color: inherit">require</a> </span><span class="nv">pict</span>
+         <span class="nv">images/icons/style</span>
+         <span class="nv">images/icons/symbol</span>
+         <span class="nv">images/icons/misc</span>
+         <span class="nv">file/convertible</span><span class="p">)</span>
+
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a> </span><span class="nv">lambda-phage</span>
+  <span class="p">(</span><span class="nf">pict-&gt;bitmap</span>
+   <span class="p">(</span><span class="nf">cc-superimpose</span>
+    <span class="p">(</span><span class="nf">bitmap</span> <span class="p">(</span><span class="nf">regular-polygon-icon</span> <span class="mi">6</span> 
+                                  <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit">*</a> </span><span class="m">-1/2</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._-))" style="color: inherit">-</a> </span><span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._/))" style="color: inherit">/</a> </span><span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((lib._racket/math..rkt)._pi))" style="color: inherit">pi</a></span> <span class="mi">6</span><span class="p">)</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit">*</a> </span><span class="m">1/2</span> <span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((lib._racket/math..rkt)._pi))" style="color: inherit">pi</a></span><span class="p">)))</span>
+                                  <span class="kd">#:color</span> <span class="s">"darkred"</span>
+                                  <span class="kd">#:height</span> <span class="mi">256</span> 
+                                  <span class="kd">#:material</span> <span class="nv">glass-icon-material</span><span class="p">))</span>
+    <span class="p">(</span><span class="nf">bitmap</span> <span class="p">(</span><span class="nf">lambda-icon</span> <span class="kd">#:height</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit">*</a> </span><span class="mi">256</span> <span class="m">3/4</span><span class="p">)</span> 
+                         <span class="kd">#:color</span> <span class="s">"white"</span>
+                         <span class="kd">#:material</span> <span class="nv">plastic-icon-material</span><span class="p">)))))</span>
+
+<span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/ivaraccess.html#(form._((lib._racket/private/class-internal..rkt)._send))" style="color: inherit">send</a></span> <span class="nv">lambda-phage</span> <span class="nv">save-file</span> <span class="s">"lambdemic-big.png"</span> <span class="ss">'png</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>And for that amusing little banner image:</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span class="kn">#lang racket</span>
+
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/require.html#(form._((lib._racket/private/base..rkt)._require))" style="color: inherit">require</a> </span><span class="nv">pict</span>
+         <span class="nv">pict/code</span>
+         <span class="nv">file/convertible</span><span class="p">)</span>
+
+<span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a> </span><span class="nv">define-universe</span>  
+  <span class="p">(</span><span class="nf">pict-&gt;bitmap</span>
+   <span class="p">(</span><span class="nf">cc-superimpose</span> 
+    <span class="p">(</span><span class="nf">colorize</span> <span class="p">(</span><span class="nf">filled-rounded-rectangle</span>  <span class="mi">1500</span> <span class="mi">500</span><span class="p">)</span> <span class="s">"Moccasin"</span><span class="p">)</span>
+    <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/parameters.html#(form._((lib._racket/private/more-scheme..rkt)._parameterize))" style="color: inherit">parameterize</a> </span><span class="p">([</span><span class="nf">current-code-font</span> <span class="s">"Envy Code R"</span><span class="p">]</span>
+                   <span class="p">[</span><span class="nf">get-current-code-font-size</span> <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/lambda.html#(form._((lib._racket/private/base..rkt)._lambda))" style="color: inherit">lambda</a> </span><span class="p">()</span> <span class="mi">48</span><span class="p">)])</span>
+      <span class="p">(</span><span class="nf">code</span> <span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/begin.html#(form._((quote._~23~25kernel)._begin))" style="color: inherit">begin</a></span>
+              <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a> </span><span class="nv">universe</span>
+                <span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/void.html#(def._((quote._~23~25kernel)._void))" style="color: inherit">void</a></span><span class="p">))))))))</span>
+
+<span class="p">(</span><span class="nf"><a href="http://docs.racket-lang.org/reference/ivaraccess.html#(form._((lib._racket/private/class-internal..rkt)._send))" style="color: inherit">send</a></span> <span class="nv">define-universe</span> <span class="nv">save-file</span> <span class="s">"define-universe.png"</span> <span class="ss">'png</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://jarcane.github.com/blog/2014/10/10/sort-in-a-tweet.html"
+       data-dnt="true">
+      "Tweet"</a>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <g:plusone size="medium" href="http://jarcane.github.com/blog/2014/10/10/sort-in-a-tweet.html"></g:plusone>
+    <script type="text/javascript">
+      var disqus_shortname = 'jarcane';
+      (function() {
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <div id="disqus_thread"></div>
+    <ul class="pager">
+
+    <li class="next">
+      <a href="/blog/2014/10/10/correction-and-refactoring.html"><em>Correction and refactoring</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p><a href="https://twitter.com/J_Arcane"
+              class="twitter-follow-button"
+              data-show-count="false"
+              data-lang="en">
+             "Follow J_Arcane"
+           </a>
+           <script type="text/javascript">
+             !function(d,s,id){
+                 var js,fjs=d.getElementsByTagName(s)[0];
+                 if(!d.getElementById(id)){
+                     js=d.createElement(s);
+                     js.id=id;
+                     js.src="//platform.twitter.com/widgets.js";
+                     fjs.parentNode.insertBefore(js,fjs);
+                 }
+             }(document,"script","twitter-wjs");
+           </script></p>
+        <p>Site generated
+        by <a href="https://github.com/greghendershott/frog">Frog</a>,
+        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+        <p><em>All contents Copyright 2014- by John S. Berry III</em>.</p>
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="//code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

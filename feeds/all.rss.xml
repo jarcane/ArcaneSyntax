@@ -4,9 +4,142 @@
   <title>Arcane Syntax: Arcane Syntax</title>
   <description>Arcane Syntax: Arcane Syntax</description>
   <link>http://jarcane.github.com/index.html</link>
-  <lastBuildDate>Fri, 10 Oct 2014 19:20:23 FLE Daylight Time</lastBuildDate>
-  <pubDate>Fri, 10 Oct 2014 19:20:23 FLE Daylight Time</pubDate>
+  <lastBuildDate>Fri, 10 Oct 2014 23:00:29 FLE Daylight Time</lastBuildDate>
+  <pubDate>Fri, 10 Oct 2014 23:00:29 FLE Daylight Time</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>Sort in a Tweet</title>
+   <link>http://jarcane.github.com/blog/2014/10/10/sort-in-a-tweet.html</link>
+   <guid>urn:http-jarcane-github-com:-blog-2014-10-10-sort-in-a-tweet-html</guid>
+   <pubDate>Fri, 10 Oct 2014 23:00:29 FLE Daylight Time</pubDate>
+   <description>&lt;html&gt;
+&lt;p&gt;Sometimes I just can&amp;rsquo;t leave well enough alone. After my last post I dove into further simplifying my Racket code, and as a fun way of &lt;a href="https://twitter.com/J_Arcane"&gt;relaunching my Twitter&lt;/a&gt; I decided to take the lock back off with a bang by code-golfing the sort algorithm down to fit in a tweet.&lt;/p&gt;
+
+&lt;p&gt;With some extra pointers from Rosetta Code and Jens Axel Soegaard in the #racket channel, I boiled it down to &lt;a href="https://twitter.com/J_Arcane/status/520664571858911232"&gt;this tweet&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- more--&gt;
+
+&lt;div class="brush: racket"&gt;
+ &lt;table class="sourcetable"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td class="linenos"&gt;
+     &lt;div class="linenodiv"&gt;
+      &lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
+    &lt;td class="code"&gt;
+     &lt;div class="source"&gt;
+      &lt;pre&gt;&lt;span class="kn"&gt;#lang racket&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;&lt;a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit"&gt;define&lt;/a&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;s&lt;/span&gt; &lt;span class="nv"&gt;f&lt;/span&gt; &lt;span class="nv"&gt;l&lt;/span&gt;&lt;span class="p"&gt;)(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/match.html#(form._((lib._racket/match..rkt)._match))" style="color: inherit"&gt;match&lt;/a&gt;&lt;/span&gt; &lt;span class="nv"&gt;l&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;'&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;'&lt;/span&gt;&lt;span class="p"&gt;()][&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="nv"&gt;h&lt;/span&gt; &lt;span class="o"&gt;.,&lt;/span&gt;&lt;span class="nv"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;,@&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;s&lt;/span&gt; &lt;span class="nv"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/private/list..rkt)._filter))" style="color: inherit"&gt;filter&lt;/a&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/procedures.html#(def._((lib._racket/function..rkt)._curry))" style="color: inherit"&gt;curry&lt;/a&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/procedures.html#(def._((lib._racket/function..rkt)._negate))" style="color: inherit"&gt;negate&lt;/a&gt;&lt;/span&gt; &lt;span class="nv"&gt;f&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nv"&gt;h&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nv"&gt;t&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt;&lt;span class="nv"&gt;h,@&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;s&lt;/span&gt; &lt;span class="nv"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/private/list..rkt)._filter))" style="color: inherit"&gt;filter&lt;/a&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/procedures.html#(def._((lib._racket/function..rkt)._curry))" style="color: inherit"&gt;curry&lt;/a&gt;&lt;/span&gt; &lt;span class="nv"&gt;f&lt;/span&gt; &lt;span class="nv"&gt;h&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="nv"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)))]))&lt;/span&gt;&lt;span class="c1"&gt;;(sort fun list)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I also debuted a new personal logo, developed entirely in Racket using the Racket image libraries. I was inspired by the shape of the &lt;a href="http://en.wikipedia.org/wiki/Lambda_phage"&gt;lambda phage&lt;/a&gt; and the Plague Inc. computer game to create a new lambda logo:&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="http://i.imgur.com/xHfZ0a2.png" alt="The Lambdemic Logo" /&gt;
+ &lt;p class="caption"&gt;The Lambdemic Logo&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;This can be helpfully generated with the following piece of Racket code:&lt;/p&gt;
+
+&lt;div class="brush: racket"&gt;
+ &lt;table class="sourcetable"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td class="linenos"&gt;
+     &lt;div class="linenodiv"&gt;
+      &lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
+    &lt;td class="code"&gt;
+     &lt;div class="source"&gt;
+      &lt;pre&gt;&lt;span class="kn"&gt;#lang racket&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;&lt;a href="http://docs.racket-lang.org/reference/require.html#(form._((lib._racket/private/base..rkt)._require))" style="color: inherit"&gt;require&lt;/a&gt; &lt;/span&gt;&lt;span class="nv"&gt;pict&lt;/span&gt;
+         &lt;span class="nv"&gt;images/icons/style&lt;/span&gt;
+         &lt;span class="nv"&gt;images/icons/symbol&lt;/span&gt;
+         &lt;span class="nv"&gt;images/icons/misc&lt;/span&gt;
+         &lt;span class="nv"&gt;file/convertible&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;&lt;a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit"&gt;define&lt;/a&gt; &lt;/span&gt;&lt;span class="nv"&gt;lambda-phage&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;pict-&amp;gt;bitmap&lt;/span&gt;
+   &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;cc-superimpose&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;bitmap&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;regular-polygon-icon&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt; 
+                                  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit"&gt;*&lt;/a&gt; &lt;/span&gt;&lt;span class="m"&gt;-1/2&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._-))" style="color: inherit"&gt;-&lt;/a&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._/))" style="color: inherit"&gt;/&lt;/a&gt; &lt;/span&gt;&lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((lib._racket/math..rkt)._pi))" style="color: inherit"&gt;pi&lt;/a&gt;&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit"&gt;*&lt;/a&gt; &lt;/span&gt;&lt;span class="m"&gt;1/2&lt;/span&gt; &lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((lib._racket/math..rkt)._pi))" style="color: inherit"&gt;pi&lt;/a&gt;&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+                                  &lt;span class="kd"&gt;#:color&lt;/span&gt; &lt;span class="s"&gt;"darkred"&lt;/span&gt;
+                                  &lt;span class="kd"&gt;#:height&lt;/span&gt; &lt;span class="mi"&gt;256&lt;/span&gt; 
+                                  &lt;span class="kd"&gt;#:material&lt;/span&gt; &lt;span class="nv"&gt;glass-icon-material&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;bitmap&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;lambda-icon&lt;/span&gt; &lt;span class="kd"&gt;#:height&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit"&gt;*&lt;/a&gt; &lt;/span&gt;&lt;span class="mi"&gt;256&lt;/span&gt; &lt;span class="m"&gt;3/4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+                         &lt;span class="kd"&gt;#:color&lt;/span&gt; &lt;span class="s"&gt;"white"&lt;/span&gt;
+                         &lt;span class="kd"&gt;#:material&lt;/span&gt; &lt;span class="nv"&gt;plastic-icon-material&lt;/span&gt;&lt;span class="p"&gt;)))))&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/ivaraccess.html#(form._((lib._racket/private/class-internal..rkt)._send))" style="color: inherit"&gt;send&lt;/a&gt;&lt;/span&gt; &lt;span class="nv"&gt;lambda-phage&lt;/span&gt; &lt;span class="nv"&gt;save-file&lt;/span&gt; &lt;span class="s"&gt;"lambdemic-big.png"&lt;/span&gt; &lt;span class="ss"&gt;'png&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;And for that amusing little banner image:&lt;/p&gt;
+
+&lt;div class="brush: racket"&gt;
+ &lt;table class="sourcetable"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td class="linenos"&gt;
+     &lt;div class="linenodiv"&gt;
+      &lt;pre&gt; 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
+    &lt;td class="code"&gt;
+     &lt;div class="source"&gt;
+      &lt;pre&gt;&lt;span class="kn"&gt;#lang racket&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;&lt;a href="http://docs.racket-lang.org/reference/require.html#(form._((lib._racket/private/base..rkt)._require))" style="color: inherit"&gt;require&lt;/a&gt; &lt;/span&gt;&lt;span class="nv"&gt;pict&lt;/span&gt;
+         &lt;span class="nv"&gt;pict/code&lt;/span&gt;
+         &lt;span class="nv"&gt;file/convertible&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;&lt;a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit"&gt;define&lt;/a&gt; &lt;/span&gt;&lt;span class="nv"&gt;define-universe&lt;/span&gt;  
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;pict-&amp;gt;bitmap&lt;/span&gt;
+   &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;cc-superimpose&lt;/span&gt; 
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;colorize&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;filled-rounded-rectangle&lt;/span&gt;  &lt;span class="mi"&gt;1500&lt;/span&gt; &lt;span class="mi"&gt;500&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="s"&gt;"Moccasin"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;&lt;a href="http://docs.racket-lang.org/reference/parameters.html#(form._((lib._racket/private/more-scheme..rkt)._parameterize))" style="color: inherit"&gt;parameterize&lt;/a&gt; &lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="nf"&gt;current-code-font&lt;/span&gt; &lt;span class="s"&gt;"Envy Code R"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+                   &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nf"&gt;get-current-code-font-size&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;&lt;a href="http://docs.racket-lang.org/reference/lambda.html#(form._((lib._racket/private/base..rkt)._lambda))" style="color: inherit"&gt;lambda&lt;/a&gt; &lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="mi"&gt;48&lt;/span&gt;&lt;span class="p"&gt;)])&lt;/span&gt;
+      &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;code&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/begin.html#(form._((quote._~23~25kernel)._begin))" style="color: inherit"&gt;begin&lt;/a&gt;&lt;/span&gt;
+              &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;&lt;a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit"&gt;define&lt;/a&gt; &lt;/span&gt;&lt;span class="nv"&gt;universe&lt;/span&gt;
+                &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/void.html#(def._((quote._~23~25kernel)._void))" style="color: inherit"&gt;void&lt;/a&gt;&lt;/span&gt;&lt;span class="p"&gt;))))))))&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;&lt;a href="http://docs.racket-lang.org/reference/ivaraccess.html#(form._((lib._racket/private/class-internal..rkt)._send))" style="color: inherit"&gt;send&lt;/a&gt;&lt;/span&gt; &lt;span class="nv"&gt;define-universe&lt;/span&gt; &lt;span class="nv"&gt;save-file&lt;/span&gt; &lt;span class="s"&gt;"define-universe.png"&lt;/span&gt; &lt;span class="ss"&gt;'png&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;&lt;/html&gt;</description></item>
   <item>
    <title>Correction and refactoring</title>
    <link>http://jarcane.github.com/blog/2014/10/10/correction-and-refactoring.html</link>
