@@ -18,25 +18,25 @@
 &lt;p&gt;Read on past the jump for a quick guide to building a blog in Frog and hosting it on Github Pages.&lt;/p&gt;
 &lt;!-- more--&gt;
 
-&lt;h1 id="step-1-install-racket"&gt;Step 1: Install Racket&lt;/h1&gt;
+&lt;h3 id="step-1-install-racket"&gt;Step 1: Install Racket&lt;/h3&gt;
 
 &lt;p&gt;Frog is powered by the Racket programming language, and is currently available primarily as a package for Racket, so we&amp;rsquo;ll need that. You can download Racket for your platform, be it *nix, Mac, or Windows, from their &lt;a href="http://download.racket-lang.org/"&gt;web site&lt;/a&gt;. If you&amp;rsquo;re on a Linux or BSD, you might also check your package repo for it, but be sure it&amp;rsquo;s up-to-date: Frog needs Racket 6, and I know at least Debian is still only hosting 5.x.&lt;/p&gt;
 
 &lt;p&gt;Crucially here, you also need to make sure that Racket&amp;rsquo;s root directory is available in your command-line path. Unixen should take care of this automatically, but Windows will need it added to the $PATH if we want this to be a painless process. You&amp;rsquo;ll need to go to the System Control Panel, Advanced System Settings, Environment Variables, and edit Path to include &amp;ldquo;C:\Program Files\Racket&amp;rdquo; for 64-bit Racket or &amp;ldquo;C:\Program Files (x86)\Racket&amp;rdquo; for 32-bit.&lt;/p&gt;
 
-&lt;h1 id="step-2-install-frog"&gt;Step 2: Install Frog&lt;/h1&gt;
+&lt;h3 id="step-2-install-frog"&gt;Step 2: Install Frog&lt;/h3&gt;
 
 &lt;p&gt;As long as Step 1 has gone fine, this part is easy. Go to your command line and do &lt;code&gt;raco pkg install frog&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;raco is the Racket command-line swiss army knife, used for everything from compiling executables to installing packages; it&amp;rsquo;ll also be your interface for Frog commands too, now that it&amp;rsquo;s installed.&lt;/p&gt;
 
-&lt;h1 id="step-3-make-a-github-account"&gt;Step 3: Make a Github Account&lt;/h1&gt;
+&lt;h3 id="step-3-make-a-github-account"&gt;Step 3: Make a Github Account&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href="http://github.com"&gt;GitHub&lt;/a&gt; is a service for hosting source repositories managed by the Git version control system. You can create a new account right from the main page, picking a username, email, and password. It&amp;rsquo;ll ask you what plan you wish to use, with Free as an option so long as you don&amp;rsquo;t mind all your repos being public. It will also send an email to whatever account you gave it, to verify that email for future use for things like password recovery.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;NOTE:&lt;/em&gt; By default, the email address you give Github will be publicly posted on your account profile. If you don&amp;rsquo;t want this to happen, once you&amp;rsquo;ve verified your email address, you can tell it to &amp;lsquo;keep my email address private&amp;rsquo; on the email settings page.&lt;/p&gt;
 
-&lt;h1 id="step-4-install-git"&gt;Step 4: Install Git&lt;/h1&gt;
+&lt;h3 id="step-4-install-git"&gt;Step 4: Install Git&lt;/h3&gt;
 
 &lt;p&gt;You&amp;rsquo;ll also need to install Git, because as the previous step alluded to, it&amp;rsquo;s what we&amp;rsquo;re going to use to manage and sync our changes to the blog whenever we generate a new post and so forth.&lt;/p&gt;
 
@@ -44,7 +44,7 @@
 
 &lt;p&gt;You&amp;rsquo;ll also need to do some additional setup things as well, like creating an SSH key for using Git and stuff, which I am going to pass along to the absolutely excellent &lt;a href="https://help.github.com/articles/set-up-git/"&gt;Github Tutorial page&lt;/a&gt; on setting up Git.&lt;/p&gt;
 
-&lt;h1 id="step-5-make-a-repo-for-your-page"&gt;Step 5: Make a Repo for your page&lt;/h1&gt;
+&lt;h3 id="step-5-make-a-repo-for-your-page"&gt;Step 5: Make a Repo for your page&lt;/h3&gt;
 
 &lt;p&gt;If you&amp;rsquo;re logged in to Github, you can just click on the little + symbol on the top bar of the site and choose &amp;ldquo;New Repository&amp;rdquo;.&lt;/p&gt;
 
@@ -52,7 +52,7 @@
 
 &lt;p&gt;It&amp;rsquo;s up to you whether you want it to be public or private, but the latter option is only available if you pay for hosting. You can also provide a description. Don&amp;rsquo;t worry about the .gitignore and license stuff, and we don&amp;rsquo;t really need to make a README either. We actually want our new repo completely empty.&lt;/p&gt;
 
-&lt;h1 id="step-6-make-the-local-mirror-of-our-blog"&gt;Step 6: Make the local mirror of our Blog&lt;/h1&gt;
+&lt;h3 id="step-6-make-the-local-mirror-of-our-blog"&gt;Step 6: Make the local mirror of our Blog&lt;/h3&gt;
 
 &lt;p&gt;Guess what! See that page that just appeared when we started an empty repo? It happens to be a complete set of instructions to link our online repository to a local folder on our computer. We just have to know a little bit more on what to do with them.&lt;/p&gt;
 
@@ -71,13 +71,13 @@ git push -u origin master&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Substitute &lt;code&gt;[username]&lt;/code&gt; for the name you used on Github.&lt;/p&gt;
 
-&lt;h1 id="step-7-build-our-new-blog"&gt;Step 7: Build our new blog&lt;/h1&gt;
+&lt;h3 id="step-7-build-our-new-blog"&gt;Step 7: Build our new blog&lt;/h3&gt;
 
 &lt;p&gt;Navigate to the directory you created in the previous step in your favorite command-line shell, and do &lt;code&gt;raco frog --init&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Frog will now build all the requisite template files to generate your new blog! These will all be on defaults, of course, but you can even run &lt;code&gt;raco frog -bp&lt;/code&gt; and it will build and open your blog in your web browser running on a local webserver. Neat! Hit Ctrl-C to stop the server if you don&amp;rsquo;t want it to stay running.&lt;/p&gt;
 
-&lt;h1 id="step-8-customize-our-blog"&gt;Step 8: Customize our Blog&lt;/h1&gt;
+&lt;h3 id="step-8-customize-our-blog"&gt;Step 8: Customize our Blog&lt;/h3&gt;
 
 &lt;p&gt;Right now though, our blog is pretty generic. It&amp;rsquo;s all on defaults! We can change some of the most common settings and details from the &lt;code&gt;.frogrc&lt;/code&gt; file that lives in the root of our site folder. Open it up in your favorite text editor.&lt;/p&gt;
 
@@ -89,7 +89,7 @@ git push -u origin master&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The default templates that Frog uses to generate pages are also tweakable, if you know some HTML and so forth, and it uses Bootstrap for making a pretty site; so you can use Bootstrap templates like those on &lt;a href="http://bootswatch.com/"&gt;Bootswatch&lt;/a&gt; to jazz it up from the basic template. I&amp;rsquo;ve also written a short little guide for setting up &lt;a href="http://jarcane.github.io/blog/2014/09/16/disqus-comments-with-frog.html"&gt;Disqus comments&lt;/a&gt; properly.&lt;/p&gt;
 
-&lt;h1 id="step-9-generate-a-new-post"&gt;Step 9: Generate a new post&lt;/h1&gt;
+&lt;h3 id="step-9-generate-a-new-post"&gt;Step 9: Generate a new post&lt;/h3&gt;
 
 &lt;p&gt;So let&amp;rsquo;s make a post to our new blog! Once more from our blog&amp;rsquo;s home folder, we can do &lt;code&gt;raco frog -n "[post title]"&lt;/code&gt;. It will helpfully display the name of the Markdown file it just generated to be the template of our new post.&lt;/p&gt;
 
@@ -101,7 +101,7 @@ git push -u origin master&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The filler text can be replaced, the more tag removed or placed where you like, but crucially, you &lt;em&gt;MUST&lt;/em&gt; change the DRAFT tag to something else, or else Frog will skip it when you build the blog!&lt;/p&gt;
 
-&lt;h1 id="step-10-build-your-blog"&gt;Step 10: Build your blog&lt;/h1&gt;
+&lt;h3 id="step-10-build-your-blog"&gt;Step 10: Build your blog&lt;/h3&gt;
 
 &lt;p&gt;Save your text file, and now we can rebuild the blog to include it. Do the following on the command line:&lt;/p&gt;
 
@@ -113,7 +113,7 @@ raco frog -b  *if you don't*&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;If everything looks satisfactory, proceed to step 11. Otherwise, tweak things as needed and redo the build.&lt;/p&gt;
 
-&lt;h1 id="step-11-sync-your-changes-with-github"&gt;Step 11: Sync your changes with Github&lt;/h1&gt;
+&lt;h3 id="step-11-sync-your-changes-with-github"&gt;Step 11: Sync your changes with Github&lt;/h3&gt;
 
 &lt;p&gt;Now we need to commit and upload our newly built blog to Github to host.&lt;/p&gt;
 
