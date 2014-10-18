@@ -10,6 +10,7 @@ http://jarcane.github.com/blog/2014/09/23/announcing-try-racket-org.html
 http://jarcane.github.com/blog/2014/09/15/choosing-a-lisp.html
 http://jarcane.github.com/blog/2014/09/16/technical-difficulties.html
 http://jarcane.github.com/blog/2014/09/20/trying-a-new-theme.html
+http://jarcane.github.com/blog/2014/10/18/a-quickstart-guide-to-frog-and-github-pages.html
 http://jarcane.github.com/blog/2014/10/10/sort-in-a-tweet.html
 http://jarcane.github.com/blog/2014/09/29/learning-programming-the-backlog.html
 http://jarcane.github.com/About.html
