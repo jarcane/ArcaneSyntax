@@ -113,6 +113,7 @@ Now we need to commit and upload our newly built blog to Github to host.
 If you're on Windows or Mac and using the Github client, this can be done by clicking on our repo, adding a summary and description under "Uncommitted Changes", clicking "Commit to master", then finally clicking the Sync button on the upper right.
 
 If we're on Unixen, we do this:
+
 ```
 git add -A
 git commit -m "Some kind of short description"

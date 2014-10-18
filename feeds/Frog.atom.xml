@@ -120,9 +120,11 @@ raco frog -b  *if you don't*&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;If you&amp;rsquo;re on Windows or Mac and using the Github client, this can be done by clicking on our repo, adding a summary and description under &amp;ldquo;Uncommitted Changes&amp;rdquo;, clicking &amp;ldquo;Commit to master&amp;rdquo;, then finally clicking the Sync button on the upper right.&lt;/p&gt;
 
-&lt;p&gt;If we&amp;rsquo;re on Unixen, we do this: &lt;code&gt;git add -A
+&lt;p&gt;If we&amp;rsquo;re on Unixen, we do this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git add -A
 git commit -m "Some kind of short description"
-git push&lt;/code&gt;&lt;/p&gt;
+git push&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Once everything is uploaded, and accounting for a bit of time for Github itself to recognize that stuff lives there now, we should be able to see our new blog online at &lt;code&gt;http://[username].github.com&lt;/code&gt;!&lt;/p&gt;
 
