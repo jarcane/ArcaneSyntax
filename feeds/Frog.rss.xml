@@ -4,14 +4,14 @@
   <title>Arcane Syntax: Posts tagged 'Frog'</title>
   <description>Arcane Syntax: Posts tagged 'Frog'</description>
   <link>http://jarcane.github.com/tags/Frog.html</link>
-  <lastBuildDate>Sat, 18 Oct 2014 12:34:28 FLE Daylight Time</lastBuildDate>
-  <pubDate>Sat, 18 Oct 2014 12:34:28 FLE Daylight Time</pubDate>
+  <lastBuildDate>Sat, 18 Oct 2014 12:34:28 FLE Standard Time</lastBuildDate>
+  <pubDate>Sat, 18 Oct 2014 12:34:28 FLE Standard Time</pubDate>
   <ttl>1800</ttl>
   <item>
    <title>A Quickstart Guide to Frog and GitHub Pages</title>
    <link>http://jarcane.github.com/blog/2014/10/18/a-quickstart-guide-to-frog-and-github-pages.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-10-18-a-quickstart-guide-to-frog-and-github-pages-html</guid>
-   <pubDate>Sat, 18 Oct 2014 12:34:28 FLE Daylight Time</pubDate>
+   <pubDate>Sat, 18 Oct 2014 12:34:28 FLE Standard Time</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;It was discussed recently on the #racket freenode channel that getting going with Frog might actually be a bit tricky for someone not coming from the Racket ecosystem or unfamiliar with Github Pages. The process is actually pretty straightforward, but the steps involved aren&amp;rsquo;t exactly documented anywhere in one place, and I promised to look into remedying that. Arcane Syntax itself is hosted on GHP, and generated with Frog, so I had some experience in getting it all working and thought I could help.&lt;/p&gt;
 
@@ -132,7 +132,7 @@ git push&lt;/code&gt;&lt;/pre&gt;
    <title>Disqus comments with Frog</title>
    <link>http://jarcane.github.com/blog/2014/09/16/disqus-comments-with-frog.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-16-disqus-comments-with-frog-html</guid>
-   <pubDate>Tue, 16 Sep 2014 10:15:18 FLE Daylight Time</pubDate>
+   <pubDate>Tue, 16 Sep 2014 10:15:18 FLE Standard Time</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;I had a slightly tricky time setting up a numbered comment link with Disqus, so I thought it might be helpful to write up a quick post on how I did it.&lt;/p&gt;
 

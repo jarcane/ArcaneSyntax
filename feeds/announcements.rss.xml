@@ -4,14 +4,14 @@
   <title>Arcane Syntax: Posts tagged 'announcements'</title>
   <description>Arcane Syntax: Posts tagged 'announcements'</description>
   <link>http://jarcane.github.com/tags/announcements.html</link>
-  <lastBuildDate>Sun, 28 Sep 2014 23:13:13 FLE Daylight Time</lastBuildDate>
-  <pubDate>Sun, 28 Sep 2014 23:13:13 FLE Daylight Time</pubDate>
+  <lastBuildDate>Sun, 28 Sep 2014 23:13:13 FLE Standard Time</lastBuildDate>
+  <pubDate>Sun, 28 Sep 2014 23:13:13 FLE Standard Time</pubDate>
   <ttl>1800</ttl>
   <item>
    <title>HateStack: The self-deleting rantbin</title>
    <link>http://jarcane.github.com/blog/2014/09/28/hatestack-the-self-deleting-rantbin.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-28-hatestack-the-self-deleting-rantbin-html</guid>
-   <pubDate>Sun, 28 Sep 2014 23:13:13 FLE Daylight Time</pubDate>
+   <pubDate>Sun, 28 Sep 2014 23:13:13 FLE Standard Time</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;Inspired by a tweet that Zoe Quinn made the other day, I knocked out a little web app over the weekend for a self-deleting public blogthing. The original spec was a social network that worked like a SnapChat for text, in which the user could post an angry rant with the assurance that it would be automatically deleted in 30 minutes&amp;rsquo; time.&lt;/p&gt;
 
@@ -22,7 +22,7 @@
    <title>Announcing try-racket.org</title>
    <link>http://jarcane.github.com/blog/2014/09/23/announcing-try-racket-org.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-23-announcing-try-racket-org-html</guid>
-   <pubDate>Tue, 23 Sep 2014 20:10:45 FLE Daylight Time</pubDate>
+   <pubDate>Tue, 23 Sep 2014 20:10:45 FLE Standard Time</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;It is my pleasure to announce that at long last, Racket has an online REPL. I&amp;rsquo;ve taken it upon myself to acquire a domain and a DigitalOcean droplet, and hosted the long-mothballed Try Racket code which you can find at &lt;a href="http://try-racket.org"&gt;http://try-racket.org&lt;/a&gt;. The PLT folks have also kindly offered an alternate URL at &lt;a href="http://try.racket-lang.org"&gt;http://try.racket-lang.org&lt;/a&gt;.&lt;/p&gt;
 
@@ -33,28 +33,28 @@
    <title>Trying a new theme</title>
    <link>http://jarcane.github.com/blog/2014/09/20/trying-a-new-theme.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-20-trying-a-new-theme-html</guid>
-   <pubDate>Sat, 20 Sep 2014 15:43:43 FLE Daylight Time</pubDate>
+   <pubDate>Sat, 20 Sep 2014 15:43:43 FLE Standard Time</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;It would appear that Bootswatch has been updated to Boostrap 3, because I was able to install Slate without any apparent issue. Let me know if you notice anything. I&amp;rsquo;m also testing some issues with Frog giving me grief on builds.&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>URI bug fixed</title>
    <link>http://jarcane.github.com/blog/2014/09/16/uri-bug-fixed.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-16-uri-bug-fixed-html</guid>
-   <pubDate>Tue, 16 Sep 2014 22:29:00 FLE Daylight Time</pubDate>
+   <pubDate>Tue, 16 Sep 2014 22:29:00 FLE Standard Time</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;Thanks to the quick efforts of Greg Hendershott, we now have a fix for the Windows URI path generation, so links to subpages should all work correctly now. Let me know if there&amp;rsquo;s any further problems.&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>Technical Difficulties</title>
    <link>http://jarcane.github.com/blog/2014/09/16/technical-difficulties.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-16-technical-difficulties-html</guid>
-   <pubDate>Tue, 16 Sep 2014 00:44:56 FLE Daylight Time</pubDate>
+   <pubDate>Tue, 16 Sep 2014 00:44:56 FLE Standard Time</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;Currently aware of an issue in Frog resulting in malformed page URLs for my posts. Users on browsers other than Chrome will get 404 errors accessing full blog pages. Greg Hendershott is aware of the issue now, and I&amp;rsquo;ll get the site patched as soon as he pushes a fix to Frog.&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>Christening the Grimoire</title>
    <link>http://jarcane.github.com/blog/2014/09/15/christening-the-grimoire.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-15-christening-the-grimoire-html</guid>
-   <pubDate>Mon, 15 Sep 2014 23:07:10 FLE Daylight Time</pubDate>
+   <pubDate>Mon, 15 Sep 2014 23:07:10 FLE Standard Time</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;Welcome to Arcane Syntax, destined to be the new home of all things relating to the arcane art of computer programming and development, as flowing from the mind of myself, an self-trained apprentice programmer, Finnish language student, and former tabletop games writer.&lt;/p&gt;
 
