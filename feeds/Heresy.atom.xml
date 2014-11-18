@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">Arcane Syntax: Posts tagged 'Heresy'</title>
+ <link rel="self" href="http://jarcane.github.com/feeds/Heresy.atom.xml" />
+ <link href="http://jarcane.github.com/tags/Heresy.html" />
+ <id>urn:http-jarcane-github-com:-tags-Heresy-html</id>
+ <updated>2014-11-18T12:32:32Z</updated>
+ <entry>
+  <title type="text">So I made a programming language. Now what?</title>
+  <link rel="alternate" href="http://jarcane.github.com/blog/2014/11/18/so-i-made-a-programming-language-now-what.html" />
+  <id>urn:http-jarcane-github-com:-blog-2014-11-18-so-i-made-a-programming-language-now-what-html</id>
+  <published>2014-11-18T12:32:32Z</published>
+  <updated>2014-11-18T12:32:32Z</updated>
+  <author>
+   <name>John Berry</name></author>
+  <content type="html">&lt;html&gt;
+&lt;p&gt;About a week ago, I had a ridiculous idea. I was in the process of learning some basic Racket macros, and also still following the progress of a couple vintage Lisp dialects for the Tandy Color Computer. Even played around a bit with XLISP in OS&amp;ndash;9. And then someone asked me what a Lambda was.&lt;/p&gt;
+
+&lt;p&gt;Somehow, in the fog of all that (plus a week with a hell of a lot of stress, mostly irrational), came a mad idea. What if someone mashed up BASIC with Lisp? Stranger still, a functionally-oriented BASIC Lisp.&lt;/p&gt;
+
+&lt;p&gt;Then I went and wrote one.&lt;/p&gt;
+
+&lt;p&gt;I called it &lt;a href="https://github.com/jarcane/heresy"&gt;Heresy&lt;/a&gt;, because that seemed like the right name for it.&lt;/p&gt;
+&lt;!-- more--&gt;
+
+&lt;p&gt;With help from a few helpful Racketeers in IRC, I now have a functional dialect of Lisp that borrows heavily from BASIC syntax; a kind of &amp;ldquo;Nutrasweet&amp;rdquo; syntax married with immutable variables and some (I&amp;rsquo;d like to think) vaguely clever use of seemingly imperative constructs executed with functional code.&lt;/p&gt;
+
+&lt;p&gt;It is also now the most well-recieved project I&amp;rsquo;ve ever released, netting 18 stars on Github, almost 3,000 vistors to the repo, and a whole day near the top of Hacker News&amp;rsquo; front page.&lt;/p&gt;
+
+&lt;p&gt;Now, don&amp;rsquo;t get me wrong or think I&amp;rsquo;m letting it get to my head (well, I probably am a little). I fully expect that many of those clicks were more at the very novelty and silliness of the idea. But as ideas go, I&amp;rsquo;ve seen dumber ones succeed, and it&amp;rsquo;s been a useful learning project that fits nicely into my current schedule. The question is though, what do I do with it? Where do I want to go? Is Heresy a way to ease BASIC programmers Lisp? A playground for weird ideas about functional programming?&lt;/p&gt;
+
+&lt;p&gt;Time to establish some ground rules.&lt;/p&gt;
+
+&lt;ol&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;em&gt;Heresy is BASIC&lt;/em&gt; - Heresy is an heir to BASIC, and aims to be at least somewhat easy for BASIC programmers to learn. Mostly this means we prefer BASIC names over the Lisp name, and naming conventions like the $ for string functions.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;em&gt;Heresy is a Lisp&lt;/em&gt; - Heresy is still a Lisp, and loves simple syntax and s-expressions. While it makes use of some sugaring like literal keywords for certain common primitives, these are best used sparingly. Heresy is the Diet Coke of Evil, just one calorie, not quite evil enough.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;em&gt;Heresy is functional&lt;/em&gt; - Functional, but not Haskell. It is not intended solely as a vehicle for absolute functional purity. I love Haskell. You love Haskell. We don&amp;rsquo;t need to write another Haskell. Think more in terms of a lower-calorie, more intelligible Clojure.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;em&gt;Heresy is for learning&lt;/em&gt; - Heresy started as a learning project for me, a chance to learn how Lisp and functional programming really work on a practical level. I hope that, in time, it can be that for others as well, especially those who grew up with BASIC like me and still sometimes struggle to get their head on this brave new FP world we live in now.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;em&gt;Heresy is an experiment&lt;/em&gt; - Heresy is an experimental language. It&amp;rsquo;s very DNA is as a mad idea that came to life, and it&amp;rsquo;s development should be ready and willing to embrace new mad ideas and run with them. This is where &lt;em&gt;carry&lt;/em&gt; came from, and I hope to have more mad ideas in the future.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
+
+&lt;p&gt;Those are my thoughts for now though. I would like to point your attention to #5 in particular, because one of it&amp;rsquo;s side effects is that any or all of these rules probably will change or be ignored as necessary over time. It also leaves out some things I haven&amp;rsquo;t decided yet, like how much of Heresy should be self-hosted (probably as much as can be borne), or a more specific syntax standard for function names (because ? for preds still looks wrong and un-BASIC to me).&lt;/p&gt;
+
+&lt;p&gt;Heresy is the projection of a fevered imagination still buzzing away with strange new ideas. Think of me less as a BDFL and more of a Mad King gibbering in the dark, still sometimes speaking truth in between the deranged quartos and evocations of elder things from beyond time and space &amp;hellip;&lt;/p&gt;&lt;/html&gt;</content></entry></feed>

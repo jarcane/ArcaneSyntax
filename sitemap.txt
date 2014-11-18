@@ -3,6 +3,7 @@ http://jarcane.github.com/blog/2014/09/28/hatestack-the-self-deleting-rantbin.ht
 http://jarcane.github.com/blog/2014/09/15/christening-the-grimoire.html
 http://jarcane.github.com/blog/2014/09/19/apologizing-for-exuberance.html
 http://jarcane.github.com/blog/2014/09/16/disqus-comments-with-frog.html
+http://jarcane.github.com/blog/2014/11/18/so-i-made-a-programming-language-now-what.html
 http://jarcane.github.com/blog/2014/09/17/we-need-a-new-filter.html
 http://jarcane.github.com/blog/2014/09/16/uri-bug-fixed.html
 http://jarcane.github.com/blog/2014/10/10/correction-and-refactoring.html
