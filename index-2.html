@@ -6,7 +6,7 @@
     <title>Arcane Syntax (page 2)</title>
     <meta name="description" content="Arcane Syntax (page 2)">
     <meta name="author"      content="John Berry">
-    <meta name="keywords"    content="Lisp, abuse, programming, Heresy, Haskell, games, all, Personal, announcements, Frog, learning, Racket">
+    <meta name="keywords"    content="Lisp, Heresy, programming, abuse, Haskell, games, all, Personal, announcements, Frog, learning, Racket">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
     <link rel="canonical" href="http://jarcane.github.com/index-2.html">
@@ -107,6 +107,35 @@
 
 
           <article>
+  <header>
+    <h2><a href='/blog/2014/09/23/announcing-try-racket-org.html'>Announcing try-racket.org</a></h2>
+    <p class='date-and-tags'>
+<time datetime="2014-09-23" pubdate="true">2014-09-23</time> :: <span class="tags"><a href="/tags/announcements.html">announcements</a>, <a href="/tags/Racket.html">Racket</a></span></p>
+  </header>
+
+<p>It is my pleasure to announce that at long last, Racket has an online REPL. I&rsquo;ve taken it upon myself to acquire a domain and a DigitalOcean droplet, and hosted the long-mothballed Try Racket code which you can find at <a href="http://try-racket.org">http://try-racket.org</a>. The PLT folks have also kindly offered an alternate URL at <a href="http://try.racket-lang.org">http://try.racket-lang.org</a>.</p>
+
+<p>I&rsquo;ve also taken up the responsibility of maintaining the code: I had to fork it by necessity to modify some things necessary to get it to run without X, and as the original maintainer had no interest in pursuing it further than that, he asked me if I&rsquo;d like to take over. You can thus find my fork of it <a href="https://github.com/jarcane/try-racket">here</a>, where future issues and development should take place.</p>
+
+<p>The code&rsquo;s still a bit rough, with a number of issues to be resolved, and I welcome any and all contributions to the code; pull requests will be tested and then accepted so long as they don&rsquo;t appear to be breaking anything. In particular, it seems the memory constraints for the sandbox need revision to prevent a server crash, and there is some amount of demand for proper multi-line entry in the style of the offline Racket REPL. The tutorial is a bit tedious without it at present.</p>
+  <footer>
+    <br>
+    <a href='/blog/2014/09/23/announcing-try-racket-org.html#disqus_thread'>Comments</a>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'jarcane'; // required: replace example with your forum shortname
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+      var s = document.createElement('script'); s.async = true;
+      s.type = 'text/javascript';
+      s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+      }());
+    </script>
+   </footer>
+</article>
+<article>
   <header>
     <h2><a href='/blog/2014/09/20/trying-a-new-theme.html'>Trying a new theme</a></h2>
     <p class='date-and-tags'>

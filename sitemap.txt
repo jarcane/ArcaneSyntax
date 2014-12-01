@@ -8,6 +8,7 @@ http://jarcane.github.com/blog/2014/09/17/we-need-a-new-filter.html
 http://jarcane.github.com/blog/2014/09/16/uri-bug-fixed.html
 http://jarcane.github.com/blog/2014/10/10/correction-and-refactoring.html
 http://jarcane.github.com/blog/2014/09/23/announcing-try-racket-org.html
+http://jarcane.github.com/blog/2014/12/01/inventing-a-thing.html
 http://jarcane.github.com/blog/2014/09/15/choosing-a-lisp.html
 http://jarcane.github.com/blog/2014/09/16/technical-difficulties.html
 http://jarcane.github.com/blog/2014/10/23/i-am.html

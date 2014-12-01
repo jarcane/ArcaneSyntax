@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Inventing a Thing</title>
+    <meta name="description" content="One of the more ambitious features I decided to attempt for Heresy was to create a new kind of struct-like syntax that would be easier and faster to use in-place in a functional style. Racket has a very robust struct system which I was initially quite ena...">
+    <meta name="author"      content="John Berry">
+    <meta name="keywords"    content="Heresy">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="http://jarcane.github.com/blog/2014/12/01/inventing-a-thing.html">
+    <link rel="next" href="/blog/2014/11/18/so-i-made-a-programming-language-now-what.html">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link ref="alternate" type="application/atom+xml"
+          href="/feeds/all.atom.xml" title="Atom Feed">
+    <link ref="alternate" type="application/rss+xml"
+          href="/feeds/all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-xxxxx']);
+      _gaq.push(['_setDomainName', 'example.com']);
+      _gaq.push(['_trackPageview']);
+      setTimeout(function(){_gaq.push(['_trackEvent', '30_seconds', 'read'])}, 30000); // http://drawingablank.me/blog/fix-your-bounce-rate.html
+      (function() {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <header class="navbar navbar-default navbar-inverse"
+            role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target=".our-nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/index.html" class="navbar-brand">Inventing a Thing</a>
+        </div>
+        <div class="collapse navbar-collapse our-nav-collapse"
+             role="navigation">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Tags <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/index.html">All Posts</a></li>
+
+<li><a href="/tags/abuse.html">abuse</a></li>
+
+<li><a href="/tags/announcements.html">announcements</a></li>
+
+<li><a href="/tags/Frog.html">Frog</a></li>
+
+<li><a href="/tags/games.html">games</a></li>
+
+<li><a href="/tags/Haskell.html">Haskell</a></li>
+
+<li><a href="/tags/Heresy.html">Heresy</a></li>
+
+<li><a href="/tags/learning.html">learning</a></li>
+
+<li><a href="/tags/Lisp.html">Lisp</a></li>
+
+<li><a href="/tags/Personal.html">Personal</a></li>
+
+<li><a href="/tags/programming.html">programming</a></li>
+
+<li><a href="/tags/Racket.html">Racket</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/About.html">About</a>
+            </li> 
+            <li><a href="/feeds/all.atom.xml">Atom</a></li>
+            <li><a href="/feeds/all.rss.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+
+
+
+
+          <article>
+  <header>
+    <h1>Inventing a Thing</h1>
+    <p class='date-and-tags'>
+<time datetime="2014-12-01" pubdate="true">2014-12-01</time> :: <span class="tags"><a href="/tags/Heresy.html">Heresy</a></span></p>
+  </header>
+
+<p>One of the more ambitious features I decided to attempt for Heresy was to create a new kind of struct-like syntax that would be easier and faster to use in-place in a functional style. Racket has a very robust struct system which I was initially quite enamored of, but which I soon discovered could get quickly cumbersome to deal with. For Heresy, I wanted something simpler.</p>
+
+<p>So, some days ago I wrote myself <a href="https://github.com/jarcane/heresy/issues/5">a spec</a> for something called &ldquo;Things,&rdquo; but set it aside because I was largely convinced it would take a considerable amount of wizardry to pull it off. The spec contained a considerable amount of functionality, from pattern-matching syntax to inheritance and on.</p>
+
+<p>I was wrong. It took me half a day. And <a href="https://github.com/jarcane/heresy/commit/7dd1456cbeae767be786cbeb94d40c5ea645f325">only 29 lines of code.</a></p>
+<!-- more-->
+
+<p>Part of the secret of course to this was actually in the reading and studying I did trying to learn more about combinators and other such lambda-based wizardry. It took me about a week of gestating, but what I realized is that what I needed wasn&rsquo;t a static data structure with some macrology attached to various names, but actually, all that syntax needed to live in the data structure itself. Then inheritance and renaming and copying and all that fun stuff comes for free.</p>
+
+<p>The result is Things. We can define a new kind of Thing:</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span class="p">(</span><span class="nf">describe</span> <span class="nv">Cthulhu</span> <span class="p">(</span><span class="nf">size</span> <span class="ss">'Immense</span><span class="p">)</span> <span class="p">(</span><span class="nf">type</span> <span class="ss">'Winged</span><span class="p">)</span> <span class="p">(</span><span class="nf">status</span> <span class="ss">'sleeping</span><span class="p">))</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>We can call values from Cthulhu:</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="p">(</span><span class="nf">Cthulhu</span> <span class="ss">'size</span><span class="p">)</span>
+<span class="ss">'Immense</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>We can copy Cthulhu with new values:</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="p">((</span><span class="nf">Cthulhu</span> <span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit">*</a></span> <span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit">*</a></span> <span class="ss">'awake</span><span class="p">)</span> <span class="ss">'status</span><span class="p">)</span>
+<span class="ss">'awake</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>We can give a new name to Cthulhu:</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2
+3</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="p">(</span><span class="nf">def</span> <span class="nv">Dreamer</span> <span class="nv">Cthulhu</span><span class="p">)</span>
+<span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="p">(</span><span class="nf">Dreamer</span> <span class="ss">'type</span><span class="p">)</span>
+<span class="ss">'Winged</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>And we can make children of Cthulhu:</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2
+3</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="p">(</span><span class="nf">def</span> <span class="nv">Star-Spawn</span> <span class="p">(</span><span class="nf">Cthulhu</span> <span class="ss">'Medium</span> <span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit">*</a></span> <span class="ss">'awake</span><span class="p">))</span>
+<span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="p">(</span><span class="nf">Star-Spawn</span> <span class="ss">'size</span><span class="p">)</span>
+<span class="ss">'Medium</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>So how does it work? It&rsquo;s all just a lambda. (describe &hellip;) is a simple macro wrapper that defines a name and seeds it with a call to (thing &hellip;), which is a helper function that returns a lambda containing a closure that holds the actual alist that holds our values as well as the argument handling code for calling and copying it. Indeed, copying Things is just a recursive call to Thing with new values, and (thing &hellip;) can potentially be called anonymously just like lambdas can. And because functions are first-class values, inheritence and value-passing just come with the territory.</p>
+
+<p>There is one weakness though:</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="nv">Cthulhu</span>
+<span class="o">#</span><span class="nv">&lt;procedure:Cthulhu&gt;</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>Because Things are just lambdas underneath, they read naked as procedures, so they are not immediately transparent.</p>
+
+<p>Instead, we have to do this:</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="p">(</span><span class="nf">Cthulhu</span><span class="p">)</span>
+<span class="o">'</span><span class="p">((</span><span class="nf">size</span> <span class="ss">'Immense</span><span class="p">)</span> <span class="p">(</span><span class="nf">type</span> <span class="ss">'Winged</span><span class="p">)</span> <span class="p">(</span><span class="nf">status</span> <span class="ss">'sleeping</span><span class="p">))</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>Though on the upside, this is not merely a print routine: It actually returns the naked alist underneath the snytax sugar, so you can mangle it with assoc and subst or whatever other unspeakable horror you wish to do to the Great Dreamer in the Deep.</p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://jarcane.github.com/blog/2014/12/01/inventing-a-thing.html"
+       data-dnt="true">
+      "Tweet"</a>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <g:plusone size="medium" href="http://jarcane.github.com/blog/2014/12/01/inventing-a-thing.html"></g:plusone>
+    <script type="text/javascript">
+      var disqus_shortname = 'jarcane';
+      (function() {
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <div id="disqus_thread"></div>
+    <ul class="pager">
+
+    <li class="next">
+      <a href="/blog/2014/11/18/so-i-made-a-programming-language-now-what.html"><em>So I made a programming language. Now what?</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p><a href="https://twitter.com/J_Arcane"
+              class="twitter-follow-button"
+              data-show-count="false"
+              data-lang="en">
+             "Follow J_Arcane"
+           </a>
+           <script type="text/javascript">
+             !function(d,s,id){
+                 var js,fjs=d.getElementsByTagName(s)[0];
+                 if(!d.getElementById(id)){
+                     js=d.createElement(s);
+                     js.id=id;
+                     js.src="//platform.twitter.com/widgets.js";
+                     fjs.parentNode.insertBefore(js,fjs);
+                 }
+             }(document,"script","twitter-wjs");
+           </script></p>
+        <p>Site generated
+        by <a href="https://github.com/greghendershott/frog">Frog</a>,
+        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+        <p><em>All contents Copyright 2014- by John S. Berry III</em>.</p>
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="//code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
