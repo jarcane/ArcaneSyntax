@@ -4,7 +4,36 @@
  <link rel="self" href="http://jarcane.github.com/feeds/Heresy.atom.xml" />
  <link href="http://jarcane.github.com/tags/Heresy.html" />
  <id>urn:http-jarcane-github-com:-tags-Heresy-html</id>
- <updated>2014-12-01T20:39:05Z</updated>
+ <updated>2014-12-29T18:04:20Z</updated>
+ <entry>
+  <title type="text">A resume and a code example in one</title>
+  <link rel="alternate" href="http://jarcane.github.com/blog/2014/12/29/a-resume-and-a-code-example-in-one.html" />
+  <id>urn:http-jarcane-github-com:-blog-2014-12-29-a-resume-and-a-code-example-in-one-html</id>
+  <published>2014-12-29T18:04:20Z</published>
+  <updated>2014-12-29T18:04:20Z</updated>
+  <author>
+   <name>John Berry</name></author>
+  <content type="html">&lt;html&gt;
+&lt;p&gt;Recently I asked on Twitter about whether it was possible to find work in functional programming without a degree, seeing as I&amp;rsquo;m a functional programmer and I don&amp;rsquo;t have a degree, and was pleasantly surprised to be contacted by a recruiter who provided some very useful advice on which languages to look into.&lt;/p&gt;
+
+&lt;p&gt;They also asked for a resume, which suddenly brought me to the realization that I hadn&amp;rsquo;t actually yet written a programming-oriented resume yet.&lt;/p&gt;
+
+&lt;p&gt;So I started thinking of how I could write a resume that would actually highlight my skills thus far as a programmer in an immediately obvious way, and I think I found an interesting solution.&lt;/p&gt;
+&lt;!-- more--&gt;
+
+&lt;p&gt;It&amp;rsquo;s pretty common for UI or graphics designers to hand design their own resumes; it&amp;rsquo;s a very clear and direct way of showing off your own design skills in an obvious way. Sadly, other than that there&amp;rsquo;s little in the way of options for the rest of us: there&amp;rsquo;s loads of templates out there for making an interesting &lt;em&gt;looking&lt;/em&gt; resume, but that&amp;rsquo;s not really the same effect for programmers as it is for a designer.&lt;/p&gt;
+
+&lt;p&gt;What&amp;rsquo;s needed is a way to show off what one is capable of as a programmer through the medium of the resume itself.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m not sure I&amp;rsquo;ve quite got that far yet, but I have done what I think is a close-by solution: showing off one&amp;rsquo;s basic capabilities as a programmer through the medium of how the resume is &lt;em&gt;generated&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thus, &lt;a href="https://github.com/jarcane/resume.hsy"&gt;resume.hsy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;resume.hsy&lt;/code&gt; is a straightforward Heresy program with one goal: to generate my resume in Markdown format. After just a half-day&amp;rsquo;s effort, it succeeds at it.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s not particularly impressive code (and the contortions involved in generating the output strings are a little ugly), and the output result is by design, not especially beautiful. The point here isn&amp;rsquo;t to make a beautiful design object, but to present my skills in a clear format through the lens of a clear example of how I code. The fact that I designed the language it&amp;rsquo;s written in is also part of the point of the demonstration, inspired by &lt;a href="https://twitter.com/boothead/status/545886788196507648"&gt;the reaction of one commenter&lt;/a&gt; to my original post on Twitter.&lt;/p&gt;
+
+&lt;p&gt;Admittedly, that last bit is probably also a weakness: nobody codes in Heresy yet except me. But the Markdown output is readily available, and the code is mostly readable to anyone familiar with Lisp, and I&amp;rsquo;m also very proud of having written the first example of useful code in Heresy.&lt;/p&gt;&lt;/html&gt;</content></entry>
  <entry>
   <title type="text">Inventing a Thing</title>
   <link rel="alternate" href="http://jarcane.github.com/blog/2014/12/01/inventing-a-thing.html" />

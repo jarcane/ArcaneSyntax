@@ -3,14 +3,14 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Posts tagged 'Heresy'</title>
-    <meta name="description" content="Posts tagged 'Heresy'">
+    <title>A resume and a code example in one</title>
+    <meta name="description" content="Recently I asked on Twitter about whether it was possible to find work in functional programming without a degree, seeing as I'm a functional programmer and I don't have a degree, and was pleasantly surprised to be contacted by a recruiter who provided so...">
     <meta name="author"      content="John Berry">
-    <meta name="keywords"    content="Heresy">
+    <meta name="keywords"    content="Heresy, programming">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://jarcane.github.com/tags/Heresy.html">
-
+    <link rel="canonical" href="http://jarcane.github.com/blog/2014/12/29/a-resume-and-a-code-example-in-one.html">
+    <link rel="next" href="/blog/2014/12/01/inventing-a-thing.html">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
@@ -19,9 +19,9 @@
     <link rel="stylesheet" type="text/css" href="/css/custom.css">
     <!-- Feeds -->
     <link ref="alternate" type="application/atom+xml"
-          href="/feeds/Heresy.atom.xml" title="Atom Feed">
+          href="/feeds/all.atom.xml" title="Atom Feed">
     <link ref="alternate" type="application/rss+xml"
-          href="/feeds/Heresy.rss.xml" title="RSS Feed">
+          href="/feeds/all.rss.xml" title="RSS Feed">
     <!-- JS -->
     <script type="text/javascript">
       var _gaq = _gaq || [];
@@ -52,7 +52,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="/index.html" class="navbar-brand">Posts tagged 'Heresy'</a>
+          <a href="/index.html" class="navbar-brand">A resume and a code example in one</a>
         </div>
         <div class="collapse navbar-collapse our-nav-collapse"
              role="navigation">
@@ -90,8 +90,8 @@
             <li>
               <a href="/About.html">About</a>
             </li> 
-            <li><a href="/feeds/Heresy.atom.xml">Atom</a></li>
-            <li><a href="/feeds/Heresy.rss.xml">RSS</a></li>
+            <li><a href="/feeds/all.atom.xml">Atom</a></li>
+            <li><a href="/feeds/all.rss.xml">RSS</a></li>
           </ul>
         </div>
       </div>
@@ -104,11 +104,11 @@
 
 
 
-          <h1>Posts tagged <em>Heresy</em></h1>
+
 
           <article>
   <header>
-    <h2><a href='/blog/2014/12/29/a-resume-and-a-code-example-in-one.html'>A resume and a code example in one</a></h2>
+    <h1>A resume and a code example in one</h1>
     <p class='date-and-tags'>
 <time datetime="2014-12-29" pubdate="true">2014-12-29</time> :: <span class="tags"><a href="/tags/Heresy.html">Heresy</a>, <a href="/tags/programming.html">programming</a></span></p>
   </header>
@@ -118,85 +118,58 @@
 <p>They also asked for a resume, which suddenly brought me to the realization that I hadn&rsquo;t actually yet written a programming-oriented resume yet.</p>
 
 <p>So I started thinking of how I could write a resume that would actually highlight my skills thus far as a programmer in an immediately obvious way, and I think I found an interesting solution.</p>
-<footer class="read-more"><a href="/blog/2014/12/29/a-resume-and-a-code-example-in-one.html">&hellip;more&hellip;</a></footer>
+<!-- more-->
+
+<p>It&rsquo;s pretty common for UI or graphics designers to hand design their own resumes; it&rsquo;s a very clear and direct way of showing off your own design skills in an obvious way. Sadly, other than that there&rsquo;s little in the way of options for the rest of us: there&rsquo;s loads of templates out there for making an interesting <em>looking</em> resume, but that&rsquo;s not really the same effect for programmers as it is for a designer.</p>
+
+<p>What&rsquo;s needed is a way to show off what one is capable of as a programmer through the medium of the resume itself.</p>
+
+<p>I&rsquo;m not sure I&rsquo;ve quite got that far yet, but I have done what I think is a close-by solution: showing off one&rsquo;s basic capabilities as a programmer through the medium of how the resume is <em>generated</em>.</p>
+
+<p>Thus, <a href="https://github.com/jarcane/resume.hsy">resume.hsy</a>.</p>
+
+<p><code>resume.hsy</code> is a straightforward Heresy program with one goal: to generate my resume in Markdown format. After just a half-day&rsquo;s effort, it succeeds at it.</p>
+
+<p>It&rsquo;s not particularly impressive code (and the contortions involved in generating the output strings are a little ugly), and the output result is by design, not especially beautiful. The point here isn&rsquo;t to make a beautiful design object, but to present my skills in a clear format through the lens of a clear example of how I code. The fact that I designed the language it&rsquo;s written in is also part of the point of the demonstration, inspired by <a href="https://twitter.com/boothead/status/545886788196507648">the reaction of one commenter</a> to my original post on Twitter.</p>
+
+<p>Admittedly, that last bit is probably also a weakness: nobody codes in Heresy yet except me. But the Markdown output is readily available, and the code is mostly readable to anyone familiar with Lisp, and I&rsquo;m also very proud of having written the first example of useful code in Heresy.</p>
   <footer>
-    <br>
-    <a href='/blog/2014/12/29/a-resume-and-a-code-example-in-one.html#disqus_thread'>Comments</a>
     <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'jarcane'; // required: replace example with your forum shortname
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function () {
-      var s = document.createElement('script'); s.async = true;
-      s.type = 'text/javascript';
-      s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-      }());
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
     </script>
-   </footer>
-</article>
-<article>
-  <header>
-    <h2><a href='/blog/2014/12/01/inventing-a-thing.html'>Inventing a Thing</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2014-12-01" pubdate="true">2014-12-01</time> :: <span class="tags"><a href="/tags/Heresy.html">Heresy</a></span></p>
-  </header>
-
-<p>One of the more ambitious features I decided to attempt for Heresy was to create a new kind of struct-like syntax that would be easier and faster to use in-place in a functional style. Racket has a very robust struct system which I was initially quite enamored of, but which I soon discovered could get quickly cumbersome to deal with. For Heresy, I wanted something simpler.</p>
-
-<p>So, some days ago I wrote myself <a href="https://github.com/jarcane/heresy/issues/5">a spec</a> for something called &ldquo;Things,&rdquo; but set it aside because I was largely convinced it would take a considerable amount of wizardry to pull it off. The spec contained a considerable amount of functionality, from pattern-matching syntax to inheritance and on.</p>
-
-<p>I was wrong. It took me half a day. And <a href="https://github.com/jarcane/heresy/commit/7dd1456cbeae767be786cbeb94d40c5ea645f325">only 29 lines of code.</a></p>
-<footer class="read-more"><a href="/blog/2014/12/01/inventing-a-thing.html">&hellip;more&hellip;</a></footer>
-  <footer>
-    <br>
-    <a href='/blog/2014/12/01/inventing-a-thing.html#disqus_thread'>Comments</a>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://jarcane.github.com/blog/2014/12/29/a-resume-and-a-code-example-in-one.html"
+       data-dnt="true">
+      "Tweet"</a>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <g:plusone size="medium" href="http://jarcane.github.com/blog/2014/12/29/a-resume-and-a-code-example-in-one.html"></g:plusone>
     <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'jarcane'; // required: replace example with your forum shortname
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function () {
-      var s = document.createElement('script'); s.async = true;
-      s.type = 'text/javascript';
-      s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-      }());
+      var disqus_shortname = 'jarcane';
+      (function() {
+          var dsq = document.createElement('script');
+          dsq.type = 'text/javascript';
+          dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
     </script>
-   </footer>
-</article>
-<article>
-  <header>
-    <h2><a href='/blog/2014/11/18/so-i-made-a-programming-language-now-what.html'>So I made a programming language. Now what?</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2014-11-18" pubdate="true">2014-11-18</time> :: <span class="tags"><a href="/tags/Heresy.html">Heresy</a>, <a href="/tags/Racket.html">Racket</a></span></p>
-  </header>
+    <div id="disqus_thread"></div>
+    <ul class="pager">
 
-<p>About a week ago, I had a ridiculous idea. I was in the process of learning some basic Racket macros, and also still following the progress of a couple vintage Lisp dialects for the Tandy Color Computer. Even played around a bit with XLISP in OS&ndash;9. And then someone asked me what a Lambda was.</p>
-
-<p>Somehow, in the fog of all that (plus a week with a hell of a lot of stress, mostly irrational), came a mad idea. What if someone mashed up BASIC with Lisp? Stranger still, a functionally-oriented BASIC Lisp.</p>
-
-<p>Then I went and wrote one.</p>
-
-<p>I called it <a href="https://github.com/jarcane/heresy">Heresy</a>, because that seemed like the right name for it.</p>
-<footer class="read-more"><a href="/blog/2014/11/18/so-i-made-a-programming-language-now-what.html">&hellip;more&hellip;</a></footer>
-  <footer>
-    <br>
-    <a href='/blog/2014/11/18/so-i-made-a-programming-language-now-what.html#disqus_thread'>Comments</a>
-    <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'jarcane'; // required: replace example with your forum shortname
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function () {
-      var s = document.createElement('script'); s.async = true;
-      s.type = 'text/javascript';
-      s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-      }());
-    </script>
-   </footer>
+    <li class="next">
+      <a href="/blog/2014/12/01/inventing-a-thing.html"><em>Inventing a Thing</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
 </article>
         </div>
       </div>
