@@ -4,13 +4,13 @@
  <link rel="self" href="http://jarcane.github.com/feeds/announcements.atom.xml" />
  <link href="http://jarcane.github.com/tags/announcements.html" />
  <id>urn:http-jarcane-github-com:-tags-announcements-html</id>
- <updated>2014-09-28T23:13:13Z</updated>
+ <updated>2014-09-28T20:13:13Z</updated>
  <entry>
   <title type="text">HateStack: The self-deleting rantbin</title>
   <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/28/hatestack-the-self-deleting-rantbin.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-09-28-hatestack-the-self-deleting-rantbin-html</id>
-  <published>2014-09-28T23:13:13Z</published>
-  <updated>2014-09-28T23:13:13Z</updated>
+  <published>2014-09-28T20:13:13Z</published>
+  <updated>2014-09-28T20:13:13Z</updated>
   <author>
    <name>John Berry</name></author>
   <content type="html">&lt;html&gt;
@@ -23,8 +23,8 @@
   <title type="text">Announcing try-racket.org</title>
   <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/23/announcing-try-racket-org.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-09-23-announcing-try-racket-org-html</id>
-  <published>2014-09-23T20:10:45Z</published>
-  <updated>2014-09-23T20:10:45Z</updated>
+  <published>2014-09-23T17:10:45Z</published>
+  <updated>2014-09-23T17:10:45Z</updated>
   <author>
    <name>John Berry</name></author>
   <content type="html">&lt;html&gt;
@@ -37,8 +37,8 @@
   <title type="text">Trying a new theme</title>
   <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/20/trying-a-new-theme.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-09-20-trying-a-new-theme-html</id>
-  <published>2014-09-20T15:43:43Z</published>
-  <updated>2014-09-20T15:43:43Z</updated>
+  <published>2014-09-20T12:43:43Z</published>
+  <updated>2014-09-20T12:43:43Z</updated>
   <author>
    <name>John Berry</name></author>
   <content type="html">&lt;html&gt;
@@ -47,8 +47,8 @@
   <title type="text">URI bug fixed</title>
   <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/16/uri-bug-fixed.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-09-16-uri-bug-fixed-html</id>
-  <published>2014-09-16T22:29:00Z</published>
-  <updated>2014-09-16T22:29:00Z</updated>
+  <published>2014-09-16T19:29:00Z</published>
+  <updated>2014-09-16T19:29:00Z</updated>
   <author>
    <name>John Berry</name></author>
   <content type="html">&lt;html&gt;
@@ -57,8 +57,8 @@
   <title type="text">Technical Difficulties</title>
   <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/16/technical-difficulties.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-09-16-technical-difficulties-html</id>
-  <published>2014-09-16T00:44:56Z</published>
-  <updated>2014-09-16T00:44:56Z</updated>
+  <published>2014-09-15T21:44:56Z</published>
+  <updated>2014-09-15T21:44:56Z</updated>
   <author>
    <name>John Berry</name></author>
   <content type="html">&lt;html&gt;
@@ -67,8 +67,8 @@
   <title type="text">Christening the Grimoire</title>
   <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/15/christening-the-grimoire.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-09-15-christening-the-grimoire-html</id>
-  <published>2014-09-15T23:07:10Z</published>
-  <updated>2014-09-15T23:07:10Z</updated>
+  <published>2014-09-15T20:07:10Z</published>
+  <updated>2014-09-15T20:07:10Z</updated>
   <author>
    <name>John Berry</name></author>
   <content type="html">&lt;html&gt;

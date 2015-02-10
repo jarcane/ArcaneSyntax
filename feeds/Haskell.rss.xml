@@ -4,14 +4,14 @@
   <title>Arcane Syntax: Posts tagged 'Haskell'</title>
   <description>Arcane Syntax: Posts tagged 'Haskell'</description>
   <link>http://jarcane.github.com/tags/Haskell.html</link>
-  <lastBuildDate>Fri, 03 Oct 2014 23:25:10 FLE Standard Time</lastBuildDate>
-  <pubDate>Fri, 03 Oct 2014 23:25:10 FLE Standard Time</pubDate>
+  <lastBuildDate>Fri, 03 Oct 2014 20:25:10 UT</lastBuildDate>
+  <pubDate>Fri, 03 Oct 2014 20:25:10 UT</pubDate>
   <ttl>1800</ttl>
   <item>
    <title>Haskell is Cool</title>
    <link>http://jarcane.github.com/blog/2014/10/03/haskell-is-cool.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-10-03-haskell-is-cool-html</guid>
-   <pubDate>Fri, 03 Oct 2014 23:25:10 FLE Standard Time</pubDate>
+   <pubDate>Fri, 03 Oct 2014 20:25:10 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;After my last post and some thinking, I ultimately settled on &lt;em&gt;Learn You a Haskell&lt;/em&gt; as my next book to work through, and after some initial hassles trying to get a decent working environment set up, I must say that I&amp;rsquo;m quite enjoying the language itself. It was running across &lt;a href="http://tryhaskell.org/"&gt;Try Haskell&lt;/a&gt; that actually spurred me to finally take the leap in that direction (seriously, online REPLs are the best language demos period), and I was quickly impressed by the power hiding in that seemingly obtuse syntax.&lt;/p&gt;
 

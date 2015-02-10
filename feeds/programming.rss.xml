@@ -4,14 +4,14 @@
   <title>Arcane Syntax: Posts tagged 'programming'</title>
   <description>Arcane Syntax: Posts tagged 'programming'</description>
   <link>http://jarcane.github.com/tags/programming.html</link>
-  <lastBuildDate>Mon, 29 Dec 2014 18:04:20 FLE Standard Time</lastBuildDate>
-  <pubDate>Mon, 29 Dec 2014 18:04:20 FLE Standard Time</pubDate>
+  <lastBuildDate>Mon, 29 Dec 2014 16:04:20 UT</lastBuildDate>
+  <pubDate>Mon, 29 Dec 2014 16:04:20 UT</pubDate>
   <ttl>1800</ttl>
   <item>
    <title>A resume and a code example in one</title>
    <link>http://jarcane.github.com/blog/2014/12/29/a-resume-and-a-code-example-in-one.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-12-29-a-resume-and-a-code-example-in-one-html</guid>
-   <pubDate>Mon, 29 Dec 2014 18:04:20 FLE Standard Time</pubDate>
+   <pubDate>Mon, 29 Dec 2014 16:04:20 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;Recently I asked on Twitter about whether it was possible to find work in functional programming without a degree, seeing as I&amp;rsquo;m a functional programmer and I don&amp;rsquo;t have a degree, and was pleasantly surprised to be contacted by a recruiter who provided some very useful advice on which languages to look into.&lt;/p&gt;
 
@@ -37,7 +37,7 @@
    <title>On LET: a brief comparative thesis</title>
    <link>http://jarcane.github.com/blog/2014/11/11/on-let-a-brief-comparative-thesis.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-11-11-on-let-a-brief-comparative-thesis-html</guid>
-   <pubDate>Tue, 11 Nov 2014 08:56:05 FLE Standard Time</pubDate>
+   <pubDate>Tue, 11 Nov 2014 06:56:05 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;I started programming, as many people my age did, as a kid, with a computer running Microsoft BASIC. Disk Extended Color Basic on a Tandy Color Computer 3, to be precise. I wrote quite a few programs, large and small, as well as modding a few others that came on various Rainbow disks I&amp;rsquo;d cobbled together mostly from either the Internet or an uncle who was far more invested in the scene.&lt;/p&gt;
 
@@ -83,7 +83,7 @@
    <title>Learning Programming: the Backlog</title>
    <link>http://jarcane.github.com/blog/2014/09/29/learning-programming-the-backlog.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-29-learning-programming-the-backlog-html</guid>
-   <pubDate>Mon, 29 Sep 2014 23:08:19 FLE Standard Time</pubDate>
+   <pubDate>Mon, 29 Sep 2014 20:08:19 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;Thus far, I have been back to programming for a vanishingly small amount of time, roughly three months by Github commit reckoning (plus a bit of time spent in Codecademy). In that time it has seemed, to myself and even to others to a lesser extent, rather remarkable the amount of progress I&amp;rsquo;ve made. In just that three months and change I&amp;rsquo;ve written a roguelike game, an old-fashioned line editor, a text graphics wrapper, an esolang, a virtual machine, a basic weblog, and even taken over as chief maintainer of an open source project for the first time.&lt;/p&gt;
 

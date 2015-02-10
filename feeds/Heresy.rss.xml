@@ -4,14 +4,14 @@
   <title>Arcane Syntax: Posts tagged 'Heresy'</title>
   <description>Arcane Syntax: Posts tagged 'Heresy'</description>
   <link>http://jarcane.github.com/tags/Heresy.html</link>
-  <lastBuildDate>Mon, 29 Dec 2014 18:04:20 FLE Standard Time</lastBuildDate>
-  <pubDate>Mon, 29 Dec 2014 18:04:20 FLE Standard Time</pubDate>
+  <lastBuildDate>Mon, 29 Dec 2014 16:04:20 UT</lastBuildDate>
+  <pubDate>Mon, 29 Dec 2014 16:04:20 UT</pubDate>
   <ttl>1800</ttl>
   <item>
    <title>A resume and a code example in one</title>
    <link>http://jarcane.github.com/blog/2014/12/29/a-resume-and-a-code-example-in-one.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-12-29-a-resume-and-a-code-example-in-one-html</guid>
-   <pubDate>Mon, 29 Dec 2014 18:04:20 FLE Standard Time</pubDate>
+   <pubDate>Mon, 29 Dec 2014 16:04:20 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;Recently I asked on Twitter about whether it was possible to find work in functional programming without a degree, seeing as I&amp;rsquo;m a functional programmer and I don&amp;rsquo;t have a degree, and was pleasantly surprised to be contacted by a recruiter who provided some very useful advice on which languages to look into.&lt;/p&gt;
 
@@ -37,7 +37,7 @@
    <title>Inventing a Thing</title>
    <link>http://jarcane.github.com/blog/2014/12/01/inventing-a-thing.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-12-01-inventing-a-thing-html</guid>
-   <pubDate>Mon, 01 Dec 2014 20:39:05 FLE Standard Time</pubDate>
+   <pubDate>Mon, 01 Dec 2014 18:39:05 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;One of the more ambitious features I decided to attempt for Heresy was to create a new kind of struct-like syntax that would be easier and faster to use in-place in a functional style. Racket has a very robust struct system which I was initially quite enamored of, but which I soon discovered could get quickly cumbersome to deal with. For Heresy, I wanted something simpler.&lt;/p&gt;
 
@@ -185,7 +185,7 @@
    <title>So I made a programming language. Now what?</title>
    <link>http://jarcane.github.com/blog/2014/11/18/so-i-made-a-programming-language-now-what.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-11-18-so-i-made-a-programming-language-now-what-html</guid>
-   <pubDate>Tue, 18 Nov 2014 12:32:32 FLE Standard Time</pubDate>
+   <pubDate>Tue, 18 Nov 2014 10:32:32 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;About a week ago, I had a ridiculous idea. I was in the process of learning some basic Racket macros, and also still following the progress of a couple vintage Lisp dialects for the Tandy Color Computer. Even played around a bit with XLISP in OS&amp;ndash;9. And then someone asked me what a Lambda was.&lt;/p&gt;
 

@@ -4,13 +4,13 @@
  <link rel="self" href="http://jarcane.github.com/feeds/programming.atom.xml" />
  <link href="http://jarcane.github.com/tags/programming.html" />
  <id>urn:http-jarcane-github-com:-tags-programming-html</id>
- <updated>2014-12-29T18:04:20Z</updated>
+ <updated>2014-12-29T16:04:20Z</updated>
  <entry>
   <title type="text">A resume and a code example in one</title>
   <link rel="alternate" href="http://jarcane.github.com/blog/2014/12/29/a-resume-and-a-code-example-in-one.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-12-29-a-resume-and-a-code-example-in-one-html</id>
-  <published>2014-12-29T18:04:20Z</published>
-  <updated>2014-12-29T18:04:20Z</updated>
+  <published>2014-12-29T16:04:20Z</published>
+  <updated>2014-12-29T16:04:20Z</updated>
   <author>
    <name>John Berry</name></author>
   <content type="html">&lt;html&gt;
@@ -38,8 +38,8 @@
   <title type="text">On LET: a brief comparative thesis</title>
   <link rel="alternate" href="http://jarcane.github.com/blog/2014/11/11/on-let-a-brief-comparative-thesis.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-11-11-on-let-a-brief-comparative-thesis-html</id>
-  <published>2014-11-11T08:56:05Z</published>
-  <updated>2014-11-11T08:56:05Z</updated>
+  <published>2014-11-11T06:56:05Z</published>
+  <updated>2014-11-11T06:56:05Z</updated>
   <author>
    <name>John Berry</name></author>
   <content type="html">&lt;html&gt;
@@ -87,8 +87,8 @@
   <title type="text">Learning Programming: the Backlog</title>
   <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/29/learning-programming-the-backlog.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-09-29-learning-programming-the-backlog-html</id>
-  <published>2014-09-29T23:08:19Z</published>
-  <updated>2014-09-29T23:08:19Z</updated>
+  <published>2014-09-29T20:08:19Z</published>
+  <updated>2014-09-29T20:08:19Z</updated>
   <author>
    <name>John Berry</name></author>
   <content type="html">&lt;html&gt;

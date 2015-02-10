@@ -4,14 +4,14 @@
   <title>Arcane Syntax: Arcane Syntax</title>
   <description>Arcane Syntax: Arcane Syntax</description>
   <link>http://jarcane.github.com/index.html</link>
-  <lastBuildDate>Mon, 29 Dec 2014 18:04:20 FLE Standard Time</lastBuildDate>
-  <pubDate>Mon, 29 Dec 2014 18:04:20 FLE Standard Time</pubDate>
+  <lastBuildDate>Mon, 29 Dec 2014 16:04:20 UT</lastBuildDate>
+  <pubDate>Mon, 29 Dec 2014 16:04:20 UT</pubDate>
   <ttl>1800</ttl>
   <item>
    <title>A resume and a code example in one</title>
    <link>http://jarcane.github.com/blog/2014/12/29/a-resume-and-a-code-example-in-one.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-12-29-a-resume-and-a-code-example-in-one-html</guid>
-   <pubDate>Mon, 29 Dec 2014 18:04:20 FLE Standard Time</pubDate>
+   <pubDate>Mon, 29 Dec 2014 16:04:20 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;Recently I asked on Twitter about whether it was possible to find work in functional programming without a degree, seeing as I&amp;rsquo;m a functional programmer and I don&amp;rsquo;t have a degree, and was pleasantly surprised to be contacted by a recruiter who provided some very useful advice on which languages to look into.&lt;/p&gt;
 
@@ -37,7 +37,7 @@
    <title>Inventing a Thing</title>
    <link>http://jarcane.github.com/blog/2014/12/01/inventing-a-thing.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-12-01-inventing-a-thing-html</guid>
-   <pubDate>Mon, 01 Dec 2014 20:39:05 FLE Standard Time</pubDate>
+   <pubDate>Mon, 01 Dec 2014 18:39:05 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;One of the more ambitious features I decided to attempt for Heresy was to create a new kind of struct-like syntax that would be easier and faster to use in-place in a functional style. Racket has a very robust struct system which I was initially quite enamored of, but which I soon discovered could get quickly cumbersome to deal with. For Heresy, I wanted something simpler.&lt;/p&gt;
 
@@ -185,7 +185,7 @@
    <title>So I made a programming language. Now what?</title>
    <link>http://jarcane.github.com/blog/2014/11/18/so-i-made-a-programming-language-now-what.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-11-18-so-i-made-a-programming-language-now-what-html</guid>
-   <pubDate>Tue, 18 Nov 2014 12:32:32 FLE Standard Time</pubDate>
+   <pubDate>Tue, 18 Nov 2014 10:32:32 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;About a week ago, I had a ridiculous idea. I was in the process of learning some basic Racket macros, and also still following the progress of a couple vintage Lisp dialects for the Tandy Color Computer. Even played around a bit with XLISP in OS&amp;ndash;9. And then someone asked me what a Lambda was.&lt;/p&gt;
 
@@ -223,7 +223,7 @@
    <title>On LET: a brief comparative thesis</title>
    <link>http://jarcane.github.com/blog/2014/11/11/on-let-a-brief-comparative-thesis.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-11-11-on-let-a-brief-comparative-thesis-html</guid>
-   <pubDate>Tue, 11 Nov 2014 08:56:05 FLE Standard Time</pubDate>
+   <pubDate>Tue, 11 Nov 2014 06:56:05 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;I started programming, as many people my age did, as a kid, with a computer running Microsoft BASIC. Disk Extended Color Basic on a Tandy Color Computer 3, to be precise. I wrote quite a few programs, large and small, as well as modding a few others that came on various Rainbow disks I&amp;rsquo;d cobbled together mostly from either the Internet or an uncle who was far more invested in the scene.&lt;/p&gt;
 
@@ -269,7 +269,7 @@
    <title>I am.</title>
    <link>http://jarcane.github.com/blog/2014/10/23/i-am.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-10-23-i-am-html</guid>
-   <pubDate>Thu, 23 Oct 2014 10:44:33 FLE Standard Time</pubDate>
+   <pubDate>Thu, 23 Oct 2014 07:44:33 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;The following post is mostly about personal matters, and save where those matters affect my progress as a wannabe programmer, probably won&amp;rsquo;t talk about that subject much. So if you don&amp;rsquo;t want to listen to the rantings of a frustrated and depressed individual venting his frustration with life under mental illness, you need not bother clicking past the more link for this one. Sorry.&lt;/p&gt;
 &lt;!-- more--&gt;
@@ -317,7 +317,7 @@
    <title>A Quickstart Guide to Frog and GitHub Pages</title>
    <link>http://jarcane.github.com/blog/2014/10/18/a-quickstart-guide-to-frog-and-github-pages.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-10-18-a-quickstart-guide-to-frog-and-github-pages-html</guid>
-   <pubDate>Sat, 18 Oct 2014 12:34:28 FLE Standard Time</pubDate>
+   <pubDate>Sat, 18 Oct 2014 09:34:28 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;It was discussed recently on the #racket freenode channel that getting going with Frog might actually be a bit tricky for someone not coming from the Racket ecosystem or unfamiliar with Github Pages. The process is actually pretty straightforward, but the steps involved aren&amp;rsquo;t exactly documented anywhere in one place, and I promised to look into remedying that. Arcane Syntax itself is hosted on GHP, and generated with Frog, so I had some experience in getting it all working and thought I could help.&lt;/p&gt;
 
@@ -438,7 +438,7 @@ git push&lt;/code&gt;&lt;/pre&gt;
    <title>Sort in a Tweet</title>
    <link>http://jarcane.github.com/blog/2014/10/10/sort-in-a-tweet.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-10-10-sort-in-a-tweet-html</guid>
-   <pubDate>Fri, 10 Oct 2014 23:00:29 FLE Standard Time</pubDate>
+   <pubDate>Fri, 10 Oct 2014 20:00:29 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;Sometimes I just can&amp;rsquo;t leave well enough alone. After my last post I dove into further simplifying my Racket code, and as a fun way of &lt;a href="https://twitter.com/J_Arcane"&gt;relaunching my Twitter&lt;/a&gt; I decided to take the lock back off with a bang by code-golfing the sort algorithm down to fit in a tweet.&lt;/p&gt;
 
@@ -571,7 +571,7 @@ git push&lt;/code&gt;&lt;/pre&gt;
    <title>Correction and refactoring</title>
    <link>http://jarcane.github.com/blog/2014/10/10/correction-and-refactoring.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-10-10-correction-and-refactoring-html</guid>
-   <pubDate>Fri, 10 Oct 2014 19:20:23 FLE Standard Time</pubDate>
+   <pubDate>Fri, 10 Oct 2014 16:20:23 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;I was thinking again this evening about last week&amp;rsquo;s quicksort post (which I&amp;rsquo;ve since even been informed isn&amp;rsquo;t technically a quicksort algorithm), and decided to tinker with streamlining my Racket version a bit more to take better advantage of higher-order functions.&lt;/p&gt;
 
@@ -636,7 +636,7 @@ git push&lt;/code&gt;&lt;/pre&gt;
    <title>Haskell is Cool</title>
    <link>http://jarcane.github.com/blog/2014/10/03/haskell-is-cool.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-10-03-haskell-is-cool-html</guid>
-   <pubDate>Fri, 03 Oct 2014 23:25:10 FLE Standard Time</pubDate>
+   <pubDate>Fri, 03 Oct 2014 20:25:10 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;After my last post and some thinking, I ultimately settled on &lt;em&gt;Learn You a Haskell&lt;/em&gt; as my next book to work through, and after some initial hassles trying to get a decent working environment set up, I must say that I&amp;rsquo;m quite enjoying the language itself. It was running across &lt;a href="http://tryhaskell.org/"&gt;Try Haskell&lt;/a&gt; that actually spurred me to finally take the leap in that direction (seriously, online REPLs are the best language demos period), and I was quickly impressed by the power hiding in that seemingly obtuse syntax.&lt;/p&gt;
 
@@ -750,7 +750,7 @@ git push&lt;/code&gt;&lt;/pre&gt;
    <title>Learning Programming: the Backlog</title>
    <link>http://jarcane.github.com/blog/2014/09/29/learning-programming-the-backlog.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-29-learning-programming-the-backlog-html</guid>
-   <pubDate>Mon, 29 Sep 2014 23:08:19 FLE Standard Time</pubDate>
+   <pubDate>Mon, 29 Sep 2014 20:08:19 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;Thus far, I have been back to programming for a vanishingly small amount of time, roughly three months by Github commit reckoning (plus a bit of time spent in Codecademy). In that time it has seemed, to myself and even to others to a lesser extent, rather remarkable the amount of progress I&amp;rsquo;ve made. In just that three months and change I&amp;rsquo;ve written a roguelike game, an old-fashioned line editor, a text graphics wrapper, an esolang, a virtual machine, a basic weblog, and even taken over as chief maintainer of an open source project for the first time.&lt;/p&gt;
 
@@ -787,7 +787,7 @@ git push&lt;/code&gt;&lt;/pre&gt;
    <title>HateStack: The self-deleting rantbin</title>
    <link>http://jarcane.github.com/blog/2014/09/28/hatestack-the-self-deleting-rantbin.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-28-hatestack-the-self-deleting-rantbin-html</guid>
-   <pubDate>Sun, 28 Sep 2014 23:13:13 FLE Standard Time</pubDate>
+   <pubDate>Sun, 28 Sep 2014 20:13:13 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;Inspired by a tweet that Zoe Quinn made the other day, I knocked out a little web app over the weekend for a self-deleting public blogthing. The original spec was a social network that worked like a SnapChat for text, in which the user could post an angry rant with the assurance that it would be automatically deleted in 30 minutes&amp;rsquo; time.&lt;/p&gt;
 
@@ -798,7 +798,7 @@ git push&lt;/code&gt;&lt;/pre&gt;
    <title>Announcing try-racket.org</title>
    <link>http://jarcane.github.com/blog/2014/09/23/announcing-try-racket-org.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-23-announcing-try-racket-org-html</guid>
-   <pubDate>Tue, 23 Sep 2014 20:10:45 FLE Standard Time</pubDate>
+   <pubDate>Tue, 23 Sep 2014 17:10:45 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;It is my pleasure to announce that at long last, Racket has an online REPL. I&amp;rsquo;ve taken it upon myself to acquire a domain and a DigitalOcean droplet, and hosted the long-mothballed Try Racket code which you can find at &lt;a href="http://try-racket.org"&gt;http://try-racket.org&lt;/a&gt;. The PLT folks have also kindly offered an alternate URL at &lt;a href="http://try.racket-lang.org"&gt;http://try.racket-lang.org&lt;/a&gt;.&lt;/p&gt;
 
@@ -809,14 +809,14 @@ git push&lt;/code&gt;&lt;/pre&gt;
    <title>Trying a new theme</title>
    <link>http://jarcane.github.com/blog/2014/09/20/trying-a-new-theme.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-20-trying-a-new-theme-html</guid>
-   <pubDate>Sat, 20 Sep 2014 15:43:43 FLE Standard Time</pubDate>
+   <pubDate>Sat, 20 Sep 2014 12:43:43 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;It would appear that Bootswatch has been updated to Boostrap 3, because I was able to install Slate without any apparent issue. Let me know if you notice anything. I&amp;rsquo;m also testing some issues with Frog giving me grief on builds.&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>Apologizing for exuberance</title>
    <link>http://jarcane.github.com/blog/2014/09/19/apologizing-for-exuberance.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-19-apologizing-for-exuberance-html</guid>
-   <pubDate>Fri, 19 Sep 2014 10:53:59 FLE Standard Time</pubDate>
+   <pubDate>Fri, 19 Sep 2014 07:53:59 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;So after some further consideration, I think I am not really the person to reinvent the internet filter. I have a lot of learning to do before I could possibly tackle something like that in anything like a useful manner. It&amp;rsquo;s possible I could hack together a pretty simple word-frequency model, but I&amp;rsquo;m not at all certain I could really go beyond that; I&amp;rsquo;m not an AI programmer, nor do I have any experience with natural language processing. My experience so far has mostly been with basic systems programming and game design. It&amp;rsquo;s probable I&amp;rsquo;ll return to the problem in the distant future, but for right now I think it&amp;rsquo;s best I leave such a task to more capable hands.&lt;/p&gt;
 
@@ -829,7 +829,7 @@ git push&lt;/code&gt;&lt;/pre&gt;
    <title>We need a new filter</title>
    <link>http://jarcane.github.com/blog/2014/09/17/we-need-a-new-filter.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-17-we-need-a-new-filter-html</guid>
-   <pubDate>Wed, 17 Sep 2014 10:43:53 FLE Standard Time</pubDate>
+   <pubDate>Wed, 17 Sep 2014 07:43:53 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;In the wake of recent events in the gaming sphere, I&amp;rsquo;ve been thinking a good hard think. Harassment on the internet is becoming a major societal problem. People&amp;rsquo;s lives are being threatened. Women are bombarded with abuse on an unconscionable scale. Something needs to be done: we can talk until we&amp;rsquo;re blue in the face about why sending someone violent threats and harassment is wrong, but the harassers aren&amp;rsquo;t listening.&lt;/p&gt;
 
@@ -859,14 +859,14 @@ git push&lt;/code&gt;&lt;/pre&gt;
    <title>URI bug fixed</title>
    <link>http://jarcane.github.com/blog/2014/09/16/uri-bug-fixed.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-16-uri-bug-fixed-html</guid>
-   <pubDate>Tue, 16 Sep 2014 22:29:00 FLE Standard Time</pubDate>
+   <pubDate>Tue, 16 Sep 2014 19:29:00 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;Thanks to the quick efforts of Greg Hendershott, we now have a fix for the Windows URI path generation, so links to subpages should all work correctly now. Let me know if there&amp;rsquo;s any further problems.&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>Disqus comments with Frog</title>
    <link>http://jarcane.github.com/blog/2014/09/16/disqus-comments-with-frog.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-16-disqus-comments-with-frog-html</guid>
-   <pubDate>Tue, 16 Sep 2014 10:15:18 FLE Standard Time</pubDate>
+   <pubDate>Tue, 16 Sep 2014 07:15:18 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;I had a slightly tricky time setting up a numbered comment link with Disqus, so I thought it might be helpful to write up a quick post on how I did it.&lt;/p&gt;
 
@@ -909,14 +909,14 @@ git push&lt;/code&gt;&lt;/pre&gt;
    <title>Technical Difficulties</title>
    <link>http://jarcane.github.com/blog/2014/09/16/technical-difficulties.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-16-technical-difficulties-html</guid>
-   <pubDate>Tue, 16 Sep 2014 00:44:56 FLE Standard Time</pubDate>
+   <pubDate>Mon, 15 Sep 2014 21:44:56 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;Currently aware of an issue in Frog resulting in malformed page URLs for my posts. Users on browsers other than Chrome will get 404 errors accessing full blog pages. Greg Hendershott is aware of the issue now, and I&amp;rsquo;ll get the site patched as soon as he pushes a fix to Frog.&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>
    <title>Choosing a Lisp</title>
    <link>http://jarcane.github.com/blog/2014/09/15/choosing-a-lisp.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-15-choosing-a-lisp-html</guid>
-   <pubDate>Mon, 15 Sep 2014 23:22:25 FLE Standard Time</pubDate>
+   <pubDate>Mon, 15 Sep 2014 20:22:25 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;I began my adventure back into the world of programming with Python. My last book had started to peter out in sales, and I began seriously re-evaluating my career potential, and it was at this point that a friend introduced me to &lt;a href="http://codecademy.com"&gt;Codecademy&lt;/a&gt;. I was immediately taken with the interactive approach to programming instruction, and in particular gravitated to Python, because it was a language I&amp;rsquo;d tinkered with before and whose power, especially in strings and lists, I&amp;rsquo;d always been impressed with.&lt;/p&gt;
 
@@ -964,7 +964,7 @@ git push&lt;/code&gt;&lt;/pre&gt;
    <title>Christening the Grimoire</title>
    <link>http://jarcane.github.com/blog/2014/09/15/christening-the-grimoire.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-15-christening-the-grimoire-html</guid>
-   <pubDate>Mon, 15 Sep 2014 23:07:10 FLE Standard Time</pubDate>
+   <pubDate>Mon, 15 Sep 2014 20:07:10 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;Welcome to Arcane Syntax, destined to be the new home of all things relating to the arcane art of computer programming and development, as flowing from the mind of myself, an self-trained apprentice programmer, Finnish language student, and former tabletop games writer.&lt;/p&gt;
 

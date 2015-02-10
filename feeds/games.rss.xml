@@ -4,14 +4,14 @@
   <title>Arcane Syntax: Posts tagged 'games'</title>
   <description>Arcane Syntax: Posts tagged 'games'</description>
   <link>http://jarcane.github.com/tags/games.html</link>
-  <lastBuildDate>Fri, 19 Sep 2014 10:53:59 FLE Standard Time</lastBuildDate>
-  <pubDate>Fri, 19 Sep 2014 10:53:59 FLE Standard Time</pubDate>
+  <lastBuildDate>Fri, 19 Sep 2014 07:53:59 UT</lastBuildDate>
+  <pubDate>Fri, 19 Sep 2014 07:53:59 UT</pubDate>
   <ttl>1800</ttl>
   <item>
    <title>Apologizing for exuberance</title>
    <link>http://jarcane.github.com/blog/2014/09/19/apologizing-for-exuberance.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-19-apologizing-for-exuberance-html</guid>
-   <pubDate>Fri, 19 Sep 2014 10:53:59 FLE Standard Time</pubDate>
+   <pubDate>Fri, 19 Sep 2014 07:53:59 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;So after some further consideration, I think I am not really the person to reinvent the internet filter. I have a lot of learning to do before I could possibly tackle something like that in anything like a useful manner. It&amp;rsquo;s possible I could hack together a pretty simple word-frequency model, but I&amp;rsquo;m not at all certain I could really go beyond that; I&amp;rsquo;m not an AI programmer, nor do I have any experience with natural language processing. My experience so far has mostly been with basic systems programming and game design. It&amp;rsquo;s probable I&amp;rsquo;ll return to the problem in the distant future, but for right now I think it&amp;rsquo;s best I leave such a task to more capable hands.&lt;/p&gt;
 

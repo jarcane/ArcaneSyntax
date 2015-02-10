@@ -4,14 +4,14 @@
   <title>Arcane Syntax: Posts tagged 'learning'</title>
   <description>Arcane Syntax: Posts tagged 'learning'</description>
   <link>http://jarcane.github.com/tags/learning.html</link>
-  <lastBuildDate>Mon, 29 Sep 2014 23:08:19 FLE Standard Time</lastBuildDate>
-  <pubDate>Mon, 29 Sep 2014 23:08:19 FLE Standard Time</pubDate>
+  <lastBuildDate>Mon, 29 Sep 2014 20:08:19 UT</lastBuildDate>
+  <pubDate>Mon, 29 Sep 2014 20:08:19 UT</pubDate>
   <ttl>1800</ttl>
   <item>
    <title>Learning Programming: the Backlog</title>
    <link>http://jarcane.github.com/blog/2014/09/29/learning-programming-the-backlog.html</link>
    <guid>urn:http-jarcane-github-com:-blog-2014-09-29-learning-programming-the-backlog-html</guid>
-   <pubDate>Mon, 29 Sep 2014 23:08:19 FLE Standard Time</pubDate>
+   <pubDate>Mon, 29 Sep 2014 20:08:19 UT</pubDate>
    <description>&lt;html&gt;
 &lt;p&gt;Thus far, I have been back to programming for a vanishingly small amount of time, roughly three months by Github commit reckoning (plus a bit of time spent in Codecademy). In that time it has seemed, to myself and even to others to a lesser extent, rather remarkable the amount of progress I&amp;rsquo;ve made. In just that three months and change I&amp;rsquo;ve written a roguelike game, an old-fashioned line editor, a text graphics wrapper, an esolang, a virtual machine, a basic weblog, and even taken over as chief maintainer of an open source project for the first time.&lt;/p&gt;
 

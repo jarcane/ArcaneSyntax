@@ -4,13 +4,13 @@
  <link rel="self" href="http://jarcane.github.com/feeds/Frog.atom.xml" />
  <link href="http://jarcane.github.com/tags/Frog.html" />
  <id>urn:http-jarcane-github-com:-tags-Frog-html</id>
- <updated>2014-10-18T12:34:28Z</updated>
+ <updated>2014-10-18T09:34:28Z</updated>
  <entry>
   <title type="text">A Quickstart Guide to Frog and GitHub Pages</title>
   <link rel="alternate" href="http://jarcane.github.com/blog/2014/10/18/a-quickstart-guide-to-frog-and-github-pages.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-10-18-a-quickstart-guide-to-frog-and-github-pages-html</id>
-  <published>2014-10-18T12:34:28Z</published>
-  <updated>2014-10-18T12:34:28Z</updated>
+  <published>2014-10-18T09:34:28Z</published>
+  <updated>2014-10-18T09:34:28Z</updated>
   <author>
    <name>John Berry</name></author>
   <content type="html">&lt;html&gt;
@@ -133,8 +133,8 @@ git push&lt;/code&gt;&lt;/pre&gt;
   <title type="text">Disqus comments with Frog</title>
   <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/16/disqus-comments-with-frog.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-09-16-disqus-comments-with-frog-html</id>
-  <published>2014-09-16T10:15:18Z</published>
-  <updated>2014-09-16T10:15:18Z</updated>
+  <published>2014-09-16T07:15:18Z</published>
+  <updated>2014-09-16T07:15:18Z</updated>
   <author>
    <name>John Berry</name></author>
   <content type="html">&lt;html&gt;

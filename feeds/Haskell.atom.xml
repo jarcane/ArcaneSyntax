@@ -4,13 +4,13 @@
  <link rel="self" href="http://jarcane.github.com/feeds/Haskell.atom.xml" />
  <link href="http://jarcane.github.com/tags/Haskell.html" />
  <id>urn:http-jarcane-github-com:-tags-Haskell-html</id>
- <updated>2014-10-03T23:25:10Z</updated>
+ <updated>2014-10-03T20:25:10Z</updated>
  <entry>
   <title type="text">Haskell is Cool</title>
   <link rel="alternate" href="http://jarcane.github.com/blog/2014/10/03/haskell-is-cool.html" />
   <id>urn:http-jarcane-github-com:-blog-2014-10-03-haskell-is-cool-html</id>
-  <published>2014-10-03T23:25:10Z</published>
-  <updated>2014-10-03T23:25:10Z</updated>
+  <published>2014-10-03T20:25:10Z</published>
+  <updated>2014-10-03T20:25:10Z</updated>
   <author>
    <name>John Berry</name></author>
   <content type="html">&lt;html&gt;
