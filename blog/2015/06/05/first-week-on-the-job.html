@@ -3,15 +3,15 @@
   <head>
 
     <meta charset="utf-8">
-    <title>So I made a programming language. Now what?</title>
-    <meta name="description" content="About a week ago, I had a ridiculous idea. I was in the process of learning some basic Racket macros, and also still following the progress of a couple vintage Lisp dialects for the Tandy Color Computer. Even played around a bit with XLISP in OS-9. And th...">
+    <title>First week on the job</title>
+    <meta name="description" content="It has begun.  In accordance with my education in the Finnish language, a portion of time, about two months, has been set aside over the summer for the students to take a &quot;work trial&quot; at a Finnish workplace. Owing to my powerful disinterest in winding up ...">
     <meta name="author"      content="John Berry">
-    <meta name="keywords"    content="Heresy, Racket">
+    <meta name="keywords"    content="Clojure">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://jarcane.github.com/blog/2014/11/18/so-i-made-a-programming-language-now-what.html">
-    <link rel="next" href="/blog/2014/11/11/on-let-a-brief-comparative-thesis.html">
-    <link rel="prev" href="/blog/2014/12/01/inventing-a-thing.html">
+    <link rel="canonical" href="http://jarcane.github.com/blog/2015/06/05/first-week-on-the-job.html">
+    <link rel="next" href="/blog/2014/12/29/a-resume-and-a-code-example-in-one.html">
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -52,7 +52,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="/index.html" class="navbar-brand">So I made a programming language. Now what?</a>
+          <a href="/index.html" class="navbar-brand">First week on the job</a>
         </div>
         <div class="collapse navbar-collapse our-nav-collapse"
              role="navigation">
@@ -113,43 +113,33 @@
 
           <article>
   <header>
-    <h1>So I made a programming language. Now what?</h1>
+    <h1>First week on the job</h1>
     <p class='date-and-tags'>
-<time datetime="2014-11-18" pubdate="true">2014-11-18</time> :: <span class="tags"><a href="/tags/Heresy.html">Heresy</a>, <a href="/tags/Racket.html">Racket</a></span></p>
+<time datetime="2015-06-05" pubdate="true">2015-06-05</time> :: <span class="tags"><a href="/tags/Clojure.html">Clojure</a></span></p>
   </header>
 
-<p>About a week ago, I had a ridiculous idea. I was in the process of learning some basic Racket macros, and also still following the progress of a couple vintage Lisp dialects for the Tandy Color Computer. Even played around a bit with XLISP in OS&ndash;9. And then someone asked me what a Lambda was.</p>
+<p>It has begun.</p>
 
-<p>Somehow, in the fog of all that (plus a week with a hell of a lot of stress, mostly irrational), came a mad idea. What if someone mashed up BASIC with Lisp? Stranger still, a functionally-oriented BASIC Lisp.</p>
+<p>In accordance with my education in the Finnish language, a portion of time, about two months, has been set aside over the summer for the students to take a &ldquo;work trial&rdquo; at a Finnish workplace. Owing to my powerful disinterest in winding up spending my summer stocking shelves at a supermarket, I naturally was quite on top of attempting to find some more suitable environment for a budding programmer, which I&rsquo;m delighted to say I did.</p>
 
-<p>Then I went and wrote one.</p>
+<p>The work place in question is a firm called <a href="http://metosin.fi">Metosin</a>, a Clojure consulting firm stationed right in the heart of the city, and this week was my very first week on the job. It had, as it was, been a little while since I dove into Clojure (which anyone who&rsquo;s actually read any of this blog, ie. no one, is likely to remember), so prior to starting the job I dove into a couple web apps in anticipation of my arrival and future employment.</p>
 
-<p>I called it <a href="https://github.com/jarcane/heresy">Heresy</a>, because that seemed like the right name for it.</p>
+<p>For starters, I did Ludum Dare this year, banging out a spiffy little Pokémon themed idler game in Hoplon, which you can find <a href="https://github.com/jarcane/trainers-progress">here</a>. Hoplon is an interesting framework, whose concept I was initially quite excited by, an excitement whose dwindling you can perhaps most likely best glean from the fact that when for my try-out task for Metosin it was suggested I use Reagent instead, I was actually more than a bit relieved.</p>
+
+<p>This task took the form of a full-stack weather look-up application, which I in my infinite nerditude decided to call <a href="https://github.com/jarcane/wunderprojectj">wunderprojectj</a>, a reference so unutterably obscure than I&rsquo;m pretty sure no one even noticed, and if you did, perhaps I shall consider buying you a beer (and then backing slowly away into the night).</p>
+
+<p>Since my official start date, I&rsquo;ve been at work on a simple CRUD sort of a web app for managing members of a matrikkeli organization (a term which I am obliged to indicate I&rsquo;m not entirely sure there&rsquo;s a direct translation for, but that doesn&rsquo;t really matter for the purposes of this blog anyway).</p>
+
+<p>It&rsquo;s been suggested I keep some kind of log of how the work is going and what I&rsquo;ve been learning, so after the jump, I&rsquo;ll get on with how my week&rsquo;s been going.</p>
 <!-- more-->
 
-<p>With help from a few helpful Racketeers in IRC, I now have a functional dialect of Lisp that borrows heavily from BASIC syntax; a kind of &ldquo;Nutrasweet&rdquo; syntax married with immutable variables and some (I&rsquo;d like to think) vaguely clever use of seemingly imperative constructs executed with functional code.</p>
+<p>The app is, by the description of my fellow co-workers, quite simple, which is to say, by the standards of anything I&rsquo;d had a personal hand in previously, it is enormously complicated. Or at least, that&rsquo;s how I felt for the first two days on the job, especially as initially my suggested task was first porting the entire front-end from Om to Reagent. I spent the bulk of the first few days just trying to get my head &rsquo;round the organization of the code base, and reading reams and reams of documentation on various libraries trying to come to grips with the moving parts and how such a task might even be approached. I had a hell of a time finding a whole lot of anything from anyone who&rsquo;s actually made such a transition, and Om and Reagent do things in very different ways; besides which I had trouble even finding many examples of an application of this scope written in Reagent. I actually wound up banging up an incredibly primitive toy Reagent app just to figure out how to refer to a single state atom across multiple files. You can see that <a href="https://github.com/jarcane/multipage-reagent">here</a> for what it&rsquo;s worth.</p>
 
-<p>It is also now the most well-recieved project I&rsquo;ve ever released, netting 18 stars on Github, almost 3,000 vistors to the repo, and a whole day near the top of Hacker News&rsquo; front page.</p>
+<p>In the process, I did manage to fix a couple of bugs with the user profile image display and upload, one of which (with help) was discovered to be the result of an API refactor that&rsquo;d never been translated to the actual front end calls, and the other of which was a failure in the image validation which more or less turned the image upload into an accidental file hosting service.</p>
 
-<p>Now, don&rsquo;t get me wrong or think I&rsquo;m letting it get to my head (well, I probably am a little). I fully expect that many of those clicks were more at the very novelty and silliness of the idea. But as ideas go, I&rsquo;ve seen dumber ones succeed, and it&rsquo;s been a useful learning project that fits nicely into my current schedule. The question is though, what do I do with it? Where do I want to go? Is Heresy a way to ease BASIC programmers Lisp? A playground for weird ideas about functional programming?</p>
+<p>Eventually after some discussions mid-week with the rest of the crew, the scope of my responsibility was narrowed down instead to new feature implementation, which has gone a bit better, and given me a bit more opportunity to really get used to the project organization and so forth. I managed to implement a user status flag and interest tags on the back-end, and search for the latter on the front-end. Sadly I&rsquo;ve so far not yet found a way to making those user tags user-editable yet, partly I suspect because I&rsquo;m having a bit of trouble following the libraries used for the user profile form. My intent is to keep at it though, at least to get some kind of rough working prototype.</p>
 
-<p>Time to establish some ground rules.</p>
-
-<ol>
- <li>
-  <p><em>Heresy is BASIC</em> - Heresy is an heir to BASIC, and aims to be at least somewhat easy for BASIC programmers to learn. Mostly this means we prefer BASIC names over the Lisp name, and naming conventions like the $ for string functions.</p></li>
- <li>
-  <p><em>Heresy is a Lisp</em> - Heresy is still a Lisp, and loves simple syntax and s-expressions. While it makes use of some sugaring like literal keywords for certain common primitives, these are best used sparingly. Heresy is the Diet Coke of Evil, just one calorie, not quite evil enough.</p></li>
- <li>
-  <p><em>Heresy is functional</em> - Functional, but not Haskell. It is not intended solely as a vehicle for absolute functional purity. I love Haskell. You love Haskell. We don&rsquo;t need to write another Haskell. Think more in terms of a lower-calorie, more intelligible Clojure.</p></li>
- <li>
-  <p><em>Heresy is for learning</em> - Heresy started as a learning project for me, a chance to learn how Lisp and functional programming really work on a practical level. I hope that, in time, it can be that for others as well, especially those who grew up with BASIC like me and still sometimes struggle to get their head on this brave new FP world we live in now.</p></li>
- <li>
-  <p><em>Heresy is an experiment</em> - Heresy is an experimental language. It&rsquo;s very DNA is as a mad idea that came to life, and it&rsquo;s development should be ready and willing to embrace new mad ideas and run with them. This is where <em>carry</em> came from, and I hope to have more mad ideas in the future.</p></li></ol>
-
-<p>Those are my thoughts for now though. I would like to point your attention to #5 in particular, because one of it&rsquo;s side effects is that any or all of these rules probably will change or be ignored as necessary over time. It also leaves out some things I haven&rsquo;t decided yet, like how much of Heresy should be self-hosted (probably as much as can be borne), or a more specific syntax standard for function names (because ? for preds still looks wrong and un-BASIC to me).</p>
-
-<p>Heresy is the projection of a fevered imagination still buzzing away with strange new ideas. Think of me less as a BDFL and more of a Mad King gibbering in the dark, still sometimes speaking truth in between the deranged quartos and evocations of elder things from beyond time and space &hellip;</p>
+<p>At this point it&rsquo;s difficult to pin down exactly how much I&rsquo;ve learned from all this, but I&rsquo;ve certainly been exposed to quite a lot of new technology, and I&rsquo;d like to think I&rsquo;m getting a bit more comfortable with the work at least so far. On the whole, not totally unproductive for a first week.</p>
   <footer>
     <script type="text/javascript">
       !function(d,s,id){
@@ -164,11 +154,11 @@
     </script>
     <a href="https://twitter.com/share"
        class="twitter-share-button"
-       data-url="http://jarcane.github.com/blog/2014/11/18/so-i-made-a-programming-language-now-what.html"
+       data-url="http://jarcane.github.com/blog/2015/06/05/first-week-on-the-job.html"
        data-dnt="true">
       "Tweet"</a>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-    <g:plusone size="medium" href="http://jarcane.github.com/blog/2014/11/18/so-i-made-a-programming-language-now-what.html"></g:plusone>
+    <g:plusone size="medium" href="http://jarcane.github.com/blog/2015/06/05/first-week-on-the-job.html"></g:plusone>
     <script type="text/javascript">
       var disqus_shortname = 'jarcane';
       (function() {
@@ -181,11 +171,9 @@
     </script>
     <div id="disqus_thread"></div>
     <ul class="pager">
-    <li class="previous">
-      <a href="/blog/2014/12/01/inventing-a-thing.html">&larr; <em>Inventing a Thing</em></a>
-    </li>
+
     <li class="next">
-      <a href="/blog/2014/11/11/on-let-a-brief-comparative-thesis.html"><em>On LET: a brief comparative thesis</em> &rarr;</a>
+      <a href="/blog/2014/12/29/a-resume-and-a-code-example-in-one.html"><em>A resume and a code example in one</em> &rarr;</a>
     </li>
     </ul>
   </footer>

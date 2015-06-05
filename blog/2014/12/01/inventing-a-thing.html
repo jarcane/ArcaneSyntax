@@ -68,6 +68,8 @@
 
 <li><a href="/tags/announcements.html">announcements</a></li>
 
+<li><a href="/tags/Clojure.html">Clojure</a></li>
+
 <li><a href="/tags/Frog.html">Frog</a></li>
 
 <li><a href="/tags/games.html">games</a></li>
@@ -128,134 +130,49 @@
 <p>The result is Things. We can define a new kind of Thing:</p>
 
 <div class="brush: racket">
- <table class="sourcetable">
-  <tbody>
-   <tr>
-    <td class="linenos">
-     <div class="linenodiv">
-      <pre>1</pre></div></td>
-    <td class="code">
-     <div class="source">
-      <pre><span class="p">(</span><span class="nf">describe</span> <span class="nv">Cthulhu</span> <span class="p">(</span><span class="nf">size</span> <span class="ss">'Immense</span><span class="p">)</span> <span class="p">(</span><span class="nf">type</span> <span class="ss">'Winged</span><span class="p">)</span> <span class="p">(</span><span class="nf">status</span> <span class="ss">'sleeping</span><span class="p">))</span>
-</pre></div>
-</td></tr></tbody></table>
-</div>
+ <pre><code>(describe Cthulhu (size 'Immense) (type 'Winged) (status 'sleeping))</code></pre></div>
 
 <p>We can call values from Cthulhu:</p>
 
 <div class="brush: racket">
- <table class="sourcetable">
-  <tbody>
-   <tr>
-    <td class="linenos">
-     <div class="linenodiv">
-      <pre>1
-2</pre></div></td>
-    <td class="code">
-     <div class="source">
-      <pre><span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="p">(</span><span class="nf">Cthulhu</span> <span class="ss">'size</span><span class="p">)</span>
-<span class="ss">'Immense</span>
-</pre></div>
-</td></tr></tbody></table>
-</div>
+ <pre><code>&gt; (Cthulhu 'size)
+'Immense</code></pre></div>
 
 <p>We can copy Cthulhu with new values:</p>
 
 <div class="brush: racket">
- <table class="sourcetable">
-  <tbody>
-   <tr>
-    <td class="linenos">
-     <div class="linenodiv">
-      <pre>1
-2</pre></div></td>
-    <td class="code">
-     <div class="source">
-      <pre><span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="p">((</span><span class="nf">Cthulhu</span> <span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit">*</a></span> <span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit">*</a></span> <span class="ss">'awake</span><span class="p">)</span> <span class="ss">'status</span><span class="p">)</span>
-<span class="ss">'awake</span>
-</pre></div>
-</td></tr></tbody></table>
-</div>
+ <pre><code>&gt; ((Cthulhu * * 'awake) 'status)
+'awake</code></pre></div>
 
 <p>We can give a new name to Cthulhu:</p>
 
 <div class="brush: racket">
- <table class="sourcetable">
-  <tbody>
-   <tr>
-    <td class="linenos">
-     <div class="linenodiv">
-      <pre>1
-2
-3</pre></div></td>
-    <td class="code">
-     <div class="source">
-      <pre><span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="p">(</span><span class="nf">def</span> <span class="nv">Dreamer</span> <span class="nv">Cthulhu</span><span class="p">)</span>
-<span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="p">(</span><span class="nf">Dreamer</span> <span class="ss">'type</span><span class="p">)</span>
-<span class="ss">'Winged</span>
-</pre></div>
-</td></tr></tbody></table>
-</div>
+ <pre><code>&gt; (def Dreamer Cthulhu)
+&gt; (Dreamer 'type)
+'Winged</code></pre></div>
 
 <p>And we can make children of Cthulhu:</p>
 
 <div class="brush: racket">
- <table class="sourcetable">
-  <tbody>
-   <tr>
-    <td class="linenos">
-     <div class="linenodiv">
-      <pre>1
-2
-3</pre></div></td>
-    <td class="code">
-     <div class="source">
-      <pre><span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="p">(</span><span class="nf">def</span> <span class="nv">Star-Spawn</span> <span class="p">(</span><span class="nf">Cthulhu</span> <span class="ss">'Medium</span> <span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit">*</a></span> <span class="ss">'awake</span><span class="p">))</span>
-<span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="p">(</span><span class="nf">Star-Spawn</span> <span class="ss">'size</span><span class="p">)</span>
-<span class="ss">'Medium</span>
-</pre></div>
-</td></tr></tbody></table>
-</div>
+ <pre><code>&gt; (def Star-Spawn (Cthulhu 'Medium * 'awake))
+&gt; (Star-Spawn 'size)
+'Medium</code></pre></div>
 
 <p>So how does it work? It&rsquo;s all just a lambda. (describe &hellip;) is a simple macro wrapper that defines a name and seeds it with a call to (thing &hellip;), which is a helper function that returns a lambda containing a closure that holds the actual alist that holds our values as well as the argument handling code for calling and copying it. Indeed, copying Things is just a recursive call to Thing with new values, and (thing &hellip;) can potentially be called anonymously just like lambdas can. And because functions are first-class values, inheritence and value-passing just come with the territory.</p>
 
 <p>There is one weakness though:</p>
 
 <div class="brush: racket">
- <table class="sourcetable">
-  <tbody>
-   <tr>
-    <td class="linenos">
-     <div class="linenodiv">
-      <pre>1
-2</pre></div></td>
-    <td class="code">
-     <div class="source">
-      <pre><span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="nv">Cthulhu</span>
-<span class="o">#</span><span class="nv">&lt;procedure:Cthulhu&gt;</span>
-</pre></div>
-</td></tr></tbody></table>
-</div>
+ <pre><code>&gt; Cthulhu
+#&lt;procedure:Cthulhu&gt;</code></pre></div>
 
 <p>Because Things are just lambdas underneath, they read naked as procedures, so they are not immediately transparent.</p>
 
 <p>Instead, we have to do this:</p>
 
 <div class="brush: racket">
- <table class="sourcetable">
-  <tbody>
-   <tr>
-    <td class="linenos">
-     <div class="linenodiv">
-      <pre>1
-2</pre></div></td>
-    <td class="code">
-     <div class="source">
-      <pre><span class="nv"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="p">(</span><span class="nf">Cthulhu</span><span class="p">)</span>
-<span class="o">'</span><span class="p">((</span><span class="nf">size</span> <span class="ss">'Immense</span><span class="p">)</span> <span class="p">(</span><span class="nf">type</span> <span class="ss">'Winged</span><span class="p">)</span> <span class="p">(</span><span class="nf">status</span> <span class="ss">'sleeping</span><span class="p">))</span>
-</pre></div>
-</td></tr></tbody></table>
-</div>
+ <pre><code>&gt; (Cthulhu)
+'((size 'Immense) (type 'Winged) (status 'sleeping))</code></pre></div>
 
 <p>Though on the upside, this is not merely a print routine: It actually returns the naked alist underneath the snytax sugar, so you can mangle it with assoc and subst or whatever other unspeakable horror you wish to do to the Great Dreamer in the Deep.</p>
   <footer>

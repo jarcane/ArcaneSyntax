@@ -51,134 +51,49 @@
 &lt;p&gt;The result is Things. We can define a new kind of Thing:&lt;/p&gt;
 
 &lt;div class="brush: racket"&gt;
- &lt;table class="sourcetable"&gt;
-  &lt;tbody&gt;
-   &lt;tr&gt;
-    &lt;td class="linenos"&gt;
-     &lt;div class="linenodiv"&gt;
-      &lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-    &lt;td class="code"&gt;
-     &lt;div class="source"&gt;
-      &lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;describe&lt;/span&gt; &lt;span class="nv"&gt;Cthulhu&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;size&lt;/span&gt; &lt;span class="ss"&gt;'Immense&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;type&lt;/span&gt; &lt;span class="ss"&gt;'Winged&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;status&lt;/span&gt; &lt;span class="ss"&gt;'sleeping&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;/div&gt;
+ &lt;pre&gt;&lt;code&gt;(describe Cthulhu (size 'Immense) (type 'Winged) (status 'sleeping))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;We can call values from Cthulhu:&lt;/p&gt;
 
 &lt;div class="brush: racket"&gt;
- &lt;table class="sourcetable"&gt;
-  &lt;tbody&gt;
-   &lt;tr&gt;
-    &lt;td class="linenos"&gt;
-     &lt;div class="linenodiv"&gt;
-      &lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-    &lt;td class="code"&gt;
-     &lt;div class="source"&gt;
-      &lt;pre&gt;&lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;Cthulhu&lt;/span&gt; &lt;span class="ss"&gt;'size&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="ss"&gt;'Immense&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;/div&gt;
+ &lt;pre&gt;&lt;code&gt;&amp;gt; (Cthulhu 'size)
+'Immense&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;We can copy Cthulhu with new values:&lt;/p&gt;
 
 &lt;div class="brush: racket"&gt;
- &lt;table class="sourcetable"&gt;
-  &lt;tbody&gt;
-   &lt;tr&gt;
-    &lt;td class="linenos"&gt;
-     &lt;div class="linenodiv"&gt;
-      &lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-    &lt;td class="code"&gt;
-     &lt;div class="source"&gt;
-      &lt;pre&gt;&lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nf"&gt;Cthulhu&lt;/span&gt; &lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit"&gt;*&lt;/a&gt;&lt;/span&gt; &lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit"&gt;*&lt;/a&gt;&lt;/span&gt; &lt;span class="ss"&gt;'awake&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ss"&gt;'status&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="ss"&gt;'awake&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;/div&gt;
+ &lt;pre&gt;&lt;code&gt;&amp;gt; ((Cthulhu * * 'awake) 'status)
+'awake&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;We can give a new name to Cthulhu:&lt;/p&gt;
 
 &lt;div class="brush: racket"&gt;
- &lt;table class="sourcetable"&gt;
-  &lt;tbody&gt;
-   &lt;tr&gt;
-    &lt;td class="linenos"&gt;
-     &lt;div class="linenodiv"&gt;
-      &lt;pre&gt;1
-2
-3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-    &lt;td class="code"&gt;
-     &lt;div class="source"&gt;
-      &lt;pre&gt;&lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;def&lt;/span&gt; &lt;span class="nv"&gt;Dreamer&lt;/span&gt; &lt;span class="nv"&gt;Cthulhu&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;Dreamer&lt;/span&gt; &lt;span class="ss"&gt;'type&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="ss"&gt;'Winged&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;/div&gt;
+ &lt;pre&gt;&lt;code&gt;&amp;gt; (def Dreamer Cthulhu)
+&amp;gt; (Dreamer 'type)
+'Winged&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;And we can make children of Cthulhu:&lt;/p&gt;
 
 &lt;div class="brush: racket"&gt;
- &lt;table class="sourcetable"&gt;
-  &lt;tbody&gt;
-   &lt;tr&gt;
-    &lt;td class="linenos"&gt;
-     &lt;div class="linenodiv"&gt;
-      &lt;pre&gt;1
-2
-3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-    &lt;td class="code"&gt;
-     &lt;div class="source"&gt;
-      &lt;pre&gt;&lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;def&lt;/span&gt; &lt;span class="nv"&gt;Star-Spawn&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;Cthulhu&lt;/span&gt; &lt;span class="ss"&gt;'Medium&lt;/span&gt; &lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit"&gt;*&lt;/a&gt;&lt;/span&gt; &lt;span class="ss"&gt;'awake&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;Star-Spawn&lt;/span&gt; &lt;span class="ss"&gt;'size&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="ss"&gt;'Medium&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;/div&gt;
+ &lt;pre&gt;&lt;code&gt;&amp;gt; (def Star-Spawn (Cthulhu 'Medium * 'awake))
+&amp;gt; (Star-Spawn 'size)
+'Medium&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;So how does it work? It&amp;rsquo;s all just a lambda. (describe &amp;hellip;) is a simple macro wrapper that defines a name and seeds it with a call to (thing &amp;hellip;), which is a helper function that returns a lambda containing a closure that holds the actual alist that holds our values as well as the argument handling code for calling and copying it. Indeed, copying Things is just a recursive call to Thing with new values, and (thing &amp;hellip;) can potentially be called anonymously just like lambdas can. And because functions are first-class values, inheritence and value-passing just come with the territory.&lt;/p&gt;
 
 &lt;p&gt;There is one weakness though:&lt;/p&gt;
 
 &lt;div class="brush: racket"&gt;
- &lt;table class="sourcetable"&gt;
-  &lt;tbody&gt;
-   &lt;tr&gt;
-    &lt;td class="linenos"&gt;
-     &lt;div class="linenodiv"&gt;
-      &lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-    &lt;td class="code"&gt;
-     &lt;div class="source"&gt;
-      &lt;pre&gt;&lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="nv"&gt;Cthulhu&lt;/span&gt;
-&lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="nv"&gt;&amp;lt;procedure:Cthulhu&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;/div&gt;
+ &lt;pre&gt;&lt;code&gt;&amp;gt; Cthulhu
+#&amp;lt;procedure:Cthulhu&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Because Things are just lambdas underneath, they read naked as procedures, so they are not immediately transparent.&lt;/p&gt;
 
 &lt;p&gt;Instead, we have to do this:&lt;/p&gt;
 
 &lt;div class="brush: racket"&gt;
- &lt;table class="sourcetable"&gt;
-  &lt;tbody&gt;
-   &lt;tr&gt;
-    &lt;td class="linenos"&gt;
-     &lt;div class="linenodiv"&gt;
-      &lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-    &lt;td class="code"&gt;
-     &lt;div class="source"&gt;
-      &lt;pre&gt;&lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;Cthulhu&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="o"&gt;'&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nf"&gt;size&lt;/span&gt; &lt;span class="ss"&gt;'Immense&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;type&lt;/span&gt; &lt;span class="ss"&gt;'Winged&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;status&lt;/span&gt; &lt;span class="ss"&gt;'sleeping&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;/div&gt;
+ &lt;pre&gt;&lt;code&gt;&amp;gt; (Cthulhu)
+'((size 'Immense) (type 'Winged) (status 'sleeping))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Though on the upside, this is not merely a print routine: It actually returns the naked alist underneath the snytax sugar, so you can mangle it with assoc and subst or whatever other unspeakable horror you wish to do to the Great Dreamer in the Deep.&lt;/p&gt;&lt;/html&gt;</description></item>
   <item>

@@ -4,7 +4,38 @@
  <link rel="self" href="http://jarcane.github.com/feeds/all.atom.xml" />
  <link href="http://jarcane.github.com/index.html" />
  <id>urn:http-jarcane-github-com:-index-html</id>
- <updated>2014-12-29T16:04:20Z</updated>
+ <updated>2015-06-05T12:10:15Z</updated>
+ <entry>
+  <title type="text">First week on the job</title>
+  <link rel="alternate" href="http://jarcane.github.com/blog/2015/06/05/first-week-on-the-job.html" />
+  <id>urn:http-jarcane-github-com:-blog-2015-06-05-first-week-on-the-job-html</id>
+  <published>2015-06-05T12:10:15Z</published>
+  <updated>2015-06-05T12:10:15Z</updated>
+  <author>
+   <name>John Berry</name></author>
+  <content type="html">&lt;html&gt;
+&lt;p&gt;It has begun.&lt;/p&gt;
+
+&lt;p&gt;In accordance with my education in the Finnish language, a portion of time, about two months, has been set aside over the summer for the students to take a &amp;ldquo;work trial&amp;rdquo; at a Finnish workplace. Owing to my powerful disinterest in winding up spending my summer stocking shelves at a supermarket, I naturally was quite on top of attempting to find some more suitable environment for a budding programmer, which I&amp;rsquo;m delighted to say I did.&lt;/p&gt;
+
+&lt;p&gt;The work place in question is a firm called &lt;a href="http://metosin.fi"&gt;Metosin&lt;/a&gt;, a Clojure consulting firm stationed right in the heart of the city, and this week was my very first week on the job. It had, as it was, been a little while since I dove into Clojure (which anyone who&amp;rsquo;s actually read any of this blog, ie. no one, is likely to remember), so prior to starting the job I dove into a couple web apps in anticipation of my arrival and future employment.&lt;/p&gt;
+
+&lt;p&gt;For starters, I did Ludum Dare this year, banging out a spiffy little Pokémon themed idler game in Hoplon, which you can find &lt;a href="https://github.com/jarcane/trainers-progress"&gt;here&lt;/a&gt;. Hoplon is an interesting framework, whose concept I was initially quite excited by, an excitement whose dwindling you can perhaps most likely best glean from the fact that when for my try-out task for Metosin it was suggested I use Reagent instead, I was actually more than a bit relieved.&lt;/p&gt;
+
+&lt;p&gt;This task took the form of a full-stack weather look-up application, which I in my infinite nerditude decided to call &lt;a href="https://github.com/jarcane/wunderprojectj"&gt;wunderprojectj&lt;/a&gt;, a reference so unutterably obscure than I&amp;rsquo;m pretty sure no one even noticed, and if you did, perhaps I shall consider buying you a beer (and then backing slowly away into the night).&lt;/p&gt;
+
+&lt;p&gt;Since my official start date, I&amp;rsquo;ve been at work on a simple CRUD sort of a web app for managing members of a matrikkeli organization (a term which I am obliged to indicate I&amp;rsquo;m not entirely sure there&amp;rsquo;s a direct translation for, but that doesn&amp;rsquo;t really matter for the purposes of this blog anyway).&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s been suggested I keep some kind of log of how the work is going and what I&amp;rsquo;ve been learning, so after the jump, I&amp;rsquo;ll get on with how my week&amp;rsquo;s been going.&lt;/p&gt;
+&lt;!-- more--&gt;
+
+&lt;p&gt;The app is, by the description of my fellow co-workers, quite simple, which is to say, by the standards of anything I&amp;rsquo;d had a personal hand in previously, it is enormously complicated. Or at least, that&amp;rsquo;s how I felt for the first two days on the job, especially as initially my suggested task was first porting the entire front-end from Om to Reagent. I spent the bulk of the first few days just trying to get my head &amp;rsquo;round the organization of the code base, and reading reams and reams of documentation on various libraries trying to come to grips with the moving parts and how such a task might even be approached. I had a hell of a time finding a whole lot of anything from anyone who&amp;rsquo;s actually made such a transition, and Om and Reagent do things in very different ways; besides which I had trouble even finding many examples of an application of this scope written in Reagent. I actually wound up banging up an incredibly primitive toy Reagent app just to figure out how to refer to a single state atom across multiple files. You can see that &lt;a href="https://github.com/jarcane/multipage-reagent"&gt;here&lt;/a&gt; for what it&amp;rsquo;s worth.&lt;/p&gt;
+
+&lt;p&gt;In the process, I did manage to fix a couple of bugs with the user profile image display and upload, one of which (with help) was discovered to be the result of an API refactor that&amp;rsquo;d never been translated to the actual front end calls, and the other of which was a failure in the image validation which more or less turned the image upload into an accidental file hosting service.&lt;/p&gt;
+
+&lt;p&gt;Eventually after some discussions mid-week with the rest of the crew, the scope of my responsibility was narrowed down instead to new feature implementation, which has gone a bit better, and given me a bit more opportunity to really get used to the project organization and so forth. I managed to implement a user status flag and interest tags on the back-end, and search for the latter on the front-end. Sadly I&amp;rsquo;ve so far not yet found a way to making those user tags user-editable yet, partly I suspect because I&amp;rsquo;m having a bit of trouble following the libraries used for the user profile form. My intent is to keep at it though, at least to get some kind of rough working prototype.&lt;/p&gt;
+
+&lt;p&gt;At this point it&amp;rsquo;s difficult to pin down exactly how much I&amp;rsquo;ve learned from all this, but I&amp;rsquo;ve certainly been exposed to quite a lot of new technology, and I&amp;rsquo;d like to think I&amp;rsquo;m getting a bit more comfortable with the work at least so far. On the whole, not totally unproductive for a first week.&lt;/p&gt;&lt;/html&gt;</content></entry>
  <entry>
   <title type="text">A resume and a code example in one</title>
   <link rel="alternate" href="http://jarcane.github.com/blog/2014/12/29/a-resume-and-a-code-example-in-one.html" />
@@ -55,134 +86,49 @@
 &lt;p&gt;The result is Things. We can define a new kind of Thing:&lt;/p&gt;
 
 &lt;div class="brush: racket"&gt;
- &lt;table class="sourcetable"&gt;
-  &lt;tbody&gt;
-   &lt;tr&gt;
-    &lt;td class="linenos"&gt;
-     &lt;div class="linenodiv"&gt;
-      &lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-    &lt;td class="code"&gt;
-     &lt;div class="source"&gt;
-      &lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;describe&lt;/span&gt; &lt;span class="nv"&gt;Cthulhu&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;size&lt;/span&gt; &lt;span class="ss"&gt;'Immense&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;type&lt;/span&gt; &lt;span class="ss"&gt;'Winged&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;status&lt;/span&gt; &lt;span class="ss"&gt;'sleeping&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;/div&gt;
+ &lt;pre&gt;&lt;code&gt;(describe Cthulhu (size 'Immense) (type 'Winged) (status 'sleeping))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;We can call values from Cthulhu:&lt;/p&gt;
 
 &lt;div class="brush: racket"&gt;
- &lt;table class="sourcetable"&gt;
-  &lt;tbody&gt;
-   &lt;tr&gt;
-    &lt;td class="linenos"&gt;
-     &lt;div class="linenodiv"&gt;
-      &lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-    &lt;td class="code"&gt;
-     &lt;div class="source"&gt;
-      &lt;pre&gt;&lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;Cthulhu&lt;/span&gt; &lt;span class="ss"&gt;'size&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="ss"&gt;'Immense&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;/div&gt;
+ &lt;pre&gt;&lt;code&gt;&amp;gt; (Cthulhu 'size)
+'Immense&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;We can copy Cthulhu with new values:&lt;/p&gt;
 
 &lt;div class="brush: racket"&gt;
- &lt;table class="sourcetable"&gt;
-  &lt;tbody&gt;
-   &lt;tr&gt;
-    &lt;td class="linenos"&gt;
-     &lt;div class="linenodiv"&gt;
-      &lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-    &lt;td class="code"&gt;
-     &lt;div class="source"&gt;
-      &lt;pre&gt;&lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nf"&gt;Cthulhu&lt;/span&gt; &lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit"&gt;*&lt;/a&gt;&lt;/span&gt; &lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit"&gt;*&lt;/a&gt;&lt;/span&gt; &lt;span class="ss"&gt;'awake&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ss"&gt;'status&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="ss"&gt;'awake&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;/div&gt;
+ &lt;pre&gt;&lt;code&gt;&amp;gt; ((Cthulhu * * 'awake) 'status)
+'awake&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;We can give a new name to Cthulhu:&lt;/p&gt;
 
 &lt;div class="brush: racket"&gt;
- &lt;table class="sourcetable"&gt;
-  &lt;tbody&gt;
-   &lt;tr&gt;
-    &lt;td class="linenos"&gt;
-     &lt;div class="linenodiv"&gt;
-      &lt;pre&gt;1
-2
-3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-    &lt;td class="code"&gt;
-     &lt;div class="source"&gt;
-      &lt;pre&gt;&lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;def&lt;/span&gt; &lt;span class="nv"&gt;Dreamer&lt;/span&gt; &lt;span class="nv"&gt;Cthulhu&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;Dreamer&lt;/span&gt; &lt;span class="ss"&gt;'type&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="ss"&gt;'Winged&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;/div&gt;
+ &lt;pre&gt;&lt;code&gt;&amp;gt; (def Dreamer Cthulhu)
+&amp;gt; (Dreamer 'type)
+'Winged&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;And we can make children of Cthulhu:&lt;/p&gt;
 
 &lt;div class="brush: racket"&gt;
- &lt;table class="sourcetable"&gt;
-  &lt;tbody&gt;
-   &lt;tr&gt;
-    &lt;td class="linenos"&gt;
-     &lt;div class="linenodiv"&gt;
-      &lt;pre&gt;1
-2
-3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-    &lt;td class="code"&gt;
-     &lt;div class="source"&gt;
-      &lt;pre&gt;&lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;def&lt;/span&gt; &lt;span class="nv"&gt;Star-Spawn&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;Cthulhu&lt;/span&gt; &lt;span class="ss"&gt;'Medium&lt;/span&gt; &lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._*))" style="color: inherit"&gt;*&lt;/a&gt;&lt;/span&gt; &lt;span class="ss"&gt;'awake&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;Star-Spawn&lt;/span&gt; &lt;span class="ss"&gt;'size&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="ss"&gt;'Medium&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;/div&gt;
+ &lt;pre&gt;&lt;code&gt;&amp;gt; (def Star-Spawn (Cthulhu 'Medium * 'awake))
+&amp;gt; (Star-Spawn 'size)
+'Medium&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;So how does it work? It&amp;rsquo;s all just a lambda. (describe &amp;hellip;) is a simple macro wrapper that defines a name and seeds it with a call to (thing &amp;hellip;), which is a helper function that returns a lambda containing a closure that holds the actual alist that holds our values as well as the argument handling code for calling and copying it. Indeed, copying Things is just a recursive call to Thing with new values, and (thing &amp;hellip;) can potentially be called anonymously just like lambdas can. And because functions are first-class values, inheritence and value-passing just come with the territory.&lt;/p&gt;
 
 &lt;p&gt;There is one weakness though:&lt;/p&gt;
 
 &lt;div class="brush: racket"&gt;
- &lt;table class="sourcetable"&gt;
-  &lt;tbody&gt;
-   &lt;tr&gt;
-    &lt;td class="linenos"&gt;
-     &lt;div class="linenodiv"&gt;
-      &lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-    &lt;td class="code"&gt;
-     &lt;div class="source"&gt;
-      &lt;pre&gt;&lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="nv"&gt;Cthulhu&lt;/span&gt;
-&lt;span class="o"&gt;#&lt;/span&gt;&lt;span class="nv"&gt;&amp;lt;procedure:Cthulhu&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;/div&gt;
+ &lt;pre&gt;&lt;code&gt;&amp;gt; Cthulhu
+#&amp;lt;procedure:Cthulhu&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Because Things are just lambdas underneath, they read naked as procedures, so they are not immediately transparent.&lt;/p&gt;
 
 &lt;p&gt;Instead, we have to do this:&lt;/p&gt;
 
 &lt;div class="brush: racket"&gt;
- &lt;table class="sourcetable"&gt;
-  &lt;tbody&gt;
-   &lt;tr&gt;
-    &lt;td class="linenos"&gt;
-     &lt;div class="linenodiv"&gt;
-      &lt;pre&gt;1
-2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
-    &lt;td class="code"&gt;
-     &lt;div class="source"&gt;
-      &lt;pre&gt;&lt;span class="nv"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;Cthulhu&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="o"&gt;'&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nf"&gt;size&lt;/span&gt; &lt;span class="ss"&gt;'Immense&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;type&lt;/span&gt; &lt;span class="ss"&gt;'Winged&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;status&lt;/span&gt; &lt;span class="ss"&gt;'sleeping&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
-&lt;/div&gt;
+ &lt;pre&gt;&lt;code&gt;&amp;gt; (Cthulhu)
+'((size 'Immense) (type 'Winged) (status 'sleeping))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Though on the upside, this is not merely a print routine: It actually returns the naked alist underneath the snytax sugar, so you can mangle it with assoc and subst or whatever other unspeakable horror you wish to do to the Great Dreamer in the Deep.&lt;/p&gt;&lt;/html&gt;</content></entry>
  <entry>
@@ -1014,18 +960,4 @@ git push&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;It is true as well that Racket is not well represented in the world of working programmers. But it is well represented in the world of computer science, a world I increasingly suspect I might like to enter if I should prove worthy. While there is something of a gap between the &amp;ldquo;beginner&amp;rdquo; and &amp;ldquo;advanced&amp;rdquo; levels of the Racket world, the flipside to this is that it is stuffed with incredibly brilliant people who are almost to a one the most polite and helpful people I&amp;rsquo;ve met since returning to programming.&lt;/p&gt;
 
-&lt;p&gt;So, with at least a year of language courses before I can even think about a job or university, why not hang around and contribute and learn in a place where I feel most at home? It was Python being this for me that made me a programmer again, and I think it could be Racket doing so that makes me a &lt;em&gt;good&lt;/em&gt; one.&lt;/p&gt;&lt;/html&gt;</content></entry>
- <entry>
-  <title type="text">Christening the Grimoire</title>
-  <link rel="alternate" href="http://jarcane.github.com/blog/2014/09/15/christening-the-grimoire.html" />
-  <id>urn:http-jarcane-github-com:-blog-2014-09-15-christening-the-grimoire-html</id>
-  <published>2014-09-15T20:07:10Z</published>
-  <updated>2014-09-15T20:07:10Z</updated>
-  <author>
-   <name>John Berry</name></author>
-  <content type="html">&lt;html&gt;
-&lt;p&gt;Welcome to Arcane Syntax, destined to be the new home of all things relating to the arcane art of computer programming and development, as flowing from the mind of myself, an self-trained apprentice programmer, Finnish language student, and former tabletop games writer.&lt;/p&gt;
-
-&lt;p&gt;The chief subject matter of Arcane Syntax is likely at this point to be focusing especially on the Racket programming language, which has ultimately proved my favorite home in the magical land of Lisp dialects, for reasons which I shall expound upon in my next post.&lt;/p&gt;
-
-&lt;p&gt;I have been at this programming thing for but a short time, having previously not touched more than a few simple dice rollers in at least a decade. If something I should happen to post on this blog demonstrate a profound ignorance, it is likely for lack of education, and thus polite instruction is likely to be welcomed eagerly.&lt;/p&gt;&lt;/html&gt;</content></entry></feed>
+&lt;p&gt;So, with at least a year of language courses before I can even think about a job or university, why not hang around and contribute and learn in a place where I feel most at home? It was Python being this for me that made me a programmer again, and I think it could be Racket doing so that makes me a &lt;em&gt;good&lt;/em&gt; one.&lt;/p&gt;&lt;/html&gt;</content></entry></feed>
